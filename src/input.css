@@ -1,0 +1,139 @@
+/* input.css */
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark-blue: #031123;
+  --color-primary-blue: #142946;
+  --color-accent-red: #E23839;
+  --color-accent-red-alt: #E85949;
+  --color-accent-blue: #3A99D1;
+  --color-text-light: #FFFFFF;
+  --color-text-gray: #CFCFCF;
+  --color-text-dark-gray: #707070;
+  
+  /* Add other colors from your palette as needed */
+  --color-secondary-blue: #325483;
+  --color-dark-brown: #572E2A;
+  --color-medium-gray: #5B5B5B;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-primary-dark-blue);
+    color: var(--color-text-light);
+    font-family: 'Roboto', sans-serif;
+  }
+
+}
+
+
+@layer components {
+ /* --- CORRECTED SWIPER PAGINATION STYLES --- */
+  .swiper-pagination-custom .swiper-pagination-bullet {
+    all: unset; /* Reset default Swiper styles */
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.25rem; /* text-xl */
+    color: #9ca3af; /* text-gray-400 */
+    transition: color 0.3s ease;
+  }
+  
+  .swiper-pagination-custom .swiper-pagination-bullet:hover {
+    color: white;
+  }
+
+  .swiper-pagination-custom .swiper-pagination-bullet-active {
+    color: white;
+    font-weight: 700;
+  }
+
+  /* This creates the vertical line ONLY on the active number */
+  .swiper-pagination-custom .swiper-pagination-bullet-active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    margin-top: 0.75rem;
+    width: 2px;
+    height: 96px; /* 6rem */
+    background-color: white;
+  }
+.slide-indicator.active {
+            color: white;
+            font-weight: bold;
+        }
+        .slide-indicator.active::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 6rem; /* 96px */
+            background-color: white;
+            margin-left: 0.4rem;
+            margin-top: 0.5rem;
+        }
+   /* --- STYLES FOR UPCOMING EVENTS SLIDER --- */
+  .events-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #6b7280; /* Gray color for inactive dots */
+    opacity: 0.7;
+    transition: background-color 0.3s ease;
+    margin: 0 4px !important; /* Add spacing between dots */
+  }
+
+  .events-pagination .swiper-pagination-bullet-active {
+    background-color: #ffffff; /* White color for the active dot */
+    opacity: 1;
+  }
+
+  
+  /* --- STYLES FOR PAST EVENTS SLIDER --- */
+  .past-events-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #9ca3af; /* Gray color for inactive dots */
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+  }
+
+  .past-events-pagination .swiper-pagination-bullet-active {
+    background-color: #ffffff; /* White color for the active dot */
+    opacity: 1;
+  }
+
+
+  
+  /* --- STYLES FOR SIGNATURE EVENTS SLIDER --- */
+  .signature-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff; /* Darker blue for inactive dots */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+  }
+
+  .signature-pagination .swiper-pagination-bullet-active {
+    background-color: #1a2b42; /* White color for the active dot */
+    opacity: 1;
+  }
+  
+   /* --- STYLES FOR MEET OUR TEAM SLIDER --- */
+  .team-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #1a2b42; /* Darker blue for inactive dots */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+  }
+
+  .team-pagination .swiper-pagination-bullet-active {
+    background-color: #ffffff; /* White color for the active dot */
+    opacity: 1;
+  }
+
+}

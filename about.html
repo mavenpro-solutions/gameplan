@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameplan - Where Champions Complete</title>
+    
+    <!-- Tailwind CSS (assumes you have a local output.css) -->
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS via Play CDN (for easy testing if you don't have a build process) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts for custom font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        /* Custom styles to match the design */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111827; /* A dark background for the page */
+            color: #ffffff;
+        }
+        .font-teko {
+            font-family: 'Teko', sans-serif;
+        }
+        .hero-slide {
+            transition: opacity 1s ease-in-out;
+        }
+        /* Style for the active slide indicator */
+        .slide-indicator.active {
+            color: white;
+            font-weight: bold;
+        }
+        .slide-indicator.active::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 6rem; /* 96px */
+            background-color: white;
+            margin-left: 0.4rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="relative h-screen min-h-[700px] overflow-hidden">
+
+        <!-- =================================== -->
+        <!-- 1. HEADER NAVIGATION                -->
+        <!-- =================================== -->
+        <header class="absolute top-0 left-0 w-full z-40 p-4 md:p-6">
+            <div class="container mx-auto">
+                <div class="bg-[#2d9cdb] flex justify-between items-center px-6 py-2 rounded-md">
+                    <!-- Logo -->
+                    <div class="text-4xl font-teko tracking-wider">
+                        <a href="#" class="border-b-4 border-white pb-1">Gameplan</a>
+                    </div>
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex items-center space-x-8 text-lg">
+                        <a href="#" class="hover:opacity-80 transition-opacity">About Us</a>
+                        <a href="#" class="hover:opacity-80 transition-opacity">Sports</a>
+                        <a href="#" class="hover:opacity-80 transition-opacity">Literature</a>
+                        <a href="#" class="hover:opacity-80 transition-opacity">Art Culture</a>
+                        <a href="#" class="hover:opacity-80 transition-opacity">Corporate Events</a>
+                    </nav>
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="focus:outline-none text-white">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu (Fullscreen Overlay) -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center">
+            <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <nav class="flex flex-col items-center space-y-8 text-2xl">
+                <a href="#" class="hover:text-[#2d9cdb]">About Us</a>
+                <a href="#" class="hover:text-[#2d9cdb]">Sports</a>
+                <a href="#" class="hover:text-[#2d9cdb]">Literature</a>
+                <a href="#" class="hover:text-[#2d9cdb]">Art Culture</a>
+                <a href="#" class="hover:text-[#2d9cdb]">Corporate Events</a>
+            </nav>
+        </div>
+
+        <!-- =================================== -->
+        <!-- 2. HERO SLIDER CONTAINER          -->
+        <!-- =================================== -->
+        <div class="absolute inset-0 z-0">
+            <!-- SLIDE 1 (Main Image) -->
+            <div class="hero-slide absolute inset-0 z-10 opacity-100" data-slide="0">
+                <!-- Replace with your local path: assets/images/hero-background.jpg -->
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 198.png');"></div>
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+            <!-- SLIDE 2 (Example) -->
+            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="1">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 199.png');"></div>
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <!-- SLIDE 3 (Example) -->
+            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="2">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 181.png');"></div>
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <!-- SLIDE 4 (Example) -->
+            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="3">
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+        </div>
+        
+        <!-- =================================== -->
+        <!-- 3. UI CONTROLS & CONTENT OVERLAY  -->
+        <!-- =================================== -->
+        <div class="relative z-10 h-full w-full flex flex-col">
+            <div class="container mx-auto px-4 md:px-6 flex-grow flex items-center">
+                <!-- Main Content -->
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold font-teko leading-tight tracking-wide text-white">Where Champions Complete</h1>
+                    <button class="mt-8 bg-[#e53935] hover:bg-red-700 text-white font-bold py-3 px-10 text-lg transition-colors">
+                        Explore Projects
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Bottom Explore Text -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white">
+                <p class="text-lg">Explore Our Landmarks</p>
+                <svg class="w-8 h-8 mx-auto mt-1 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+        </div>
+
+        <!-- Left-side Slider Indicators -->
+        <div class="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 z-20">
+            <div id="slide-indicators" class="flex flex-col items-start space-y-4 text-xl text-gray-400">
+                <p class="slide-indicator cursor-pointer active" data-slide-to="0">01</p>
+                <p class="slide-indicator cursor-pointer" data-slide-to="1">02</p>
+                <p class="slide-indicator cursor-pointer" data-slide-to="2">03</p>
+                <p class="slide-indicator cursor-pointer" data-slide-to="3">04</p>
+            </div>
+        </div>
+        
+        <!-- Right-side Slider Arrows -->
+        <div class="absolute right-10 md:right-16 bottom-40 md:bottom-1/2 md:translate-y-[120%] z-20 flex space-x-2">
+            <button id="prev-slide" class="text-white/70 hover:text-white transition-colors p-2">&lt;</button>
+            <button id="next-slide" class="text-white/70 hover:text-white transition-colors p-2">&gt;</button>
+        </div>
+
+        <!-- =================================== -->
+        <!-- 4. NEW EVENT ALERT POPUP            -->
+        <!-- =================================== -->
+        <div id="event-alert" class="absolute top-1/3 right-4 md:right-10 lg:right-20 z-30 w-[90vw] max-w-sm bg-gray-800/80 backdrop-blur-xs rounded-lg shadow-2xl text-white overflow-hidden">
+            <div class="p-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">New Event Alert</span>
+                    <button id="close-alert-button" class="text-2xl leading-none text-white/70 hover:text-white">&times;</button>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Replace with your local path: assets/images/event-thumb.png -->
+                    <img src="assets/images/Rectangle 198.png" alt="Event Image" class="w-32 h-20 object-cover rounded flex-shrink-0">
+                    <div class="flex-grow">
+                        <h3 class="font-bold text-lg leading-tight">Reading and Writing India 2025</h3>
+                        <p class="text-sm text-gray-300 mt-1">30 September | 4pm Onwards</p>
+                        <p class="text-xs text-gray-400">Writers Building, Kolkata</p>
+                    </div>
+                    <a href="#" class="self-center text-gray-300 hover:text-white pl-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

@@ -4,17 +4,39 @@
 @theme {
   --color-primary-dark-blue: #031123;
   --color-primary-blue: #142946;
+  --color-primary-light-blue: #0B3C86;
   --color-accent-red: #E23839;
   --color-accent-red-alt: #E85949;
   --color-accent-blue: #3A99D1;
   --color-text-light: #FFFFFF;
   --color-text-gray: #CFCFCF;
   --color-text-dark-gray: #707070;
-  
-  /* Add other colors from your palette as needed */
+   /* -- ADD THESE TWO NEW COLORS -- */
+  --color-accent-green: #61B32D; /* A nice green for Literature */
+  --color-light-beige: #FFFBEB;  /* The background for the section */
+  --color-light-tan-bg: #FFF9E6;
+  --color-dark-gold-text: #8D7520;
+ --color-accent-magenta: #B51A50;
+  --color-light-pink-bg: #FFE6EF;
+ --color-light-cyan-bg: #E0FFFE;
+ --color-dark-charcoal: #383838;
+  --color-light-peach-bg: #FFE6CE;
+  --color-rust-text: #B35800;
+  --color-dark-red-text: #B71610;
+  --color-gold-button: #A68A27;
+  --color-light-mint-bg: #E5FFF3;
+  --color-dark-teal: #15995D;
+--color-accent-teal: #00AAAD;
+ --color-accent-purple: #3D0BB0;
+  --color-deep-purple: #5B0E76;
+ --color-deep-blue: #3D0BB0;
+
+ --color-light-green-bg: #F0F5E8;
+  --color-dark-green-text: #4A6C2F;
   --color-secondary-blue: #325483;
   --color-dark-brown: #572E2A;
   --color-medium-gray: #5B5B5B;
+  
 }
 
 @layer base {

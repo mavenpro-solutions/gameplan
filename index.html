@@ -18,9 +18,6 @@
 </head>
 <body>
 
-    <!-- HERO SECTION WRAPPER -->
-     <main class="relative h-screen min-h-[700px] overflow-hidden">
-
        <!-- =================================== -->
 <!-- 1. HEADER (CORRECTED to be Sticky)  -->
 <!-- =================================== -->
@@ -66,101 +63,103 @@
             </nav>
         </div>
 
-        <!-- =================================== -->
-        <!-- 2. HERO SLIDER CONTAINER          -->
-        <!-- =================================== -->
-        <div class="absolute inset-0 z-0">
-            <!-- SLIDE 1 (Main Image) -->
-            <div class="hero-slide absolute inset-0 z-10 opacity-100" data-slide="0">
-                <!-- Replace with your local path: assets/images/hero-background.jpg -->
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 198.png');"></div>
-                <div class="absolute inset-0 bg-black/40"></div>
-            </div>
-            <!-- SLIDE 2 (Example) -->
-            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="1">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 199.png');"></div>
-                <div class="absolute inset-0 bg-black/50"></div>
-            </div>
-            <!-- SLIDE 3 (Example) -->
-            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="2">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 181.png');"></div>
-                <div class="absolute inset-0 bg-black/50"></div>
-            </div>
-            <!-- SLIDE 4 (Example) -->
-            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="3">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
-                <div class="absolute inset-0 bg-black/50"></div>
+<!-- HERO SECTION WRAPPER -->
+<main class="relative h-screen min-h-[900px] overflow-hidden">
+
+    <!-- =================================== -->
+    <!-- 2. HERO SLIDER CONTAINER          -->
+    <!-- =================================== -->
+    <div class="absolute inset-0 z-0">
+        <!-- SLIDE 1 (Main Image) -->
+        <div class="hero-slide absolute inset-0 z-10 opacity-100" data-slide="0">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 198.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
+        <!-- SLIDE 2 (Example) -->
+        <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="1">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 199.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
+        <!-- SLIDE 3 (Example) -->
+        <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="2">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 181.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
+        <!-- SLIDE 4 (Example) -->
+        <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="3">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        </div>
+    </div>
+    
+    <!-- =================================== -->
+    <!-- 3. UI CONTROLS & CONTENT OVERLAY  -->
+    <!-- =================================== -->
+    <div class="relative z-10 h-full w-full flex flex-col justify-end">
+        <!-- Main Content Container -->
+        <div class="container mx-auto px-4 md:px-12 pb-40 md:pb-32">
+            <div class="max-w-xl">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Where Champions Complete</h1>
+                <button class="mt-8 bg-accent-red-alt hover:bg-red-500 text-white font-bold py-3 px-10 text-lg rounded-md transition-colors">
+                    Explore Projects
+                </button>
             </div>
         </div>
         
-        <!-- =================================== -->
-        <!-- 3. UI CONTROLS & CONTENT OVERLAY  -->
-        <!-- =================================== -->
-        <div class="relative z-10 h-full w-full flex flex-col">
-            <div class="container mx-auto px-4 md:px-6 flex-grow flex items-center">
-                <!-- Main Content -->
-                <div class="max-w-3xl ">
-                    <h1 class="text-5xl md:text-4xl lg:text-6xl font-bold  leading-tight tracking-wide text-white">Where Champions Complete</h1>
-                    <button class="mt-8 bg-accent-red-alt hover:bg-red-500 text-white font-bold py-3 px-10 text-lg transition-colors">
-                        Explore Projects
-                    </button>
-                </div>
-            </div>
+        <!-- Bottom Explore Text -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white">
+            <p class="text-xl">Explore Our Landmarks</p>
+            <svg class="w-7 h-7 mx-auto mt-1 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </div>
+
+    <!-- Left-side Slider Indicators -->
+    <div class="absolute top-100 -translate-y-1/2 left-4 md:left-12 z-20">
+        <div id="slide-indicators" class="flex flex-col items-start space-y-4 text-xl text-gray-400">
+            <p class="slide-indicator cursor-pointer active" data-slide-to="0">01</p>
+            <p class="slide-indicator cursor-pointer" data-slide-to="1">02</p>
+            <p class="slide-indicator cursor-pointer" data-slide-to="2">03</p>
+            <p class="slide-indicator cursor-pointer" data-slide-to="3">04</p>
+        </div>
+    </div>
+    
+    <!-- Right-side Slider Arrows -->
+    <div class="absolute top-1/2 -translate-y-1/2 right-10 md:right-16 z-20 flex flex-col space-y-6">
+        <button id="prev-slide" class="text-white/70 hover:text-white transition-colors p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+        </button>
+        <button id="next-slide" class="text-white/70 hover:text-white transition-colors p-2">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+    </div>
+
+    <!-- =================================== -->
+    <!-- 4. NEW EVENT ALERT POPUP (Corrected)-->
+    <!-- =================================== -->
+    <div id="event-alert" class="absolute top-28 md:top-32 right-4 md:right-10 lg:right-20 z-30 w-[85vw] max-w-xs bg-primary-dark-blue/50 backdrop-blur-xs rounded-lg shadow-2xl text-white overflow-hidden">
+        <!-- Event Image -->
+        <img src="assets/images/Rectangle 196.png" alt="Event Image" class="w-full h-32 object-cover">
+        
+        <!-- Content -->
+        <div class="relative p-5">
+             <!-- Alert Tag -->
+            <span class="absolute -top-32 left-0 bg-accent-red-alt text-white text-xs font-bold px-3 py-1 rounded">New Event Alert</span>
+           
+            <!-- Close Button -->
+            <button id="close-alert-button" class="absolute top-4 right-4 text-2xl leading-none text-white/70 hover:text-white">&times;</button>
             
-            <!-- Bottom Explore Text -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white">
-                <p class="text-2xl">Explore Our Landmarks</p>
-                <svg class="w-8 h-8 mx-auto mt-1 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                <!-- <svg class="w-8 h-8 mx-auto mt-1 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> -->
-            </div>
-        </div>
+            <!-- Text Details -->
+            <h3 class="font-bold text-lg leading-tight mt-2 pr-6">Reading and Writing India 2025</h3>
+            <p class="text-sm text-gray-300 mt-2">30 September | 4pm Onwards</p>
+            <p class="text-xs text-gray-400">Writers Building, Kolkata</p>
 
-        <!-- Left-side Slider Indicators -->
-        <div class="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 z-20">
-            <div id="slide-indicators" class="flex flex-col items-start space-y-4 text-xl text-gray-400">
-                <p class="slide-indicator cursor-pointer active" data-slide-to="0">01</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="1">02</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="2">03</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="3">04</p>
-            </div>
+            <!-- Arrow Link -->
+            <a href="#" class="absolute bottom-4 right-4 text-gray-300 hover:text-white">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
         </div>
-        
-        <!-- Right-side Slider Arrows -->
-        <div class="absolute right-10 md:right-16 bottom-40 md:bottom-1/2 md:translate-y-[120%] z-20 flex space-x-6 pt-36">
-            <button id="prev-slide" class="text-white/70 hover:text-white transition-colors p-2"><svg width="29" height="50" viewBox="0 0 29 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M27.9845 49.0057C26.6305 50.3314 24.4313 50.3314 23.0774 49.0057L1.01548 27.4001C-0.338493 26.0744 -0.338493 23.9256 1.01548 22.5999L23.0774 0.994274C24.4313 -0.331425 26.6306 -0.331425 27.9845 0.994274C29.3385 2.31997 29.3385 4.47326 27.9845 5.79895L8.36944 25L27.9845 44.201C29.3385 45.5267 29.3385 47.68 27.9845 49.0057Z" fill="white"/>
-</svg>
-</button>
-            <button id="next-slide" class="text-white/70 hover:text-white transition-colors p-2"><svg width="29" height="50" viewBox="0 0 29 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.01548 0.994273C2.36945 -0.331424 4.56866 -0.331424 5.92264 0.994273L27.9845 22.5999C29.3385 23.9256 29.3385 26.0744 27.9845 27.4001L5.92264 49.0057C4.56866 50.3314 2.36945 50.3314 1.01548 49.0057C-0.338493 47.68 -0.338493 45.5267 1.01548 44.201L20.6306 25L1.01548 5.79895C-0.338493 4.47326 -0.338493 2.31997 1.01548 0.994273Z" fill="white"/>
-</svg>
-</button>
-        </div>
-
-        <!-- =================================== -->
-        <!-- 4. NEW EVENT ALERT POPUP            -->
-        <!-- =================================== -->
-        <div id="event-alert" class="absolute top-1/3 right-4 md:right-10 lg:right-20 z-30 w-[90vw] h-[200px] max-w-sm bg-gray-800/80 backdrop-blur-xs rounded-lg shadow-2xl text-white overflow-hidden">
-            <div class="p-4">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">New Event Alert</span>
-                    <button id="close-alert-button" class="text-2xl leading-none text-white/70 hover:text-white">&times;</button>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <!-- Replace with your local path: assets/images/event-thumb.png -->
-                    <img src="assets/images/Rectangle 198.png" alt="Event Image" class="w-32 h-20 object-cover rounded flex-shrink-0">
-                    <div class="flex-grow">
-                        <h3 class="font-bold text-lg leading-tight">Reading and Writing India 2025</h3>
-                        <p class="text-sm text-gray-300 mt-1">30 September | 4pm Onwards</p>
-                        <p class="text-xs text-gray-400">Writers Building, Kolkata</p>
-                    </div>
-                    <a href="#" class="self-center text-gray-300 hover:text-white pl-2">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
+    </div>
+</main>
 
     
     <!-- =================================== -->

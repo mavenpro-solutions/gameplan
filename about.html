@@ -3,190 +3,494 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gameplan - Where Champions Complete</title>
+    <title>About Gameplan</title>
     
-    <!-- Tailwind CSS (assumes you have a local output.css) -->
+    <!-- Local CSS build from input.css -->
     <link href="./output.css" rel="stylesheet">
     
-    <!-- Tailwind CSS via Play CDN (for easy testing if you don't have a build process) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper.js CSS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <!-- Google Fonts for custom font style -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <style>
-        /* Custom styles to match the design */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #111827; /* A dark background for the page */
-            color: #ffffff;
-        }
-        .font-teko {
-            font-family: 'Teko', sans-serif;
-        }
-        .hero-slide {
-            transition: opacity 1s ease-in-out;
-        }
-        /* Style for the active slide indicator */
-        .slide-indicator.active {
-            color: white;
-            font-weight: bold;
-        }
-        .slide-indicator.active::after {
-            content: '';
-            display: block;
-            width: 2px;
-            height: 6rem; /* 96px */
-            background-color: white;
-            margin-left: 0.4rem;
-            margin-top: 0.5rem;
-        }
-    </style>
 </head>
-<body>
+<body class="bg-primary-dark-blue">
 
-    <main class="relative h-screen min-h-[700px] overflow-hidden">
-
-        <!-- =================================== -->
-        <!-- 1. HEADER NAVIGATION                -->
-        <!-- =================================== -->
-        <header class="absolute top-0 left-0 w-full z-40 p-4 md:p-6">
-            <div class="container mx-auto">
-                <div class="bg-[#2d9cdb] flex justify-between items-center px-6 py-2 rounded-md">
-                    <!-- Logo -->
-                    <div class="text-4xl font-teko tracking-wider">
-                        <a href="#" class="border-b-4 border-white pb-1">Gameplan</a>
-                    </div>
-                    <!-- Desktop Navigation -->
-                    <nav class="hidden md:flex items-center space-x-8 text-lg">
-                        <a href="#" class="hover:opacity-80 transition-opacity">About Us</a>
-                        <a href="#" class="hover:opacity-80 transition-opacity">Sports</a>
-                        <a href="#" class="hover:opacity-80 transition-opacity">Literature</a>
-                        <a href="#" class="hover:opacity-80 transition-opacity">Art Culture</a>
-                        <a href="#" class="hover:opacity-80 transition-opacity">Corporate Events</a>
-                    </nav>
-                    <!-- Mobile Menu Button -->
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="focus:outline-none text-white">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Mobile Menu (Fullscreen Overlay) -->
-        <div id="mobile-menu" class="hidden fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center">
-            <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <nav class="flex flex-col items-center space-y-8 text-2xl">
-                <a href="#" class="hover:text-[#2d9cdb]">About Us</a>
-                <a href="#" class="hover:text-[#2d9cdb]">Sports</a>
-                <a href="#" class="hover:text-[#2d9cdb]">Literature</a>
-                <a href="#" class="hover:text-[#2d9cdb]">Art Culture</a>
-                <a href="#" class="hover:text-[#2d9cdb]">Corporate Events</a>
+<!-- =================================== -->
+<!-- 1. HEADER                         -->
+<!-- =================================== -->
+<header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 md:p-6">
+    <div class="container mx-auto">
+        <div class="bg-accent-blue flex justify-between items-center px-6 py-2 rounded-md shadow-lg">
+            
+            <!-- LOGO IMAGE -->
+            <a href="index.html">
+                <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-lg text-white">
+                <a href="about.html" class="hover:opacity-80 transition-opacity">About Us</a>
+                <a href="#" class="hover:opacity-80 transition-opacity">Sports</a>
+                <a href="#" class="hover:opacity-80 transition-opacity">Literature</a>
+                <a href="#" class="hover:opacity-80 transition-opacity">Art Culture</a>
+                <a href="#" class="hover:opacity-80 transition-opacity">Corporate Events</a>
             </nav>
-        </div>
 
-        <!-- =================================== -->
-        <!-- 2. HERO SLIDER CONTAINER          -->
-        <!-- =================================== -->
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="focus:outline-none text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu (Fullscreen Overlay) -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center">
+    <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <nav class="flex flex-col items-center space-y-8 text-2xl text-white">
+        <a href="about.html" class="hover:text-gray-300">About Us</a>
+        <a href="#" class="hover:text-gray-300">Sports</a>
+        <a href="#" class="hover:text-gray-300">Literature</a>
+        <a href="#" class="hover:text-gray-300">Art Culture</a>
+        <a href="#" class="hover:text-gray-300">Corporate Events</a>
+    </nav>
+</div>
+
+
+<!-- HERO SECTION FOR ABOUT PAGE -->
+<!-- HERO SECTION FOR ABOUT PAGE -->
+<main>
+    <section class="relative h-[80vh] min-h-[700px] flex flex-col justify-end text-white">
+        <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <!-- SLIDE 1 (Main Image) -->
-            <div class="hero-slide absolute inset-0 z-10 opacity-100" data-slide="0">
-                <!-- Replace with your local path: assets/images/hero-background.jpg -->
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 198.png');"></div>
-                <div class="absolute inset-0 bg-black/40"></div>
-            </div>
-            <!-- SLIDE 2 (Example) -->
-            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="1">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 199.png');"></div>
-                <div class="absolute inset-0 bg-black/50"></div>
-            </div>
-            <!-- SLIDE 3 (Example) -->
-            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="2">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 181.png');"></div>
-                <div class="absolute inset-0 bg-black/50"></div>
-            </div>
-            <!-- SLIDE 4 (Example) -->
-            <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="3">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
-                <div class="absolute inset-0 bg-black/50"></div>
-            </div>
+            <!-- IMPORTANT: Replace with the correct image path for the about page hero -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
+            <!-- Gradient Overlay from bottom to top for better text readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
         </div>
         
-        <!-- =================================== -->
-        <!-- 3. UI CONTROLS & CONTENT OVERLAY  -->
-        <!-- =================================== -->
-        <div class="relative z-10 h-full w-full flex flex-col">
-            <div class="container mx-auto px-4 md:px-6 flex-grow flex items-center">
-                <!-- Main Content -->
-                <div class="max-w-3xl">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold font-teko leading-tight tracking-wide text-white">Where Champions Complete</h1>
-                    <button class="mt-8 bg-[#e53935] hover:bg-red-700 text-white font-bold py-3 px-10 text-lg transition-colors">
-                        Explore Projects
-                    </button>
-                </div>
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-6 md:px-10 pb-20">
+            <h1 class="text-6xl md:text-8xl font-bold tracking-wider">About Gameplan</h1>
+        </div>
+    </section>
+
+    <!-- ABOUT CONTENT & "PLAY ON" SECTION -->
+    <section class="bg-primary-blue py-20 md:py-28">
+        <div class="container mx-auto px-6 md:px-10">
+            <!-- About Text -->
+            <div class="max-w-8xl mx-auto text-white space-y-8 text-base md:text-lg leading-relaxed">
+                <p>
+                    Gameplan Sports Private Limited was established in 1998 at a time when sports marketing was a nascent industry in India. Over the last 25 years Gameplan has worked with sponsorship, in stadium advertising, player management, franchise leagues including Indian Premier League, Indian Super League and Pro Kabaddi League. Gameplan has been associated with Kolkata Knight Riders since the inception of IPL in 2008. The company has also worked with content management and digital marketing, among other verticals in sports.
+                </p>
+                <p>
+                    In 2012 we diversified in arts and culture based events. The Kolkata Literary Meet is now one of India’s foremost culture events and Gameplan has also worked with cinema (commissioning films for the pioneering Royal Stag Barrel Select Large Short Films) besides curating cultural events in classical music and art. In 2018, Gameplan started and introduced Tata Steel Chess India which has since become India’s foremost chess event and also the first to offer equal prize money in the open and women’s competition.
+                </p>
             </div>
             
-            <!-- Bottom Explore Text -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white">
-                <p class="text-lg">Explore Our Landmarks</p>
-                <svg class="w-8 h-8 mx-auto mt-1 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            <!-- "PLAY ON" Banner Text -->
+            <div class="text-end mt-20 md:mt-28">
+                <h2 class="text-7xl md:text-9xl lg:text-[150px] font-bold text-accent-red  uppercase">
+                    PLAY ON
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================== -->
+<!-- OUR SERVICES GRID SECTION           -->
+<!-- =================================== -->
+<section class="bg-light-beige py-20 md:py-28">
+    <div class="container mx-auto px-4 md:px-6">
+        
+        <!-- Grid Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+            <!-- Card 1: Sports -->
+            <div class="group">
+                <div class="bg-accent-blue py-4 px-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-widest">Sports</h3>
+                </div>
+                <div>
+                    <!-- Replace with your actual image path -->
+                    <img src="assets/images/Rectangle 248.png" alt="A scene from a sports event" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Card 2: Literature -->
+            <div class="group">
+                <div class="bg-accent-green py-4 px-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-widest">Literature</h3>
+                </div>
+                <div>
+                    <!-- Replace with your actual image path -->
+                    <img src="assets/images/Rectangle 248.png" alt="A panel discussion at a literary event" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Card 3: Art & Culture -->
+            <div class="group">
+                <div class="bg-dark-brown py-4 px-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-widest">Art & Culture</h3>
+                </div>
+                <div>
+                    <!-- Replace with your actual image path -->
+                    <img src="assets/images/Rectangle 248.png" alt="People looking at art in a gallery" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Card 4: Corporate Event & Engagement -->
+            <div class="group">
+                <div class="bg-primary-blue py-4 px-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-widest">Corporate Event & Engagement</h3>
+                </div>
+                <div>
+                    <!-- Replace with your actual image path -->
+                    <img src="assets/images/Rectangle 248.png" alt="A corporate event in progress" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =================================== -->
+<!-- 9. TRUSTED BRANDS SECTION (EXPANDED) -->
+<!-- =================================== -->
+<section class="bg-white py-20">
+    <div class="container mx-auto px-4 md:px-6">
+
+        <!-- Section Header -->
+        <div class="text-center">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-[#e53935]">
+                Brands Who Trust Our Plans
+            </h2>
+        </div>
+
+        <!-- Responsive Logo Wall -->
+        <div class="mt-16 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-8 gap-y-12">
+            
+            <!-- Row 1 -->
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+             <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
+            </div>
+
+            <!-- Row 2 -->
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+             <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
+            </div>
+
+            <!-- Row 3 -->
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+             <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
+            </div>
+
+            <!-- Row 4 -->
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+             <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
+            </div>
+            
+             <!-- Row 5 -->
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+             <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- =================================== -->
+<!-- 10. MEET OUR TEAM SECTION           -->
+<!-- =================================== -->
+<section class="bg-accent-blue py-20">
+    <div class="container mx-auto px-4 md:px-6">
+        
+        <!-- Section Header -->
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white">
+                Meet Our Team
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+                <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl">&lt;</button>
+                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl">&gt;</button>
             </div>
         </div>
 
-        <!-- Left-side Slider Indicators -->
-        <div class="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 z-20">
-            <div id="slide-indicators" class="flex flex-col items-start space-y-4 text-xl text-gray-400">
-                <p class="slide-indicator cursor-pointer active" data-slide-to="0">01</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="1">02</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="2">03</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="3">04</p>
+        <!-- Team Slider -->
+        <div class="swiper team-slider">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1: Jeet Banerjee -->
+                <div class="swiper-slide">
+                    <div class="text-center">
+                        <img src="assets/images/Rectangle 169.png" alt="Jeet Banerjee" class="w-full object-cover">
+                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Jeet Banerjee</h3>
+                        <p class="text-white/80 uppercase text-sm tracking-widest">Director</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Malavika Banerjee -->
+                <div class="swiper-slide">
+                     <div class="text-center">
+                        <img src="assets/images/Rectangle 169.png" alt="Malavika Banerjee" class="w-full object-cover">
+                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Malavika Banerjee</h3>
+                        <p class="text-white/80 uppercase text-sm tracking-widest">Director</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Prem Khatwani -->
+                <div class="swiper-slide">
+                     <div class="text-center">
+                        <img src="assets/images/Rectangle 169.png" alt="Prem Khatwani" class="w-full object-cover">
+                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Prem Khatwani</h3>
+                        <p class="text-white/80 uppercase text-sm tracking-widest">Director</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 (Example) -->
+                <div class="swiper-slide">
+                     <div class="text-center">
+                        <img src="assets/images/Rectangle 169.png" alt="Team Member" class="w-full object-cover">
+                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Sujata Sen</h3>
+                        <p class="text-white/80 uppercase text-sm tracking-widest">Consultant</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 5 (Example) -->
+                <div class="swiper-slide">
+                     <div class="text-center">
+                        <img src="assets/images/Rectangle 169.png" alt="Team Member" class="w-full object-cover">
+                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Another Member</h3>
+                        <p class="text-white/80 uppercase text-sm tracking-widest">Manager</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Slider Pagination Dots -->
+        <div class="team-pagination mt-8 text-center"></div>
+
+    </div>
+</section>
+
+</main>
+
+
+<!-- =================================== -->
+<!-- 11. FOOTER SECTION                  -->
+<!-- =================================== -->
+<footer class="bg-black">
+    <!-- Top Red Banner -->
+    <div class="bg-accent-red py-12">
+        <div class="container mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-white text-center sm:text-left">
+            <h2 class=" text-6xl md:text-8xl font-semibold uppercase">Play On</h2>
+            <h3 class=" text-4xl md:text-5xl  leading-tight">Every Event<br>Every Experience</h3>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="container mx-auto px-4 md:px-6 py-20 text-white">
+        <!-- Footer Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <!-- Column 1: Offices -->
+            <div class="space-y-10">
+                <!-- Logo -->
+                <div>
+                     <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
+                </div>
+                
+                <!-- Office Locations -->
+                <div class="space-y-6 text-gray-400">
+                    <div>
+                        <h4 class="font-bold text-white uppercase tracking-widest text-sm mb-2">Head Office</h4>
+                        <p>L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-white uppercase tracking-widest text-sm mb-2">Bhubaneshwar Office</h4>
+                        <p>L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-white uppercase tracking-widest text-sm mb-2">Jharkhand Office</h4>
+                        <p>L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 & 3 Combined for layout -->
+            <div class="md:col-span-2">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+                    
+                    <!-- Contact Column -->
+                    <div class="space-y-6">
+                        <h4 class="font-bold text-white uppercase tracking-widest text-sm">Contact</h4>
+                        <div class="text-gray-400 space-y-3">
+                            <p><a href="mailto:mail@gameplan.co.in" class="hover:text-white">mail@gameplan.co.in</a></p>
+                            <p>+ 91 (0) 33 2282 1960/61</p>
+                            <p>+ 91 (0) 33 3290 4947</p>
+                            <p>+ 91 (0) 33 2282 1959</p>
+                        </div>
+                        <div class="pt-8">
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                        </div>
+                    </div>
+
+                    <!-- Follow Us Column -->
+                     <div class="space-y-6">
+                        <h4 class="font-bold text-white uppercase tracking-widest text-sm">Follow Us On</h4>
+                        <div class="flex items-center space-x-3">
+                            <!-- Facebook -->
+                            <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full text-gray-400 hover:bg-white hover:text-black transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                            </a>
+                            <!-- X (Twitter) -->
+                             <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full text-gray-400 hover:bg-white hover:text-black transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <!-- Instagram -->
+                             <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full text-gray-400 hover:bg-white hover:text-black transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                            </a>
+                            <!-- LinkedIn -->
+                             <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full text-gray-400 hover:bg-white hover:text-black transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                            </a>
+                        </div>
+                        <div class="pt-8">
+                            <a href="#" class="text-gray-400 hover:text-white text-sm">Terms & Conditions</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <!-- Right-side Slider Arrows -->
-        <div class="absolute right-10 md:right-16 bottom-40 md:bottom-1/2 md:translate-y-[120%] z-20 flex space-x-2">
-            <button id="prev-slide" class="text-white/70 hover:text-white transition-colors p-2">&lt;</button>
-            <button id="next-slide" class="text-white/70 hover:text-white transition-colors p-2">&gt;</button>
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-sm">
+            © Gameplan Copyright 2025, All Rights Reserved
         </div>
+    </div>
+</footer>
 
-        <!-- =================================== -->
-        <!-- 4. NEW EVENT ALERT POPUP            -->
-        <!-- =================================== -->
-        <div id="event-alert" class="absolute top-1/3 right-4 md:right-10 lg:right-20 z-30 w-[90vw] max-w-sm bg-gray-800/80 backdrop-blur-xs rounded-lg shadow-2xl text-white overflow-hidden">
-            <div class="p-4">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">New Event Alert</span>
-                    <button id="close-alert-button" class="text-2xl leading-none text-white/70 hover:text-white">&times;</button>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <!-- Replace with your local path: assets/images/event-thumb.png -->
-                    <img src="assets/images/Rectangle 198.png" alt="Event Image" class="w-32 h-20 object-cover rounded flex-shrink-0">
-                    <div class="flex-grow">
-                        <h3 class="font-bold text-lg leading-tight">Reading and Writing India 2025</h3>
-                        <p class="text-sm text-gray-300 mt-1">30 September | 4pm Onwards</p>
-                        <p class="text-xs text-gray-400">Writers Building, Kolkata</p>
-                    </div>
-                    <a href="#" class="self-center text-gray-300 hover:text-white pl-2">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="assets/js/main.js"></script>
-
 
 </body>
 </html>

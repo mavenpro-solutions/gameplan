@@ -36,20 +36,28 @@
   --color-secondary-blue: #325483;
   --color-dark-brown: #572E2A;
   --color-medium-gray: #5B5B5B;
-  
+  --font-DarkerGrotesque: 'DarkerGrotesque' , sans-serif;
 }
 
 @layer base {
   body {
     background-color: var(--color-primary-dark-blue);
     color: var(--color-text-light);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DarkerGrotesque', sans-serif;
   }
 
 }
 
 
 @layer components {
+
+   @font-face {
+  font-family: DarkerGrotesque;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
+}
  /* --- CORRECTED SWIPER PAGINATION STYLES --- */
   .swiper-pagination-custom .swiper-pagination-bullet {
     all: unset; /* Reset default Swiper styles */

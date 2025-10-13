@@ -103,7 +103,16 @@
             margin-left: 0.4rem;
             margin-top: 0.5rem;
         }
+
+
+
    /* --- STYLES FOR UPCOMING EVENTS SLIDER --- */
+
+     /* --- UPCOMING EVENTS SLIDER --- */
+  .events-pagination {
+    /* --- FIX: Override Swiper's default blue color --- */
+    --swiper-pagination-color: #ffffff;
+  }
   .events-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -120,6 +129,11 @@
 
   
   /* --- STYLES FOR PAST EVENTS SLIDER --- */
+    /* --- PAST EVENTS SLIDER --- */
+  .past-events-pagination {
+    /* --- FIX: Override Swiper's default blue color --- */
+    --swiper-pagination-color: #ffffff;
+  }
   .past-events-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -134,7 +148,22 @@
     opacity: 1;
   }
 
-
+ /* --- FIX: ADD STYLES FOR THE NEW SPORTS SLIDER --- */
+  .sports-events-pagination {
+    --swiper-pagination-color: #ffffff;
+  }
+  .sports-events-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+  }
+  .sports-events-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.2);
+  }
   
   /* --- STYLES FOR SIGNATURE EVENTS SLIDER --- */
   .signature-pagination .swiper-pagination-bullet {
@@ -152,6 +181,10 @@
   }
   
    /* --- STYLES FOR MEET OUR TEAM SLIDER --- */
+     .team-pagination {
+    /* --- FIX: Override Swiper's default blue color --- */
+    --swiper-pagination-color: #ffffff;
+  }
   .team-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -164,6 +197,45 @@
   .team-pagination .swiper-pagination-bullet-active {
     background-color: #ffffff; /* White color for the active dot */
     opacity: 1;
+  }
+
+  /* --- STYLES FOR SIGNATURE (ART & CULTURE) SLIDER --- */
+   .art-culture-pagination {
+    /* --- FIX: Override Swiper's default blue color --- */
+    --swiper-pagination-color: #ffffff;
+  }
+  .art-culture-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff; /* White color */
+    opacity: 0.4; /* Inactive dots are faded */
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+  }
+
+  .art-culture-pagination .swiper-pagination-bullet-active {
+    opacity: 1; /* Active dot is fully white */
+    transform: scale(1.2);
+  }
+
+  
+  /* --- STYLES FOR SIGNATURE (CORPORATE) SLIDER --- */
+    .corporate-pagination {
+    /* --- FIX: Override Swiper's default blue color --- */
+    --swiper-pagination-color: #ffffff;
+  }
+  .corporate-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff; /* White color */
+    opacity: 0.4; /* Inactive dots are faded */
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+  }
+
+  .corporate-pagination .swiper-pagination-bullet-active {
+    opacity: 1; /* Active dot is fully white */
+    transform: scale(1.2);
   }
 
 }

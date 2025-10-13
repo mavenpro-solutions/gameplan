@@ -9,30 +9,28 @@
     <link href="./output.css" rel="stylesheet">
     
     <!-- Swiper.js CSS Library -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="src/swiper-bundle.min.css" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-       <!-- =================================== -->
-<!-- 1. HEADER (CORRECTED to be Sticky)  -->
+<!-- =================================== -->
+<!-- 1. HEADER (WITH MOBILE MENU)      -->
 <!-- =================================== -->
 <header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 md:p-6">
+    
+    <!-- Desktop Header Bar -->
     <div class="container mx-auto">
         <div class="bg-accent-blue flex justify-between items-center px-6 py-2 rounded-md shadow-lg">
             
-            <!-- LOGO IMAGE as requested -->
-            <a href="#">
+            <!-- Logo for Desktop -->
+            <a href="index.html">
                 <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
             </a>
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8 text-lg text-white">
-                <a href="#" class="hover:opacity-80 transition-opacity">About Us</a>
+                <a href="about.html" class="hover:opacity-80 transition-opacity">About Us</a>
                 <a href="#" class="hover:opacity-80 transition-opacity">Sports</a>
                 <a href="#" class="hover:opacity-80 transition-opacity">Literature</a>
                 <a href="#" class="hover:opacity-80 transition-opacity">Art Culture</a>
@@ -42,124 +40,155 @@
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="focus:outline-none text-white">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 19" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="3" rx="1.5" fill="white"/>
+                        <rect y="8" width="24" height="3" rx="1.5" fill="white"/>
+                        <rect y="16" width="24" height="3" rx="1.5" fill="white"/>
+                    </svg>
                 </button>
             </div>
         </div>
     </div>
-</header>
 
-        <!-- Mobile Menu (Fullscreen Overlay) -->
-        <div id="mobile-menu" class="hidden fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center">
-            <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <nav class="flex flex-col items-center space-y-8 text-2xl">
-                <a href="#" class="hover:text-gray-300">About Us</a>
-                <a href="#" class="hover:text-gray-300">Sports</a>
-                <a href="#" class="hover:text-gray-300">Literature</a>
-                <a href="#" class="hover:text-gray-300">Art Culture</a>
-                <a href="#" class="hover:text-gray-300">Corporate Events</a>
+    <!-- Mobile Menu Panel (Slides in from the right) -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-full max-w-md bg-accent-blue z-50 p-8 transform translate-x-full transition-transform duration-300 ease-in-out text-white">
+        
+        <!-- Close Button -->
+        <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none p-2">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Menu Content -->
+        <div class="flex flex-col h-full pt-10">
+            <!-- Logo for Mobile Menu (Styled to be white) -->
+            <a href="index.html" class="mb-16">
+                <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10 brightness-0 invert">
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="flex flex-col space-y-5">
+                <a href="about.html" class="text-3xl  hover:opacity-80 transition-opacity">About Us</a>
+                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Sports</a>
+                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Literature</a>
+                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Art Culture</a>
+                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Corporate Events</a>
             </nav>
         </div>
-
-<!-- HERO SECTION WRAPPER -->
-<main class="relative h-screen min-h-[900px] overflow-hidden">
+    </div>
+</header>
+<main>
+ <!-- HERO SECTION WRAPPER -->
+   <div class="relative h-screen min-h-[700px] overflow-hidden">
 
     <!-- =================================== -->
     <!-- 2. HERO SLIDER CONTAINER          -->
     <!-- =================================== -->
     <div class="absolute inset-0 z-0">
-        <!-- SLIDE 1 (Main Image) -->
+        
+        <!-- SLIDE 1 -->
         <div class="hero-slide absolute inset-0 z-10 opacity-100" data-slide="0">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 198.png');"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 197.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <!-- Slide 1 Content -->
+            <div class="relative z-10 h-full w-full flex flex-col justify-end">
+                <div class="container mx-auto px-6 md:px-12 pb-32 sm:pb-40 md:pb-32">
+                    <div class="max-w-2xl">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Ruskin Bond & Malavika Banerjee</h1>
+                        <button class="mt-6 md:mt-8 bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-3 px-10 text-base md:text-lg rounded-md transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- SLIDE 2 (Example) -->
+
+        <!-- SLIDE 2 -->
         <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="1">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 199.png');"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <!-- Slide 2 Content -->
+            <div class="relative z-10 h-full w-full flex flex-col justify-end">
+                <div class="container mx-auto px-6 md:px-12 pb-32 sm:pb-40 md:pb-32">
+                    <div class="max-w-2xl">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Another Featured Speaker</h1>
+                        <button class="mt-6 md:mt-8 bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-3 px-10 text-base md:text-lg rounded-md transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- SLIDE 3 (Example) -->
+
+        <!-- SLIDE 3 -->
         <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="2">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 181.png');"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+             <!-- Slide 3 Content -->
+            <div class="relative z-10 h-full w-full flex flex-col justify-end">
+                <div class="container mx-auto px-6 md:px-12 pb-32 sm:pb-40 md:pb-32">
+                    <div class="max-w-2xl">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Literary Discussions</h1>
+                        <button class="mt-6 md:mt-8 bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-3 px-10 text-base md:text-lg rounded-md transition-colors">
+                            View Schedule
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- SLIDE 4 (Example) -->
+
+        <!-- SLIDE 4 -->
         <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="3">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 198.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+             <!-- Slide 4 Content -->
+            <div class="relative z-10 h-full w-full flex flex-col justify-end">
+                <div class="container mx-auto px-6 md:px-12 pb-32 sm:pb-40 md:pb-32">
+                    <div class="max-w-2xl">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Engaging Audiences</h1>
+                        <button class="mt-6 md:mt-8 bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-3 px-10 text-base md:text-lg rounded-md transition-colors">
+                            Get Tickets
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
     <!-- =================================== -->
-    <!-- 3. UI CONTROLS & CONTENT OVERLAY  -->
+    <!-- 3. UI CONTROLS OVERLAY            -->
     <!-- =================================== -->
-    <div class="relative z-10 h-full w-full flex flex-col justify-end">
-        <!-- Main Content Container -->
-        <div class="container mx-auto px-4 md:px-12 pb-40 md:pb-32">
-            <div class="max-w-xl">
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Where Champions Complete</h1>
-                <button class="mt-8 bg-accent-red-alt hover:bg-red-500 text-white font-bold py-3 px-10 text-lg rounded-md transition-colors">
-                    Explore Projects
-                </button>
+    <!-- This container ensures controls are above the slides -->
+    <div class="relative z-20 h-full w-full pointer-events-none">
+        <!-- Left-side Slider Indicators -->
+        <div class="absolute top-50 md:top-1/2 -translate-y-1/4 md:-translate-y-1/2 left-4 md:left-12 pointer-events-auto">
+            <div id="slide-indicators" class="flex flex-col items-start space-y-4 text-xl text-gray-400">
+                <p class="slide-indicator cursor-pointer active" data-slide-to="0">01</p>
+                <p class="slide-indicator cursor-pointer" data-slide-to="1">02</p>
+                <p class="slide-indicator cursor-pointer" data-slide-to="2">03</p>
+                <p class="slide-indicator cursor-pointer" data-slide-to="3">04</p>
             </div>
         </div>
         
-        <!-- Bottom Explore Text -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white">
-            <p class="text-xl">Explore Our Landmarks</p>
-            <svg class="w-7 h-7 mx-auto mt-1 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        <!-- Right-side Slider Arrows -->
+        <div class="absolute bottom-20 md:bottom-32 right-6 sm:right-10 md:right-16 pointer-events-auto">
+            <div class="flex space-x-6">
+                <button id="prev-slide">
+                  <svg width="29" height="50" viewBox="0 0 29 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 md:h-16 w-6 md:w-16">
+<path d="M27.9845 49.0057C26.6305 50.3314 24.4313 50.3314 23.0774 49.0057L1.01548 27.4001C-0.338493 26.0744 -0.338493 23.9256 1.01548 22.5999L23.0774 0.994274C24.4313 -0.331425 26.6306 -0.331425 27.9845 0.994274C29.3385 2.31997 29.3385 4.47326 27.9845 5.79895L8.36944 25L27.9845 44.201C29.3385 45.5267 29.3385 47.68 27.9845 49.0057Z" fill="white"/>
+</svg>
+</button>
+                <button id="next-slide" >
+                    <svg width="29" height="50" viewBox="0 0 29 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 md:h-16 w-6 md:w-16">
+<path d="M1.01548 0.994273C2.36945 -0.331424 4.56866 -0.331424 5.92264 0.994273L27.9845 22.5999C29.3385 23.9256 29.3385 26.0744 27.9845 27.4001L5.92264 49.0057C4.56866 50.3314 2.36945 50.3314 1.01548 49.0057C-0.338493 47.68 -0.338493 45.5267 1.01548 44.201L20.6306 25L1.01548 5.79895C-0.338493 4.47326 -0.338493 2.31997 1.01548 0.994273Z" fill="white"/>
+</svg>
+</button>
+            </div>
         </div>
     </div>
 
-    <!-- Left-side Slider Indicators -->
-    <div class="absolute top-100 -translate-y-1/2 left-4 md:left-12 z-20">
-        <div id="slide-indicators" class="flex flex-col items-start space-y-4 text-xl text-gray-400">
-            <p class="slide-indicator cursor-pointer active" data-slide-to="0">01</p>
-            <p class="slide-indicator cursor-pointer" data-slide-to="1">02</p>
-            <p class="slide-indicator cursor-pointer" data-slide-to="2">03</p>
-            <p class="slide-indicator cursor-pointer" data-slide-to="3">04</p>
-        </div>
-    </div>
-    
-    <!-- Right-side Slider Arrows -->
-    <div class="absolute top-1/2 -translate-y-1/2 right-10 md:right-16 z-20 flex flex-col space-y-6">
-        <button id="prev-slide" class="text-white/70 hover:text-white transition-colors p-2">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-        </button>
-        <button id="next-slide" class="text-white/70 hover:text-white transition-colors p-2">
-             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-        </button>
-    </div>
-
-    <!-- =================================== -->
-    <!-- 4. NEW EVENT ALERT POPUP (Corrected)-->
-    <!-- =================================== -->
-    <div id="event-alert" class="absolute top-28 md:top-32 right-4 md:right-10 lg:right-20 z-30 w-[85vw] max-w-xs bg-primary-dark-blue/50 backdrop-blur-xs rounded-lg shadow-2xl text-white overflow-hidden">
-        <!-- Event Image -->
-        <img src="assets/images/Rectangle 196.png" alt="Event Image" class="w-full h-32 object-cover">
-        
-        <!-- Content -->
-        <div class="relative p-5">
-             <!-- Alert Tag -->
-            <span class="absolute -top-32 left-0 bg-accent-red-alt text-white text-xs font-bold px-3 py-1 rounded">New Event Alert</span>
-           
-            <!-- Close Button -->
-            <button id="close-alert-button" class="absolute top-4 right-4 text-2xl leading-none text-white/70 hover:text-white">&times;</button>
-            
-            <!-- Text Details -->
-            <h3 class="font-bold text-lg leading-tight mt-2 pr-6">Reading and Writing India 2025</h3>
-            <p class="text-sm text-gray-300 mt-2">30 September | 4pm Onwards</p>
-            <p class="text-xs text-gray-400">Writers Building, Kolkata</p>
-
-            <!-- Arrow Link -->
-            <a href="#" class="absolute bottom-4 right-4 text-gray-300 hover:text-white">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </a>
-        </div>
-    </div>
-</main>
+</div>
 
     
     <!-- =================================== -->
@@ -175,12 +204,12 @@
                 </h2>
                 <!-- Slider Navigation Arrows -->
                 <div class="hidden md:flex items-center space-x-2">
-                    <button id="events-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.0722 33.3988C18.1494 34.3023 16.6506 34.3023 15.7278 33.3988L0.692048 18.674C-0.230721 17.7705 -0.230721 16.306 0.692049 15.4025L15.7278 0.677635C16.6506 -0.225865 18.1494 -0.225865 19.0722 0.677635C19.995 1.58114 19.995 3.04866 19.0722 3.95216L5.70398 17.0382L19.0722 30.1243C19.995 31.0278 19.995 32.4953 19.0722 33.3988Z" fill="white"/>
+                     <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z" fill="white"/>
 </svg>
 </button>
-                    <button id="events-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.928039 0.677869C1.85081 -0.225631 3.34963 -0.225631 4.2724 0.677869L19.3082 15.4027C20.231 16.3062 20.231 17.7707 19.3082 18.6742L4.2724 33.399C3.34963 34.3025 1.85081 34.3025 0.928039 33.399C0.00526948 32.4955 0.00526948 31.028 0.928039 30.1245L14.2963 17.0384L0.928039 3.95239C0.00526948 3.04889 0.00526948 1.58137 0.928039 0.677869Z" fill="white"/>
+                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z" fill="white"/>
 </svg>
 </button>
                 </div>
@@ -193,14 +222,17 @@
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <a href="#" class="block group">
-                            <div class="bg-[#e53935] p-6 rounded-t-lg">
+                            <div class="bg-accent-red p-6 rounded-t-lg">
                                 <h3 class="text-2xl font-bold text-white mb-4">The Shakti of Music 2025</h3>
                                 <div class="flex justify-between items-center text-white">
                                     <div>
                                         <p>4 September 2025</p>
                                         <p class="text-sm">Kolkata</p>
                                     </div>
-                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                                 </div>
                             </div>
                             <img src="assets/images/Rectangle 178.png" alt="Zakir Hussain playing tabla" class="w-full h-72 object-cover rounded-b-lg">
@@ -210,14 +242,17 @@
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                          <a href="#" class="block group">
-                            <div class="bg-[#e53935] p-6 rounded-t-lg">
+                            <div class="bg-accent-red p-6 rounded-t-lg">
                                 <h3 class="text-2xl font-bold text-white mb-4">Good Economics for Hard Times</h3>
                                 <div class="flex justify-between items-center text-white">
                                     <div>
                                         <p>28 September 2025</p>
                                         <p class="text-sm">Kolkata</p>
                                     </div>
-                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                                 </div>
                             </div>
                             <img src="assets/images/Rectangle 178.png" alt="Abhijit Banerjee speaking" class="w-full h-72 object-cover rounded-b-lg">
@@ -227,14 +262,17 @@
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
                          <a href="#" class="block group">
-                            <div class="bg-[#e53935] p-6 rounded-t-lg">
+                            <div class="bg-accent-red p-6 rounded-t-lg">
                                 <h3 class="text-2xl font-bold text-white mb-4">The Shakti of Music 2025</h3>
                                 <div class="flex justify-between items-center text-white">
                                     <div>
                                         <p>27 September 2025</p>
                                         <p class="text-sm">Kolkata</p>
                                     </div>
-                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                                 </div>
                             </div>
                             <img src="assets/images/Rectangle 181.png" alt="Shakti band performing" class="w-full h-72 object-cover rounded-b-lg">
@@ -244,14 +282,17 @@
                     <!-- Slide 4 (Example) -->
                     <div class="swiper-slide">
                          <a href="#" class="block group">
-                            <div class="bg-[#e53935] p-6 rounded-t-lg">
+                            <div class="bg-accent-red p-6 rounded-t-lg">
                                 <h3 class="text-2xl font-bold text-white mb-4">Another Great Event</h3>
                                 <div class="flex justify-between items-center text-white">
                                     <div>
                                         <p>15 October 2025</p>
                                         <p class="text-sm">Delhi</p>
                                     </div>
-                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                                 </div>
                             </div>
                             <img src="assets/images/Rectangle 178.png" alt="Event placeholder image" class="w-full h-72 object-cover rounded-b-lg">
@@ -280,8 +321,14 @@
             </h2>
             <!-- Slider Navigation Arrows -->
             <div class="hidden md:flex items-center space-x-2">
-                <button id="past-events-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl">&lt;</button>
-                <button id="past-events-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl">&gt;</button>
+                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z" fill="white"/>
+</svg>
+</button>
+                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z" fill="white"/>
+</svg>
+</button>
             </div>
         </div>
 
@@ -292,13 +339,16 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <a href="#" class="block group relative overflow-hidden rounded-lg">
-                        <img src="https://i.imgur.com/uR29w2k.png" alt="Event: Cricket and Beyond" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="assets/images/Rectangle 181.png" alt="Event: Cricket and Beyond" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white w-full">
                             <h3 class="text-2xl font-bold">Cricket and Beyond</h3>
                             <div class="flex justify-between items-center mt-2 opacity-80">
                                 <p>20 April 2025</p>
-                                <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                             </div>
                         </div>
                     </a>
@@ -307,13 +357,16 @@
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                      <a href="#" class="block group relative overflow-hidden rounded-lg">
-                        <img src="https://i.imgur.com/2U5VqG3.png" alt="Event: The name is Bond" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="assets/images/Rectangle 199.png" alt="Event: The name is Bond" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white w-full">
                             <h3 class="text-2xl font-bold">The name is Bond</h3>
                             <div class="flex justify-between items-center mt-2 opacity-80">
                                 <p>20 April 2025</p>
-                                <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                             </div>
                         </div>
                     </a>
@@ -322,13 +375,16 @@
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
                      <a href="#" class="block group relative overflow-hidden rounded-lg">
-                        <img src="https://i.imgur.com/F0rDkX2.png" alt="Event: Plying with the..." class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="assets/images/Rectangle 198.png" alt="Event: Plying with the..." class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white w-full">
                             <h3 class="text-2xl font-bold">Plying with the...</h3>
                             <div class="flex justify-between items-center mt-2 opacity-80">
                                 <p>20 April 2025</p>
-                                <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                             </div>
                         </div>
                     </a>
@@ -337,13 +393,16 @@
                 <!-- Slide 4 (Example) -->
                 <div class="swiper-slide">
                      <a href="#" class="block group relative overflow-hidden rounded-lg">
-                        <img src="https://i.imgur.com/yD9KRyv.jpeg" alt="Past Event placeholder" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="assets/images/Rectangle 198.png" alt="Past Event placeholder" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white w-full">
                             <h3 class="text-2xl font-bold">Historic Moment</h3>
                             <div class="flex justify-between items-center mt-2 opacity-80">
                                 <p>15 March 2025</p>
-                                <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                             </div>
                         </div>
                     </a>
@@ -366,7 +425,7 @@
     <div class="container mx-auto px-4 md:px-6 relative">
 
         <!-- Decorative Background Text -->
-        <h2 class="absolute top-0 right-0 text-[10rem] lg:text-[10rem] font-bold text-accent-red opacity-90 select-none -translate-y-1/4 hidden sm:block z-0">
+        <h2 class="absolute -top-6 right-0 text-[10rem] lg:text-[10rem] font-bold text-accent-red opacity-90 select-none -translate-y-1/4 hidden sm:block z-0">
             PLAY ON
         </h2>
 
@@ -382,14 +441,14 @@
                 <!-- LEFT COLUMN (Two large items stacked) -->
                 <div class="flex flex-col gap-6">
                     <!-- Item 1: Consulting -->
-                    <a href="#" class="group relative h-120 block overflow-hidden rounded-lg shadow-lg">
+                    <a href="#" class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg">
                         <img src="assets/images/Rectangle 197.png" alt="Consulting with Shah Rukh Khan" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <h3 class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white">Consulting</h3>
                     </a>
 
                     <!-- Item 4: Event Management -->
-                    <a href="#" class="group relative h-120 block overflow-hidden rounded-lg shadow-lg">
+                    <a href="#" class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg">
                         <img src="assets/images/Rectangle 178.png" alt="Event Management" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <h3 class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white">Event Management</h3>
@@ -402,14 +461,14 @@
     <!-- First vertical stack (even heights) -->
     <div class="flex flex-col gap-6">
         <!-- Item 2: Instadia Branding -->
-        <a href="#" class="group relative h-120 block overflow-hidden rounded-lg shadow-lg">
+        <a href="#" class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg">
             <img src="assets/images/Rectangle 178.png" alt="Instadia Branding" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
             <h3 class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight">Instadia<br>Branding</h3>
         </a>
 
         <!-- Item 5: Media Syndication -->
-        <a href="#" class="group relative h-120 block overflow-hidden rounded-lg shadow-lg">
+        <a href="#" class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg">
             <img src="assets/images/Rectangle 200.png" alt="Media Syndication" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
             <h3 class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight">Media<br>Syndication</h3>
@@ -419,14 +478,14 @@
     <!-- Second vertical stack (uneven heights to match design) -->
     <div class="flex flex-col gap-6">
         <!-- Item 3: Sponsorship Sales (Taller) -->
-        <a href="#" class="group relative h-150 block overflow-hidden rounded-lg shadow-lg">
+        <a href="#" class="group relative h-60 md:h-150 block overflow-hidden rounded-lg shadow-lg">
             <img src="assets/images/Rectangle 198.png" alt="Sponsorship Sales" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
             <h3 class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight">Sponsorship<br>Sales</h3>
         </a>
         
         <!-- Item 6: Players Endorsement (Shorter) -->
-        <a href="#" class="group relative h-90 block overflow-hidden rounded-lg shadow-lg">
+        <a href="#" class="group relative h-60 md:h-90 block overflow-hidden rounded-lg shadow-lg">
             <img src="assets/images/Rectangle 199.png" alt="Players Endorsement" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
             <h3 class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight">Players<br>Endorsement</h3>
@@ -453,8 +512,14 @@
             </h2>
             <!-- Slider Navigation Arrows -->
             <div class="hidden md:flex items-center space-x-2">
-                <button id="signature-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl">&lt;</button>
-                <button id="signature-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl">&gt;</button>
+                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z" fill="white"/>
+</svg>
+</button>
+                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z" fill="white"/>
+</svg>
+</button>
             </div>
         </div>
 
@@ -465,14 +530,17 @@
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <a href="#" class="block group">
-                            <div class="bg-[#e53935] p-6 rounded-t-lg">
+                            <div class="bg-accent-red p-6 rounded-t-lg">
                                 <h3 class="text-2xl font-bold text-white mb-4">The Shakti of Music 2025</h3>
                                 <div class="flex justify-between items-center text-white">
                                     <div>
                                         <p>4 September 2025</p>
                                         <p class="text-sm">Kolkata</p>
                                     </div>
-                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                                 </div>
                             </div>
                             <img src="assets/images/Rectangle 178.png" alt="Zakir Hussain playing tabla" class="w-full h-72 object-cover rounded-b-lg">
@@ -482,14 +550,17 @@
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                          <a href="#" class="block group">
-                            <div class="bg-[#e53935] p-6 rounded-t-lg">
+                            <div class="bg-accent-red p-6 rounded-t-lg">
                                 <h3 class="text-2xl font-bold text-white mb-4">Good Economics for Hard Times</h3>
                                 <div class="flex justify-between items-center text-white">
                                     <div>
                                         <p>28 September 2025</p>
                                         <p class="text-sm">Kolkata</p>
                                     </div>
-                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                                 </div>
                             </div>
                             <img src="assets/images/Rectangle 178.png" alt="Abhijit Banerjee speaking" class="w-full h-72 object-cover rounded-b-lg">
@@ -499,14 +570,17 @@
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
                          <a href="#" class="block group">
-                            <div class="bg-[#e53935] p-6 rounded-t-lg">
+                            <div class="bg-accent-red p-6 rounded-t-lg">
                                 <h3 class="text-2xl font-bold text-white mb-4">The Shakti of Music 2025</h3>
                                 <div class="flex justify-between items-center text-white">
                                     <div>
                                         <p>27 September 2025</p>
                                         <p class="text-sm">Kolkata</p>
                                     </div>
-                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                                 </div>
                             </div>
                             <img src="assets/images/Rectangle 181.png" alt="Shakti band performing" class="w-full h-72 object-cover rounded-b-lg">
@@ -516,14 +590,17 @@
                     <!-- Slide 4 (Example) -->
                     <div class="swiper-slide">
                          <a href="#" class="block group">
-                            <div class="bg-[#e53935] p-6 rounded-t-lg">
+                            <div class="bg-accent-red p-6 rounded-t-lg">
                                 <h3 class="text-2xl font-bold text-white mb-4">Another Great Event</h3>
                                 <div class="flex justify-between items-center text-white">
                                     <div>
                                         <p>15 October 2025</p>
                                         <p class="text-sm">Delhi</p>
                                     </div>
-                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1">&#8594;</span>
+                                    <span class="text-2xl transform transition-transform group-hover:translate-x-1"><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.39355 0.43934C6.97934 -0.146447 7.92886 -0.146447 8.51465 0.43934L18.0605 9.98524C18.6463 10.571 18.6463 11.5205 18.0605 12.1063L8.51465 21.6522C7.92886 22.238 6.97934 22.238 6.39355 21.6522C5.80777 21.0664 5.80777 20.1169 6.39355 19.5311L13.3789 12.5458H0V9.54578H13.3789L6.39355 2.56043C5.80777 1.97465 5.80777 1.02513 6.39355 0.43934Z" fill="white"/>
+</svg>
+</span>
                                 </div>
                             </div>
                             <img src="assets/images/Rectangle 178.png" alt="Event placeholder image" class="w-full h-72 object-cover rounded-b-lg">
@@ -539,6 +616,181 @@
     </div>
 </section>
 
+
+<!-- ============================================= -->
+<!-- 8. SIGNATURE EVENTS (ART & CULTURE) SECTION   -->
+<!-- ============================================= -->
+<section class="bg-dark-brown py-20">
+    <div class="container mx-auto px-4 md:px-6">
+        
+        <!-- Section Header -->
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white">
+                Signature Events (Art & Culture)
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+                <button id="art-culture-prev" class="text-white/70 hover:text-white transition-colors p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button id="art-culture-next" class="text-white/70 hover:text-white transition-colors p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Art & Culture Slider -->
+        <div class="swiper art-culture-slider">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 196.png" alt="Event: Reading and Writing India" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">Reading and Wri...</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 199.png" alt="Event: The name is Bond" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">The name is Bond</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 200.png" alt="Event: Open to All" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">Open to All</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 4 (Example) -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 181.png" alt="Another Art Event" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">Artistic Visions</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>15 May 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Slider Pagination Dots -->
+        <div class="art-culture-pagination mt-8 text-center"></div>
+
+    </div>
+</section>
+
+
+
+<!-- ============================================= -->
+<!-- 9. SIGNATURE EVENTS (CORPORATE) SECTION       -->
+<!-- ============================================= -->
+<section class="bg-primary-blue py-20">
+    <div class="container mx-auto px-4 md:px-6">
+        
+        <!-- Section Header -->
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white">
+                Signature Events (Corporate)
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+                <button id="corporate-prev" class="text-white/70 hover:text-white transition-colors p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button id="corporate-next" class="text-white/70 hover:text-white transition-colors p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Corporate Slider -->
+        <div class="swiper corporate-slider">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 178.png" alt="Event: The game of decisions" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">The game of de...</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/absolut-kapoor.jpg" alt="Event: Perfect Strokes" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">Perfect Strokes</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/royal-stag.jpg" alt="Event: The large short films" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">The large...</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Slider Pagination Dots -->
+        <div class="corporate-pagination mt-8 text-center"></div>
+    </div>
+</section>
+
 <!-- =================================== -->
 <!-- 9. TRUSTED BRANDS SECTION (EXPANDED) -->
 <!-- =================================== -->
@@ -547,7 +799,7 @@
 
         <!-- Section Header -->
         <div class="text-center">
-            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-[#e53935]">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-accent-red">
                 Brands Who Trust Our Plans
             </h2>
         </div>
@@ -704,8 +956,14 @@
             </h2>
             <!-- Slider Navigation Arrows -->
             <div class="hidden md:flex items-center space-x-2">
-                <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl">&lt;</button>
-                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl">&gt;</button>
+                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z" fill="white"/>
+</svg>
+</button>
+                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z" fill="white"/>
+</svg>
+</button>
             </div>
         </div>
 
@@ -767,100 +1025,161 @@
     </div>
 </section>
 
+</main>
+
 <!-- =================================== -->
-<!-- 11. FOOTER SECTION                  -->
+<!-- 11. FOOTER SECTION (UPDATED)        -->
 <!-- =================================== -->
-<footer class="bg-black">
+<footer class="bg-black text-white">
+    
     <!-- Top Red Banner -->
-    <div class="bg-accent-red py-12">
-        <div class="container mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-white text-center sm:text-left">
-            <h2 class=" text-6xl md:text-8xl font-bold uppercase">Play On</h2>
-            <h3 class=" text-4xl md:text-5xl font-semibold leading-tight">Every Event<br>Every Experience</h3>
+    <div class="bg-accent-red py-10 md:py-14">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-6">
+            <!-- 'font-teko' must be defined in your CSS/Tailwind config for this font family -->
+            <h2 class="text-6xl md:text-7xl font-bold font-teko uppercase leading-none tracking-wide">PLAY ON</h2>
+            <!-- Vertical divider on desktop -->
+            <h3 class="text-xl md:text-2xl font-medium leading-tight text-center md:text-left">
+                Every Event<br>Every Experience
+            </h3>
         </div>
     </div>
 
     <!-- Main Footer Content -->
-    <div class="container mx-auto px-4 md:px-6 py-20 text-white">
-        <!-- Footer Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="container mx-auto px-6 md:px-10 py-16 lg:py-20 text-lg">
+        <!-- Grid: Stacks on mobile (text-center), 3 columns on desktop (text-left) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 text-center md:text-left">
             
-            <!-- Column 1: Offices -->
-            <div class="space-y-10">
+            <!-- Column 1: Logo & Offices (Spans 4/12 on desktop) -->
+            <div class="md:col-span-5 lg:col-span-4 flex flex-col items-center md:items-start space-y-10">
                 <!-- Logo -->
-                <div>
-                     <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
-                </div>
+                <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-8">
                 
-                <!-- Office Locations -->
-                <div class="space-y-6 text-gray-400">
+                <!-- Offices Container -->
+                <div class="space-y-6 ">
                     <div>
-                        <h4 class="font-bold text-white uppercase tracking-widest text-sm mb-2">Head Office</h4>
-                        <p>L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
+                        <h4 class=" text-gray-400 font-bold uppercase tracking-[0.2em] mb-2">Head Office</h4>
+                        <p class=" uppercase leading-relaxed text-white">L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
                     </div>
-                     <div>
-                        <h4 class="font-bold text-white uppercase tracking-widest text-sm mb-2">Bhubaneshwar Office</h4>
-                        <p>L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
+                    <div>
+                        <h4 class=" text-gray-400 font-bold uppercase tracking-[0.2em] mb-2">Bhubaneshwar Office</h4>
+                        <p class=" uppercase leading-relaxed text-white">L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
                     </div>
-                     <div>
-                        <h4 class="font-bold text-white uppercase tracking-widest text-sm mb-2">Jharkhand Office</h4>
-                        <p>L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
+                    <div>
+                        <h4 class=" text-gray-400 font-bold uppercase tracking-[0.2em] mb-2">Jharkhand Office</h4>
+                        <p class=" uppercase leading-relaxed text-white">L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Column 2 & 3 Combined for layout -->
-            <div class="md:col-span-2">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
-                    
-                    <!-- Contact Column -->
-                    <div class="space-y-6">
-                        <h4 class="font-bold text-white uppercase tracking-widest text-sm">Contact</h4>
-                        <div class="text-gray-400 space-y-3">
-                            <p><a href="mailto:mail@gameplan.co.in" class="hover:text-white">mail@gameplan.co.in</a></p>
+            <!-- Column 2: Contact & Privacy (Spans 4/12 on desktop) -->
+            <!-- Uses flex-col justify-between to push Privacy Policy to bottom on desktop -->
+            <div class="md:col-span-3 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10">
+                <div>
+                    <h4 class="text-lg text-white font-bold uppercase tracking-[0.2em] mb-6">Contact</h4>
+                    <div class=" uppercase space-y-2 leading-relaxed text-white">
+                        <a href="mailto:mail@gameplan.co.in" class="hover:text-gray-300 transition-colors lowercase text-lg">mail@gameplan.co.in</a>
+                        <div class="mt-5 space-y-1 text-lg">
                             <p>+ 91 (0) 33 2282 1960/61</p>
                             <p>+ 91 (0) 33 3290 4947</p>
                             <p>+ 91 (0) 33 2282 1959</p>
                         </div>
-                        <div class="pt-8">
-                            <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
-                        </div>
-                    </div>
-
-                    <!-- Follow Us Column -->
-                     <div class="space-y-6">
-                        <h4 class="font-bold text-white uppercase tracking-widest text-sm">Follow Us On</h4>
-                        <div class="flex items-center space-x-3">
-                            <!-- Facebook -->
-                            <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full text-gray-400 hover:bg-white hover:text-black transition-colors">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                            </a>
-                            <!-- X (Twitter) -->
-                             <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full text-gray-400 hover:bg-white hover:text-black transition-colors">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            </a>
-                            <!-- Instagram -->
-                             <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full text-gray-400 hover:bg-white hover:text-black transition-colors">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                            </a>
-                            <!-- LinkedIn -->
-                             <a href="#" class="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full text-gray-400 hover:bg-white hover:text-black transition-colors">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
-                            </a>
-                        </div>
-                        <div class="pt-8">
-                            <a href="#" class="text-gray-400 hover:text-white text-sm">Terms & Conditions</a>
-                        </div>
                     </div>
                 </div>
+                <!-- Bottom Link -->
+                <div class="md:mt-auto pt-4">
+                    <a href="#" class=" text-gray-400 hover:text-white transition-colors tracking-wider">Privacy Policy</a>
+                </div>
             </div>
+
+            <!-- Column 3: Follow Us & Terms (Spans 4/12 on desktop) -->
+            <!-- Uses flex-col justify-between to push Terms to bottom on desktop -->
+            <div class="md:col-span-4 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10">
+                <div>
+                    <h4 class=" text-white font-bold uppercase tracking-[0.2em] mb-6">Follow Us On</h4>
+                    <div class="flex items-center justify-center md:justify-start gap-3">
+                        <!-- Facebook -->
+                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <!-- X (Twitter) -->
+                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <!-- Threads (@ symbol style) -->
+                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
+                           <svg width="16" height="20" viewBox="0 0 16 20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8667 9.35828C11.7303 6.62531 10.3556 5.06073 8.04761 5.04518C6.6561 5.03603 5.49285 5.6765 4.78024 6.85038L6.05047 7.79553C6.5845 6.91626 7.42766 6.73419 8.03835 6.74059C8.79897 6.74608 9.37175 6.9858 9.74321 7.45426C10.0128 7.79462 10.1939 8.26582 10.284 8.85963C9.609 8.73519 8.88179 8.69707 8.10237 8.74526C5.90727 8.8825 4.49722 10.2732 4.59156 12.2047C4.63958 13.1846 5.08853 14.0282 5.85673 14.579C6.50532 15.0447 7.34259 15.2716 8.21103 15.2204C9.35911 15.1518 10.2596 14.6769 10.8879 13.8068C11.3647 13.1462 11.6662 12.2898 11.7993 11.212C12.3468 11.5706 12.7511 12.0418 12.976 12.6091C13.3568 13.5735 13.3787 15.1582 12.1885 16.4501C11.1457 17.581 9.8923 18.0714 7.99792 18.086C5.89632 18.0696 4.30686 17.3367 3.27417 15.9103C2.3055 14.5744 1.806 12.6439 1.78747 10.1744C1.806 7.70404 2.30634 5.7744 3.27417 4.43765C4.30686 3.01123 5.89632 2.27927 7.99792 2.2628C10.1147 2.28018 11.7311 3.01489 12.8042 4.44954C13.3307 5.15223 13.7266 6.03607 13.9885 7.06631L15.4761 6.63629C15.1585 5.36724 14.6598 4.27387 13.9818 3.36715C12.6063 1.52809 10.5847 0.586597 7.99286 0.567383C5.40609 0.586597 3.41737 1.53266 2.0806 3.37721C0.892081 5.01956 0.278028 7.31701 0.257812 10.1808C0.278028 13.0446 0.892081 15.3293 2.0806 16.9716C3.41737 18.8162 5.4162 19.7622 8.00213 19.7815C10.3025 19.7641 11.9231 19.1099 13.2582 17.6615C15.006 15.7648 14.953 13.3887 14.3777 11.9302C13.9355 10.8094 13.0552 9.91183 11.8675 9.35919M8.12932 13.5286C7.16739 13.5872 6.16839 13.1187 6.11869 12.1141C6.08248 11.3694 6.60724 10.5386 8.18828 10.4398C8.90284 10.3878 9.62059 10.4413 10.3219 10.599C10.1399 13.0712 9.07104 13.4719 8.12932 13.5286Z" fill="white"/>
+</svg>
+
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Bottom Link -->
+                <div class="md:mt-auto pt-4">
+                    <a href="#" class=" text-gray-400 hover:text-white transition-colors tracking-wider">Terms & Conditions</a>
+                </div>
+            </div>
+
         </div>
-        
-        <!-- Copyright -->
-        <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-sm">
-            © Gameplan Copyright 2025, All Rights Reserved
-        </div>
+
+        <!-- Bottom Copyright with Divider -->
+        <div class="border-t border-white mt-16 pt-8 text-center text-gray-500 text-md">
+        © Gameplan Copyright 2025, All Rights Reserved
+    </div>
     </div>
 </footer>
+
+<!-- ========================================================= -->
+<!-- 4. NEW EVENT ALERT POPUP (UPDATED DESIGN)                 -->
+<!-- ========================================================= -->
+<div id="event-alert" class="fixed bottom-50 md:bottom-70 right-5 z-50 w-[60vw] md:w-[90vw] max-w-sm transform overflow-hidden rounded-2xl bg-black/20 backdrop-blur-md transition-all duration-500 ease-in-out opacity-0 translate-y-10">
+    
+    <!-- This div holds all the content and provides padding -->
+    <div class="relative p-4">
+
+        <!-- Positioned "New Event Alert" Tag -->
+        <!-- <span class="absolute -top-0 left-4 z-10 rounded-lg bg-accent-red-alt px-2 py-1 text-sm font-bold text-white">New Event Alert</span> -->
+        
+        <!-- Positioned Close Button -->
+        <button id="close-alert-button" class="absolute right-3 top-3 z-10 p-1 text-white/70 transition-colors hover:text-white">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Main Content Area -->
+        <div class="mt-6">
+            <span class="absolute left-4 z-10 rounded-lg bg-accent-red-alt px-2 py-2 text-sm font-bold text-white">New Event Alert</span>
+            <!-- Event Image with rounded corners inside the card -->
+            <img src="assets/images/Rectangle%20196.png" alt="Event Image" class="h-46 w-full rounded-xl object-cover pt-9">
+            
+            <!-- Text Details below the image -->
+            <div class="relative mt-5 text-white">
+                <h3 class="pr-8 text-xl md:text-2xl font-bold leading-tight">Reading and Writing India 2025</h3>
+                <div class="mt-3 space-y-1 text-white/80">
+                    <p class="text-base">30 September | 4pm Onwards</p>
+                    <p class="text-sm">Writers Building, Kolkata</p>
+                </div>
+
+                <!-- Arrow Link (positioned relative to the text block) -->
+                <a href="#" class="absolute bottom-0 right-0 text-white/80 transition-colors hover:text-white">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
 
     <!-- SCRIPTS -->
     <script src="assets/js/swiper-bundle.min.js"></script>

@@ -1,8 +1,7 @@
 // assets/js/main.js
 jQuery(document).ready(function($) {
 
-    // --- 1. CUSTOM HERO SLIDER (as requested) ---
-    // This section only runs if the hero slider elements exist on the page.
+    // --- 1. CUSTOM HERO SLIDER ---
     if ($('.hero-slide').length > 0) {
         let currentSlide = 0;
         const slides = $('.hero-slide');
@@ -11,7 +10,7 @@ jQuery(document).ready(function($) {
         let slideInterval;
 
         function goToSlide(slideIndex) {
-            slideIndex = (slideIndex + totalSlides) % totalSlides; // Loop through slides
+            slideIndex = (slideIndex + totalSlides) % totalSlides;
             slides.removeClass('z-10 opacity-100').addClass('z-0 opacity-0');
             slides.eq(slideIndex).removeClass('opacity-0').addClass('z-10 opacity-100');
             indicators.removeClass('active');
@@ -22,7 +21,7 @@ jQuery(document).ready(function($) {
         function startSlider() {
             slideInterval = setInterval(function() {
                 goToSlide(currentSlide + 1);
-            }, 5000); // Change slide every 5 seconds
+            }, 5000);
         }
 
         function resetSliderInterval() {
@@ -41,53 +40,49 @@ jQuery(document).ready(function($) {
         });
 
         indicators.on('click', function() {
-            let slideIndex = $(this).data('slide-to');
+            const slideIndex = $(this).data('slide-to');
             goToSlide(slideIndex);
             resetSliderInterval();
         });
 
-        // Initialize the slider
+        goToSlide(0);
         startSlider();
     }
 
     // --- 2. MOBILE MENU ---
+    const mobileMenu = $('#mobile-menu');
     $('#mobile-menu-button').on('click', function() {
-        $('#mobile-menu').removeClass('hidden');
+        mobileMenu.removeClass('translate-x-full');
     });
-    $('#close-menu-button').on('click', function() {
-        $('#mobile-menu').addClass('hidden');
+    $('#close-menu-button, #mobile-menu a').on('click', function() {
+        mobileMenu.addClass('translate-x-full');
     });
-    
-    // --- 3. EVENT ALERT BOX ---
+
+    // --- 3. EVENT ALERT POPUP ---
+    setTimeout(function() {
+        $('#event-alert').removeClass('opacity-0 translate-y-10');
+    }, 3000);
     $('#close-alert-button').on('click', function() {
-        $('#event-alert').fadeOut();
+        const eventAlert = $('#event-alert');
+        eventAlert.addClass('opacity-0 translate-y-10');
+        setTimeout(function() {
+            eventAlert.addClass('hidden');
+        }, 500);
     });
-  
- // --- 5. UPCOMING EVENTS SLIDER ---
-    const eventsSwiper = new Swiper('.events-slider', {
+
+    // --- 5. UPCOMING EVENTS SLIDER ---
+    new Swiper('.events-slider', {
         loop: true,
-        spaceBetween: 30, // Space between slides
-
-        // Responsive breakpoints
-        slidesPerView: 1, // Default for mobile
+        spaceBetween: 30,
+        slidesPerView: 1,
         breakpoints: {
-            // when window width is >= 768px
-            768: {
-                slidesPerView: 2,
-            },
-            // when window width is >= 1024px
-            1024: {
-                slidesPerView: 3,
-            }
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
         },
-
-        // Custom Pagination
         pagination: {
             el: '.events-pagination',
             clickable: true,
         },
-
-        // Navigation arrows
         navigation: {
             nextEl: '#events-next',
             prevEl: '#events-prev',
@@ -95,30 +90,18 @@ jQuery(document).ready(function($) {
     });
 
     // --- 6. PAST EVENTS SLIDER ---
-    const pastEventsSwiper = new Swiper('.past-events-slider', {
+    new Swiper('.past-events-slider', {
         loop: true,
-        spaceBetween: 30, // Space between slides
-
-        // Responsive breakpoints
-        slidesPerView: 1, // Default for mobile
+        spaceBetween: 30,
+        slidesPerView: 1,
         breakpoints: {
-            // when window width is >= 768px
-            768: {
-                slidesPerView: 2,
-            },
-            // when window width is >= 1024px
-            1024: {
-                slidesPerView: 3,
-            }
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
         },
-
-        // Custom Pagination
         pagination: {
             el: '.past-events-pagination',
             clickable: true,
         },
-
-        // Navigation arrows
         navigation: {
             nextEl: '#past-events-next',
             prevEl: '#past-events-prev',
@@ -126,64 +109,77 @@ jQuery(document).ready(function($) {
     });
 
 
-      // --- 7. SIGNATURE EVENTS SLIDER ---
-    const signatureSwiper = new Swiper('.signature-slider', {
+     // --- NEW/FIXED: SIGNATURE (SPORTS) SLIDER ---
+    new Swiper('.sports-events-slider', {
         loop: true,
-        spaceBetween: 30, // Space between slides
-
-        // Responsive breakpoints
-        slidesPerView: 1, // Default for mobile
+        spaceBetween: 30,
+        slidesPerView: 1,
         breakpoints: {
-            // when window width is >= 640px
-            640: {
-                slidesPerView: 2,
-            },
-            // when window width is >= 1024px
-            1024: {
-                slidesPerView: 4,
-            }
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
         },
-
-        // Custom Pagination
         pagination: {
-            el: '.signature-pagination',
+            el: '.sports-events-pagination',
             clickable: true,
         },
-
-        // Navigation arrows
         navigation: {
-            nextEl: '#signature-next',
-            prevEl: '#signature-prev',
+            nextEl: '#sports-events-next',
+            prevEl: '#sports-events-prev',
+        },
+    });
+
+    // --- NEW: SIGNATURE (ART & CULTURE) SLIDER ---
+    new Swiper('.art-culture-slider', {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        },
+        pagination: {
+            el: '.art-culture-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '#art-culture-next',
+            prevEl: '#art-culture-prev',
+        },
+    });
+
+    // --- NEW: SIGNATURE (CORPORATE) SLIDER ---
+    new Swiper('.corporate-slider', {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        },
+        pagination: {
+            el: '.corporate-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '#corporate-next',
+            prevEl: '#corporate-prev',
         },
     });
 
 
-    
-    // --- 8. MEET OUR TEAM SLIDER ---
-    const teamSwiper = new Swiper('.team-slider', {
+    // --- 8. MEET OUR TEAM SLIDER (This might be number 10 or 11 now) ---
+    new Swiper('.team-slider', {
         loop: true,
-        spaceBetween: 30, // Space between slides
-
-        // Responsive breakpoints
-        slidesPerView: 1, // Default for mobile
+        spaceBetween: 30,
+        slidesPerView: 1,
         breakpoints: {
-            // when window width is >= 640px
-            640: {
-                slidesPerView: 2,
-            },
-            // when window width is >= 1024px
-            1024: {
-                slidesPerView: 4,
-            }
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 }
         },
-
-        // Custom Pagination
         pagination: {
             el: '.team-pagination',
             clickable: true,
         },
-
-        // Navigation arrows
         navigation: {
             nextEl: '#team-next',
             prevEl: '#team-prev',

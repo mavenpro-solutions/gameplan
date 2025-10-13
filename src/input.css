@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* ... your theme variables ... */
   --color-primary-dark-blue: #031123;
   --color-primary-blue: #142946;
   --color-primary-light-blue: #0B3C86;
@@ -11,27 +12,25 @@
   --color-text-light: #FFFFFF;
   --color-text-gray: #CFCFCF;
   --color-text-dark-gray: #707070;
-   /* -- ADD THESE TWO NEW COLORS -- */
-  --color-accent-green: #61B32D; /* A nice green for Literature */
-  --color-light-beige: #FFFBEB;  /* The background for the section */
+  --color-accent-green: #61B32D;
+  --color-light-beige: #FFFBEB;
   --color-light-tan-bg: #FFF9E6;
   --color-dark-gold-text: #8D7520;
- --color-accent-magenta: #B51A50;
+  --color-accent-magenta: #B51A50;
   --color-light-pink-bg: #FFE6EF;
- --color-light-cyan-bg: #E0FFFE;
- --color-dark-charcoal: #383838;
+  --color-light-cyan-bg: #E0FFFE;
+  --color-dark-charcoal: #383838;
   --color-light-peach-bg: #FFE6CE;
   --color-rust-text: #B35800;
   --color-dark-red-text: #B71610;
   --color-gold-button: #A68A27;
   --color-light-mint-bg: #E5FFF3;
   --color-dark-teal: #15995D;
---color-accent-teal: #00AAAD;
- --color-accent-purple: #3D0BB0;
+  --color-accent-teal: #00AAAD;
+  --color-accent-purple: #3D0BB0;
   --color-deep-purple: #5B0E76;
- --color-deep-blue: #3D0BB0;
-
- --color-light-green-bg: #F0F5E8;
+  --color-deep-blue: #3D0BB0;
+  --color-light-green-bg: #F0F5E8;
   --color-dark-green-text: #4A6C2F;
   --color-secondary-blue: #325483;
   --color-dark-brown: #572E2A;
@@ -45,67 +44,71 @@
     color: var(--color-text-light);
     font-family: 'DarkerGrotesque', sans-serif;
   }
-
 }
-
 
 @layer components {
 
    @font-face {
-  font-family: DarkerGrotesque;
-  font-style: normal;
-  font-weight: 200 700;
-  font-display: swap;
-  src: url("/assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
-}
- /* --- CORRECTED SWIPER PAGINATION STYLES --- */
-  .swiper-pagination-custom .swiper-pagination-bullet {
-    all: unset; /* Reset default Swiper styles */
-    display: block;
+    font-family: DarkerGrotesque;
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("/assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
+  }
+  /* --- DEFINITIVE FIX FOR HERO SLIDER PAGINATION --- */
+
+  /* This is the main container for the numbers AND the static line */
+  .hero-pagination {
     position: relative;
-    cursor: pointer;
-    font-size: 1.25rem; /* text-xl */
-    color: #9ca3af; /* text-gray-400 */
-    transition: color 0.3s ease;
-  }
-  
-  .swiper-pagination-custom .swiper-pagination-bullet:hover {
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 120px; /* Space for the line (96px) + gap (24px) */
+    transform: none !important;
   }
 
-  .swiper-pagination-custom .swiper-pagination-bullet-active {
-    color: white;
-    font-weight: 700;
-  }
-
-  /* This creates the vertical line ONLY on the active number */
-  .swiper-pagination-custom .swiper-pagination-bullet-active::after {
+  /* Creates the STATIC WHITE LINE below the numbers */
+  .hero-pagination::after {
     content: '';
     position: absolute;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    top: 100%;
-    margin-top: 0.75rem;
     width: 2px;
-    height: 96px; /* 6rem */
+    height: 96px;
     background-color: white;
   }
-.slide-indicator.active {
-            color: white;
-            font-weight: bold;
-        }
-        .slide-indicator.active::after {
-            content: '';
-            display: block;
-            width: 2px;
-            height: 6rem; /* 96px */
-            background-color: white;
-            margin-left: 0.4rem;
-            margin-top: 0.5rem;
-        }
 
+  /* This styles all the numbers (the <span> tags) */
+  .hero-pagination .swiper-pagination-bullet {
+    /* --- THE CRITICAL FIX IS HERE --- */
+    background: transparent !important; /* This explicitly removes the background dot */
+    
+    /* Reset other Swiper styles to be safe */
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    
+    /* General Styling */
+    display: block;
+    cursor: pointer;
+    opacity: 1; /* Control visibility with text color instead */
 
+    /* Typography for the INACTIVE state */
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgba(214, 214, 214, 0.932);
+    
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
 
+  /* This styles ONLY the ACTIVE number */
+  .hero-pagination .swiper-pagination-bullet-active {
+    font-weight: 700;
+    color: white;
+  }
    /* --- STYLES FOR UPCOMING EVENTS SLIDER --- */
 
      /* --- UPCOMING EVENTS SLIDER --- */

@@ -1,53 +1,46 @@
 // assets/js/main.js
 jQuery(document).ready(function($) {
 
-    // --- 1. CUSTOM HERO SLIDER ---
-    if ($('.hero-slide').length > 0) {
-        let currentSlide = 0;
-        const slides = $('.hero-slide');
-        const indicators = $('.slide-indicator');
-        const totalSlides = slides.length;
-        let slideInterval;
+     // --- 1. HERO SLIDER (WITH CLICK-TO-CHANGE FUNCTIONALITY) ---
+    new Swiper('.hero-swiper', {
+        // Core settings
+        loop: true,
+        effect: 'fade', // Use 'fade' effect to match the old style
+        fadeEffect: {
+            crossFade: true
+        },
+        
+        // Autoplay
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false, // Continue autoplay after user interaction
+        },
 
-        function goToSlide(slideIndex) {
-            slideIndex = (slideIndex + totalSlides) % totalSlides;
-            slides.removeClass('z-10 opacity-100').addClass('z-0 opacity-0');
-            slides.eq(slideIndex).removeClass('opacity-0').addClass('z-10 opacity-100');
-            indicators.removeClass('active');
-            indicators.eq(slideIndex).addClass('active');
-            currentSlide = slideIndex;
-        }
+        // Navigation arrows
+        navigation: {
+            nextEl: '.hero-button-next',
+            prevEl: '.hero-button-prev',
+        },
 
-        function startSlider() {
-            slideInterval = setInterval(function() {
-                goToSlide(currentSlide + 1);
-            }, 5000);
-        }
+        // Custom pagination for the '01', '02' style
+        pagination: {
+            el: '.hero-pagination',
+            clickable: true,
+            // This function creates the '01', '02', etc. format
+            renderBullet: function (index, className) {
+                const number = (index + 1).toString().padStart(2, '0');
+                return '<span class="' + className + '">' + number + '</span>';
+            },
+        },
 
-        function resetSliderInterval() {
-            clearInterval(slideInterval);
-            startSlider();
-        }
-
-        $('#next-slide').on('click', function() {
-            goToSlide(currentSlide + 1);
-            resetSliderInterval();
-        });
-
-        $('#prev-slide').on('click', function() {
-            goToSlide(currentSlide - 1);
-            resetSliderInterval();
-        });
-
-        indicators.on('click', function() {
-            const slideIndex = $(this).data('slide-to');
-            goToSlide(slideIndex);
-            resetSliderInterval();
-        });
-
-        goToSlide(0);
-        startSlider();
-    }
+        // --- NEW CODE ADDED HERE ---
+        // This listens for a click anywhere on the slider and moves to the next slide.
+        on: {
+            click: function () {
+                this.slideNext();
+            },
+        },
+    });
 
     // --- 2. MOBILE MENU ---
     const mobileMenu = $('#mobile-menu');

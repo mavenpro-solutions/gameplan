@@ -33,8 +33,8 @@
                 <a href="about.html" class="hover:opacity-80 transition-opacity">About Us</a>
                 <a href="#" class="hover:opacity-80 transition-opacity">Sports</a>
                 <a href="#" class="hover:opacity-80 transition-opacity">Literature</a>
-                <a href="#" class="hover:opacity-80 transition-opacity">Art Culture</a>
-                <a href="#" class="hover:opacity-80 transition-opacity">Corporate Events</a>
+                <a href="#" class="hover:opacity-80 transition-opacity">Art</a>
+                <a href="#" class="hover:opacity-80 transition-opacity">Others</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -72,23 +72,23 @@
                 <a href="about.html" class="text-3xl  hover:opacity-80 transition-opacity">About Us</a>
                 <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Sports</a>
                 <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Literature</a>
-                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Art Culture</a>
-                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Corporate Events</a>
+                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Art</a>
+                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Others</a>
             </nav>
         </div>
     </div>
 </header>
 <main>
- <!-- HERO SECTION WRAPPER -->
-   <div class="relative h-screen min-h-[700px] overflow-hidden">
+   <!-- HERO SECTION WRAPPER -->
+<div class="relative h-screen min-h-[700px] overflow-hidden hero-swiper">
 
     <!-- =================================== -->
     <!-- 2. HERO SLIDER CONTAINER          -->
     <!-- =================================== -->
-    <div class="absolute inset-0 z-0">
+    <div class="swiper-wrapper">
         
         <!-- SLIDE 1 -->
-        <div class="hero-slide absolute inset-0 z-10 opacity-100" data-slide="0">
+        <div class="swiper-slide hero-slide" data-slide="0">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 197.png');"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
             <!-- Slide 1 Content -->
@@ -105,7 +105,7 @@
         </div>
 
         <!-- SLIDE 2 -->
-        <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="1">
+        <div class="swiper-slide hero-slide" data-slide="1">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
             <!-- Slide 2 Content -->
@@ -122,7 +122,7 @@
         </div>
 
         <!-- SLIDE 3 -->
-        <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="2">
+        <div class="swiper-slide hero-slide" data-slide="2">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 181.png');"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
              <!-- Slide 3 Content -->
@@ -139,7 +139,7 @@
         </div>
 
         <!-- SLIDE 4 -->
-        <div class="hero-slide absolute inset-0 z-0 opacity-0" data-slide="3">
+        <div class="swiper-slide hero-slide" data-slide="3">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 198.png');"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
              <!-- Slide 4 Content -->
@@ -157,40 +157,39 @@
     </div>
     
     <!-- =================================== -->
-    <!-- 3. UI CONTROLS OVERLAY            -->
+    <!-- 3. UI CONTROLS OVERLAY (FIXED)    -->
     <!-- =================================== -->
-    <!-- This container ensures controls are above the slides -->
-    <div class="relative z-20 h-full w-full pointer-events-none">
-        <!-- Left-side Slider Indicators -->
-        <div class="absolute top-50 md:top-1/2 -translate-y-1/4 md:-translate-y-1/2 left-4 md:left-12 pointer-events-auto">
-            <div id="slide-indicators" class="flex flex-col items-start space-y-4 text-xl text-gray-400">
-                <p class="slide-indicator cursor-pointer active" data-slide-to="0">01</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="1">02</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="2">03</p>
-                <p class="slide-indicator cursor-pointer" data-slide-to="3">04</p>
+    <!-- 
+        CHANGE: Replaced 'relative h-full w-full' with 'absolute inset-0'.
+        This makes the div an overlay that covers the parent (.hero-swiper)
+        and sits on top of the slides.
+    -->
+    <div class="absolute inset-0 z-20 pointer-events-none">
+        <!-- Left-side Slider Indicators (Now the Swiper Pagination) -->
+        <div class="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 pointer-events-auto">
+            <div class="hero-pagination">
+                <!-- Swiper will generate pagination bullets here -->
             </div>
         </div>
         
-        <!-- Right-side Slider Arrows -->
+       <!-- Right-side Slider Arrows (Now the Swiper Navigation) -->
         <div class="absolute bottom-20 md:bottom-32 right-6 sm:right-10 md:right-16 pointer-events-auto">
             <div class="flex space-x-6">
-                <button id="prev-slide">
+                <button id="prev-slide" class="hero-button-prev">
                   <svg width="29" height="50" viewBox="0 0 29 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 md:h-16 w-6 md:w-16">
-<path d="M27.9845 49.0057C26.6305 50.3314 24.4313 50.3314 23.0774 49.0057L1.01548 27.4001C-0.338493 26.0744 -0.338493 23.9256 1.01548 22.5999L23.0774 0.994274C24.4313 -0.331425 26.6306 -0.331425 27.9845 0.994274C29.3385 2.31997 29.3385 4.47326 27.9845 5.79895L8.36944 25L27.9845 44.201C29.3385 45.5267 29.3385 47.68 27.9845 49.0057Z" fill="white"/>
-</svg>
-</button>
-                <button id="next-slide" >
+                    <path d="M27.9845 49.0057C26.6305 50.3314 24.4313 50.3314 23.0774 49.0057L1.01548 27.4001C-0.338493 26.0744 -0.338493 23.9256 1.01548 22.5999L23.0774 0.994274C24.4313 -0.331425 26.6306 -0.331425 27.9845 0.994274C29.3385 2.31997 29.3385 4.47326 27.9845 5.79895L8.36944 25L27.9845 44.201C29.3385 45.5267 29.3385 47.68 27.9845 49.0057Z" fill="white"/>
+                  </svg>
+                </button>
+                <button id="next-slide" class="hero-button-next">
                     <svg width="29" height="50" viewBox="0 0 29 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 md:h-16 w-6 md:w-16">
-<path d="M1.01548 0.994273C2.36945 -0.331424 4.56866 -0.331424 5.92264 0.994273L27.9845 22.5999C29.3385 23.9256 29.3385 26.0744 27.9845 27.4001L5.92264 49.0057C4.56866 50.3314 2.36945 50.3314 1.01548 49.0057C-0.338493 47.68 -0.338493 45.5267 1.01548 44.201L20.6306 25L1.01548 5.79895C-0.338493 4.47326 -0.338493 2.31997 1.01548 0.994273Z" fill="white"/>
-</svg>
-</button>
+                      <path d="M1.01548 0.994273C2.36945 -0.331424 4.56866 -0.331424 5.92264 0.994273L27.9845 22.5999C29.3385 23.9256 29.3385 26.0744 27.9845 27.4001L5.92264 49.0057C4.56866 50.3314 2.36945 50.3314 1.01548 49.0057C-0.338493 47.68 -0.338493 45.5267 1.01548 44.201L20.6306 25L1.01548 5.79895C-0.338493 4.47326 -0.338493 2.31997 1.01548 0.994273Z" fill="white"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
 
 </div>
-
-    
     <!-- =================================== -->
     <!-- 5. UPCOMING EVENTS SECTION (NOW VISIBLE) -->
     <!-- =================================== -->
@@ -421,7 +420,7 @@
 <!-- =================================== -->
 <!-- 7. OUR EXPERTISE SECTION (CORRECTED LAYOUT) -->
 <!-- =================================== -->
-<section class="bg-[#1a2b42] py-20 relative overflow-hidden">
+<section class="bg-primary-blue py-20 relative overflow-hidden">
     <div class="container mx-auto px-4 md:px-6 relative">
 
         <!-- Decorative Background Text -->
@@ -616,6 +615,102 @@
     </div>
 </section>
 
+<!-- =================================== -->
+<!-- 8. SIGNATURE EVENTS (SPORTS) SECTION -->
+<!-- =================================== -->
+<section class="bg-accent-green py-20">
+    <div class="container mx-auto px-4 md:px-6">
+        
+        <!-- Section Header -->
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white">
+                Signature Events (Literature)
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z" fill="white"/>
+</svg>
+</button>
+                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z" fill="white"/>
+</svg>
+</button>
+            </div>
+        </div>
+
+         <div class="swiper art-culture-slider">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 196.png" alt="Event: Reading and Writing India" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">Reading and Wri...</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 199.png" alt="Event: The name is Bond" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">The name is Bond</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 200.png" alt="Event: Open to All" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">Open to All</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 4 (Example) -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 181.png" alt="Another Art Event" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">Artistic Visions</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>15 May 2025</p>
+                                <svg class="h-6 w-6 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Slider Pagination Dots -->
+        <div class="signature-pagination mt-8 text-center"></div>
+
+    </div>
+</section>
+
 
 <!-- ============================================= -->
 <!-- 8. SIGNATURE EVENTS (ART & CULTURE) SECTION   -->
@@ -626,16 +721,18 @@
         <!-- Section Header -->
         <div class="flex justify-between items-center mb-10">
             <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white">
-                Signature Events (Art & Culture)
+                Signature Events (Art)
             </h2>
             <!-- Slider Navigation Arrows -->
             <div class="hidden md:flex items-center space-x-2">
-                <button id="art-culture-prev" class="text-white/70 hover:text-white transition-colors p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
-                </button>
-                <button id="art-culture-next" class="text-white/70 hover:text-white transition-colors p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
-                </button>
+                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z" fill="white"/>
+</svg>
+</button>
+                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z" fill="white"/>
+</svg>
+</button>
             </div>
         </div>
 
@@ -723,16 +820,18 @@
         <!-- Section Header -->
         <div class="flex justify-between items-center mb-10">
             <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white">
-                Signature Events (Corporate)
+                Signature Events (Others)
             </h2>
             <!-- Slider Navigation Arrows -->
             <div class="hidden md:flex items-center space-x-2">
-                <button id="corporate-prev" class="text-white/70 hover:text-white transition-colors p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
-                </button>
-                <button id="corporate-next" class="text-white/70 hover:text-white transition-colors p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
-                </button>
+                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z" fill="white"/>
+</svg>
+</button>
+                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z" fill="white"/>
+</svg>
+</button>
             </div>
         </div>
 
@@ -758,7 +857,7 @@
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                      <a href="#" class="block group relative overflow-hidden rounded-lg">
-                        <img src="assets/images/absolut-kapoor.jpg" alt="Event: Perfect Strokes" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="assets/images/Rectangle 197.png" alt="Event: Perfect Strokes" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white w-full">
                             <h3 class="text-2xl font-bold">Perfect Strokes</h3>
@@ -773,7 +872,7 @@
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
                      <a href="#" class="block group relative overflow-hidden rounded-lg">
-                        <img src="assets/images/royal-stag.jpg" alt="Event: The large short films" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="assets/images/Rectangle 199.png" alt="Event: The large short films" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white w-full">
                             <h3 class="text-2xl font-bold">The large...</h3>

@@ -14,7 +14,7 @@
 <body>
 
 <!-- =================================== -->
-<!-- 1. HEADER (WITH MOBILE MENU)      -->
+<!-- 1. HEADER (WITH MULTILEVEL MENU)  -->
 <!-- =================================== -->
 <header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 md:p-6">
     
@@ -22,57 +22,208 @@
     <div class="container mx-auto">
         <div class="bg-accent-blue flex justify-between items-center px-6 py-2 rounded-md shadow-lg">
             
-            <!-- Logo for Desktop -->
+            <!-- Logo -->
             <a href="index.html">
                 <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
             </a>
             
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8 text-lg text-white">
-                <a href="about.html" class="hover:opacity-80 transition-opacity">About Us</a>
-                <a href="#" class="hover:opacity-80 transition-opacity">Sports</a>
-                <a href="#" class="hover:opacity-80 transition-opacity">Literature</a>
-                <a href="#" class="hover:opacity-80 transition-opacity">Art</a>
-                <a href="#" class="hover:opacity-80 transition-opacity">Others</a>
+            <!-- ======================= -->
+            <!-- DESKTOP NAVIGATION      -->
+            <!-- ======================= -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center space-x-8 text-lg text-white">
+                    
+                    <li><a href="index.html" class="hover:opacity-80 transition-opacity">Home</a></li>
+                    
+                    <!-- About (Has Submenu) -->
+                    <li class="relative group">
+                        <a href="about.html" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                            <span>About</span>
+                            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <!-- Level 2 Dropdown -->
+                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-black/20">Our Team</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Sports (Has 3rd Level Submenu) -->
+                    <li class="relative group">
+                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                            <span>Sports</span>
+                            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <!-- Level 2 Dropdown -->
+                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[220px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
+                            <!-- Cricket (Sub-group) -->
+                            <li class="relative group/cricket">
+                                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-black/20">
+                                    <span>Cricket</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </a>
+                                <!-- Level 3 Dropdown -->
+                                <ul class="absolute hidden group-hover/cricket:block left-full top-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2">
+                                    <li><a href="icc.html" class="block px-4 py-2 hover:bg-black/20">ICC</a></li>
+                                    <li><a href="ipl.html" class="block px-4 py-2 hover:bg-black/20">IPL</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="chess.html" class="block px-4 py-2 hover:bg-black/20">Tata Steel Chess</a></li>
+                             <!-- 3D Signature (Sub-group) -->
+                            <li class="relative group/3d">
+                                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-black/20">
+                                    <span>3D Signature</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </a>
+                                <!-- Level 3 Dropdown -->
+                                <ul class="absolute hidden group-hover/3d:block left-full top-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2">
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-black/20">Football</a></li>
+                                    <li><a href="hockey.html" class="block px-4 py-2 hover:bg-black/20">Hockey</a></li>
+                                    <li><a href="kabaddi.html" class="block px-4 py-2 hover:bg-black/20">Kabaddi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Literature (Has Submenu) -->
+                    <li class="relative group">
+                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                            <span>Literature</span>
+                            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
+                            <li><a href="klm.html" class="block px-4 py-2 hover:bg-black/20">Kolkata Literary</a></li>
+                            <li><a href="blm.html" class="block px-4 py-2 hover:bg-black/20">BLM</a></li>
+                            <li><a href="jklm.html" class="block px-4 py-2 hover:bg-black/20">JLM</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Art (Has Submenu) -->
+                    <li class="relative group">
+                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                            <span>Art</span>
+                            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
+                            <li><a href="bengal-biennale.html" class="block px-4 py-2 hover:bg-black/20">Bengal Biennale</a></li>
+                        </ul>
+                    </li>
+
+                     <!-- Others (Has Submenu) -->
+                    <li class="relative group">
+                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                            <span>Others</span>
+                            <svg class="w-4 h-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
+                            <li><a href="aberlour.html" class="block px-4 py-2 hover:bg-black/20">Aberlour</a></li>
+                            <li><a href="absolut.html" class="block px-4 py-2 hover:bg-black/20">Absolut Art</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
 
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="focus:outline-none text-white">
-                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 19" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="24" height="3" rx="1.5" fill="white"/>
-                        <rect y="8" width="24" height="3" rx="1.5" fill="white"/>
-                        <rect y="16" width="24" height="3" rx="1.5" fill="white"/>
-                    </svg>
+                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 19"><rect width="24" height="3" rx="1.5" fill="white"/><rect y="8" width="24" height="3" rx="1.5" fill="white"/><rect y="16" width="24" height="3" rx="1.5" fill="white"/></svg>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Mobile Menu Panel (Slides in from the right) -->
+    <!-- ======================= -->
+    <!-- MOBILE MENU PANEL       -->
+    <!-- ======================= -->
     <div id="mobile-menu" class="fixed top-0 right-0 h-full w-full max-w-md bg-accent-blue z-50 p-8 transform translate-x-full transition-transform duration-300 ease-in-out text-white">
         
-        <!-- Close Button -->
-        <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none p-2">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
+        <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none p-2"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg></button>
 
-        <!-- Menu Content -->
         <div class="flex flex-col h-full pt-10">
-            <!-- Logo for Mobile Menu (Styled to be white) -->
-            <a href="index.html" class="mb-16">
-                <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10 brightness-0 invert">
-            </a>
+            <a href="index.html" class="mb-16"><img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10 brightness-0 invert"></a>
             
-            <!-- Navigation Links -->
-            <nav class="flex flex-col space-y-5">
-                <a href="about.html" class="text-3xl  hover:opacity-80 transition-opacity">About Us</a>
-                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Sports</a>
-                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Literature</a>
-                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Art</a>
-                <a href="#" class="text-3xl  hover:opacity-80 transition-opacity">Others</a>
+            <nav class="flex flex-col space-y-2">
+                <a href="index.html" class="text-3xl hover:opacity-80 transition-opacity py-2">Home</a>
+                
+                <!-- About -->
+                <div>
+                    <a href="about.html" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                        <span>About</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <ul class="hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="text-2xl text-white/80 hover:text-white">Our Team</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sports -->
+                <div>
+                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                        <span>Sports</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <ul class="hidden pl-4 mt-2 space-y-2">
+                        <!-- Cricket Sub-Menu -->
+                        <li>
+                             <a href="#" class="mobile-menu-parent flex items-center justify-between text-2xl text-white/80 hover:text-white">
+                                <span>Cricket</span>
+                                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </a>
+                            <ul class="hidden pl-4 mt-2 space-y-2">
+                                <li><a href="icc.html" class="text-xl text-white/60 hover:text-white">ICC</a></li>
+                                <li><a href="ipl.html" class="text-xl text-white/60 hover:text-white">IPL</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="chess.html" class="text-2xl text-white/80 hover:text-white">Tata Steel Chess</a></li>
+                         <!-- 3D Signature Sub-Menu -->
+                        <li>
+                             <a href="#" class="mobile-menu-parent flex items-center justify-between text-2xl text-white/80 hover:text-white">
+                                <span>3D Signature</span>
+                                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </a>
+                            <ul class="hidden pl-4 mt-2 space-y-2">
+                                <li><a href="#" class="text-xl text-white/60 hover:text-white">Football</a></li>
+                                <li><a href="hockey.html" class="text-xl text-white/60 hover:text-white">Hockey</a></li>
+                                <li><a href="kabaddi.html" class="text-xl text-white/60 hover:text-white">Kabaddi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Literature -->
+                <div>
+                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                        <span>Literature</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <ul class="hidden pl-4 mt-2 space-y-2">
+                        <li><a href="klm.html" class="text-2xl text-white/80 hover:text-white">Kolkata Literary</a></li>
+                        <li><a href="blm.html" class="text-2xl text-white/80 hover:text-white">BLM</a></li>
+                        <li><a href="jklm.html" class="text-2xl text-white/80 hover:text-white">JLM</a></li>
+                    </ul>
+                </div>
+
+                <!-- Art -->
+                 <div>
+                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                        <span>Art</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <ul class="hidden pl-4 mt-2 space-y-2">
+                        <li><a href="bengal-biennale.html" class="text-2xl text-white/80 hover:text-white">Bengal Biennale</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Others -->
+                 <div>
+                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                        <span>Others</span>
+                        <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <ul class="hidden pl-4 mt-2 space-y-2">
+                        <li><a href="aberlour.html" class="text-2xl text-white/80 hover:text-white">Aberlour</a></li>
+                        <li><a href="absolut.html" class="text-2xl text-white/80 hover:text-white">Absolut Art</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </div>

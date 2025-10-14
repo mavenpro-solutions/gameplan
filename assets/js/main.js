@@ -70,6 +70,18 @@ jQuery(document).ready(function($) {
         // If no submenu, the link will work as normal (e.g., "About Us")
     });
 
+// --- 3. EVENT ALERT POPUP ---
+    setTimeout(function() {
+        $('#event-alert').removeClass('opacity-0 translate-y-10');
+    }, 3000);
+    $('#close-alert-button').on('click', function() {
+        const eventAlert = $('#event-alert');
+        eventAlert.addClass('opacity-0 translate-y-10');
+        setTimeout(function() {
+            eventAlert.addClass('hidden');
+        }, 500);
+    });
+
    // --- 4. UNIVERSAL LIGHTBOX/POPUP LOGIC (UPDATED) ---
     const lightbox = $('#lightbox');
     const lightboxContent = $('#lightbox-content');

@@ -299,11 +299,6 @@
     <!-- =================================== -->
     <!-- 3. UI CONTROLS OVERLAY (FIXED)    -->
     <!-- =================================== -->
-    <!-- 
-        CHANGE: Replaced 'relative h-full w-full' with 'absolute inset-0'.
-        This makes the div an overlay that covers the parent (.hero-swiper)
-        and sits on top of the slides.
-    -->
     <div class="absolute inset-0 z-20 pointer-events-none">
         <!-- Left-side Slider Indicators (Now the Swiper Pagination) -->
         <div class="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 pointer-events-auto">
@@ -331,122 +326,120 @@
 
 </div>
 
-<!-- =================================== -->
-<!-- ROYAL STAG INTRO SECTION          -->
-<!-- =================================== -->
-<section class="bg-light-tan-bg py-16 md:py-20">
-    <div class="container mx-auto px-6 md:px-10 max-w-8xl">
-        
-        <!-- Section Title -->
-        <h2 class="text-dark-gold-text text-3xl font-bold uppercase tracking-widest mb-6">
-            ROYAL STAG BARREL SELECT SHORTS
-        </h2>
-        
-        <!-- Section Content -->
-        <p class="text-gray-800 text-lg leading-relaxed">
-            Gameplan has been in the thick of the short film revolution sweeping India and the world, having taken on the responsibility of commissioning several films on behalf of Royal Stag Barrel Select Large Short Films. Among the films are Ahalya and Anukul, directed by Sujoy Ghosh, Death of a Father directed by Chaitanya Tamhane and Ouch, directed by Neeraj Pandey, which have drawn millions of views on social media and contributed significantly to the genre.
-        </p>
-
-    </div>
-</section>
-
-<!-- ======================================================= -->
-<!-- ROYAL STAG VIDEO LIST SECTION (WITH POPUP TRIGGERS)   -->
-<!-- ======================================================= -->
-<section class="bg-white py-16 md:py-24">
-    <div class="container mx-auto px-6 md:px-10 max-w-6xl">
-        
-        <!-- Video List Container -->
-        <div class="space-y-12">
-
-            <!-- Video Item 1 -->
-            <div>
-                <h3 class="text-dark-gold-text text-xl font-semibold uppercase tracking-widest mb-4">SOMAYER SMRITIMALA | GOUTAM GHOSE</h3>
-                <!-- POPUP TRIGGER ADDED: js-lightbox class and data attributes -->
-                <!-- Classes removed: 'aspect-video' from <a>, 'h-full object-cover' from <img> -->
-                <a href="#" class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden" data-type="video" data-src="https://www.youtube.com/embed/fBIE8wPv78s?si=_K8dLNEpeYXWYN9T">
-                    <img src="assets/images/Rectangle 196.png" alt="Thumbnail for Somayer Smritimala" class="w-full">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg transition-opacity group-hover:opacity-100"><svg class="w-20 h-20 text-white transform transition-transform group-hover:scale-110" viewBox="0 0 165 116" fill="none"><path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/><path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/></svg></div>
-                </a>
-            </div>
-
-            <!-- Video Item 2 -->
-            <div>
-                <h3 class="text-dark-gold-text text-xl font-semibold uppercase tracking-widest mb-4">ANUKUL | SUJOY GHOSH</h3>
-                <!-- POPUP TRIGGER ADDED -->
-                <!-- Classes removed: 'aspect-video' from <a>, 'h-full object-cover' from <img> -->
-                <a href="#" class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden" data-type="video" data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2">
-                    <img src="assets/images/Rectangle 181.png" alt="Thumbnail for Anukul" class="w-full">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg transition-opacity group-hover:opacity-100"><svg class="w-20 h-20 text-white transform transition-transform group-hover:scale-110" viewBox="0 0 165 116" fill="none"><path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/><path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/></svg></div>
-                </a>
-            </div>
-
-            <!-- Video Item 3 -->
-            <div>
-                <h3 class="text-dark-gold-text text-xl font-semibold uppercase tracking-widest mb-4">DEATH OF A FATHER | CHAITANYA TAMHANE</h3>
-                <!-- POPUP TRIGGER ADDED -->
-                <!-- Classes removed: 'aspect-video' from <a>, 'h-full object-cover' from <img> -->
-                <a href="#" class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden" data-type="video" data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3">
-                    <img src="assets/images/Rectangle 248.png" alt="Thumbnail for Death of a Father" class="w-full">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg transition-opacity group-hover:opacity-100"><svg class="w-20 h-20 text-white transform transition-transform group-hover:scale-110" viewBox="0 0 165 116" fill="none"><path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/><path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/></svg></div>
-                </a>
-            </div>
+    <!-- =================================== -->
+    <!-- BHUBANESWAR LITERARY MEET SECTION (UPDATED) -->
+    <!-- =================================== -->
+    <section class="bg-light-orange-bg py-16 md:py-24">
+        <div class="container mx-auto px-6 md:px-10 max-w-8xl">
+            <h2 class="text-dark-orange-text text-3xl font-bold uppercase tracking-widest mb-6">
+                BHUBANESWAR LITERARY MEET
+            </h2>
+            <p class="text-gray-800 text-lg leading-relaxed">
+                Gameplan launched the Bhubaneswar Literary Meet in 2016 to celebrate the rich literary and cultural legacy of Odisha.
+            </p>
         </div>
+    </section>
 
-        <!-- View More Button -->
-        <div class="text-center mt-16">
-            <a href="#" class="inline-block bg-dark-charcoal text-white text-sm font-semibold py-3 px-8 rounded-md uppercase tracking-wider hover:bg-opacity-90 transition-colors">View More</a>
-        </div>
-    </div>
-</section>
-
-<!-- ========================================================= -->
-<!-- THE BARTENDER SERIES SECTION (WITH POPUP TRIGGERS)      -->
-<!-- ========================================================= -->
-<section class="bg-light-tan-bg py-16 md:py-24">
-    <div class="container mx-auto px-6 md:px-10 max-w-6xl">
-        
-        <!-- Section Title -->
-        <h2 class="text-dark-gold-text text-3xl md:text-4xl font-bold uppercase tracking-widest mb-10">THE BARTENDER SERIES:</h2>
-        
-        <!-- Video List Container -->
-        <div class="space-y-12">
-
-            <!-- Video Item 1 -->
-            <div>
-                <h3 class="text-dark-gold-text text-xl font-semibold uppercase tracking-widest mb-4">BADMINTON | DIBAKAR BANERJEE</h3>
-                <!-- POPUP TRIGGER ADDED -->
-                <!-- Classes removed: 'aspect-video' from <a>, 'h-full object-cover' from <img> -->
-                <a href="#" class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden" data-type="video" data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4">
-                    <img src="assets/images/Rectangle 181.png" alt="Thumbnail for Badminton" class="w-full">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg transition-opacity group-hover:opacity-100"><svg class="w-20 h-20 text-white transform transition-transform group-hover:scale-110" viewBox="0 0 165 116" fill="none"><path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/><path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/></svg></div>
-                </a>
-            </div>
-
-            <!-- Video Item 2 -->
-            <div>
-                <h3 class="text-dark-gold-text text-xl font-semibold uppercase tracking-widest mb-4">NEXT PLEASE | RISHAV KAPOOR</h3>
-                <!-- POPUP TRIGGER ADDED -->
-                <!-- Classes removed: 'aspect-video' from <a>, 'h-full object-cover' from <img> -->
-                <a href="#" class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden" data-type="video" data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_5">
-                    <img src="assets/images/Rectangle 198.png" alt="Thumbnail for Next Please" class="w-full">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg transition-opacity group-hover:opacity-100"><svg class="w-20 h-20 text-white transform transition-transform group-hover:scale-110" viewBox="0 0 165 116" fill="none"><path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/><path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/></svg></div>
-                </a>
-            </div>
+    <!-- =================================== -->
+    <!-- "WHAT IS" DETAILS SECTION (UPDATED) -->
+    <!-- =================================== -->
+    <section class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-6 md:px-10 max-w-8xl">
             
-            <!-- Video Item 3 -->
-            <div>
-                <h3 class="text-dark-gold-text text-xl font-semibold uppercase tracking-widest mb-4">THE PROMISE | TIGMANSHU DHULIA</h3>
-                <!-- POPUP TRIGGER ADDED -->
-                <!-- Classes removed: 'aspect-video' from <a>, 'h-full object-cover' from <img> -->
-                <a href="#" class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden" data-type="video" data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_6">
-                    <img src="assets/images/Rectangle 199.png" alt="Thumbnail for The Promise" class="w-full">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg transition-opacity group-hover:opacity-100"><svg class="w-20 h-20 text-white transform transition-transform group-hover:scale-110" viewBox="0 0 165 116" fill="none"><path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/><path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/></svg></div>
-                </a>
+            <!-- Section Title -->
+            <h2 class="text-dark-orange-text text-3xl font-bold mb-10">
+                What is the Bhubaneswar Literary Meet?
+            </h2>
+            
+            <!-- Grid for Bullet Points -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
+                
+                <!-- Column 1 -->
+                <div class="space-y-8">
+                    <!-- Point 1 -->
+                    <div class="flex items-start">
+                        <span class="text-dark-orange-text text-xl mt-1 mr-4">•</span>
+                        <p class="text-gray-800 text-lg leading-relaxed">
+                            An endeavour to take Odisha to a wider global audience and also to bring the world to Odisha
+                        </p>
+                    </div>
+                    
+                    <!-- Point 2 -->
+                    <div class="flex items-start">
+                        <span class="text-dark-orange-text text-xl mt-1 mr-4">•</span>
+                        <p class="text-gray-800 text-lg leading-relaxed">
+                            A platform for national and international authors to meet the local talent of Odisha
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="space-y-8">
+                    <!-- Point 3 -->
+                    <div class="flex items-start">
+                        <span class="text-dark-orange-text text-xl mt-1 mr-4">•</span>
+                        <p class="text-gray-800 text-lg leading-relaxed">
+                           A forging of international connections with the local cultural ethos
+                        </p>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- Additional Information Paragraph -->
+             <p class="text-gray-800 text-lg leading-relaxed mt-16">
+                The Bhubaneswar Literary Meet has drawn premier authors and speakers from across India and the world. We have hosted eminent delegates such as Manoj Das, Ruskin Bond, Jayanta Mahapatra, Nayantara Sehgal, Kiran Nagarkar, Sharmila Tagore, Lord Meghnad Desai, Ileana Citaristi, Mark Tully, Nandita Das, Barkha Dutt and William Dalrymple, among others.
+            </p>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- =================================== -->
+    <!-- CTA & SOCIALS SECTION (UPDATED)   -->
+    <!-- =================================== -->
+    <section class="bg-light-orange-bg py-16 md:py-20">
+        <div class="container mx-auto px-6 md:px-10 flex flex-col items-center gap-y-10">
+
+            <!-- CTA Button -->
+            <a href="#" class="bg-dark-orange-text text-white font-bold py-4 px-10 rounded-lg shadow-md uppercase tracking-widest text-center transition-transform transform hover:scale-105">
+                Visit Bhubaneswar Literary Meet Website
+            </a>
+
+            <!-- Social Media Links -->
+            <div class="flex items-center gap-x-4">
+                <p class="font-semibold text-gray-800 text-lg">Follow On</p>
+                <div class="flex items-center gap-x-2 md:gap-x-4">
+                    
+                      
+                    <!-- Instagram -->
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                        <img src="assets/images/logo/insta-logo.png" alt="Instagram" class="w-9 h-9">
+                    </a>
+                    
+                    <!-- Facebook -->
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                        <img src="assets/images/logo/facebook-logo.png" alt="Facebook" class="w-9 h-9">
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                         <img src="assets/images/logo/linkedin-logo.png" alt="LinkedIn" class="w-9 h-9">
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                        <img src="assets/images/logo/youtube-logo.png" alt="YouTube" class="w-12 h-9">
+                    </a>
+                    
+                    <!-- X (Twitter) -->
+                    <a href="#" class="hover:opacity-80 transition-opacity">
+                        <img src="assets/images/logo/x-logo.png" alt="X (Twitter)" class="w-9 h-9">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 </main>
 
@@ -538,7 +531,6 @@
                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.8667 9.35828C11.7303 6.62531 10.3556 5.06073 8.04761 5.04518C6.6561 5.03603 5.49285 5.6765 4.78024 6.85038L6.05047 7.79553C6.5845 6.91626 7.42766 6.73419 8.03835 6.74059C8.79897 6.74608 9.37175 6.9858 9.74321 7.45426C10.0128 7.79462 10.1939 8.26582 10.284 8.85963C9.609 8.73519 8.88179 8.69707 8.10237 8.74526C5.90727 8.8825 4.49722 10.2732 4.59156 12.2047C4.63958 13.1846 5.08853 14.0282 5.85673 14.579C6.50532 15.0447 7.34259 15.2716 8.21103 15.2204C9.35911 15.1518 10.2596 14.6769 10.8879 13.8068C11.3647 13.1462 11.6662 12.2898 11.7993 11.212C12.3468 11.5706 12.7511 12.0418 12.976 12.6091C13.3568 13.5735 13.3787 15.1582 12.1885 16.4501C11.1457 17.581 9.8923 18.0714 7.99792 18.086C5.89632 18.0696 4.30686 17.3367 3.27417 15.9103C2.3055 14.5744 1.806 12.6439 1.78747 10.1744C1.806 7.70404 2.30634 5.7744 3.27417 4.43765C4.30686 3.01123 5.89632 2.27927 7.99792 2.2628C10.1147 2.28018 11.7311 3.01489 12.8042 4.44954C13.3307 5.15223 13.7266 6.03607 13.9885 7.06631L15.4761 6.63629C15.1585 5.36724 14.6598 4.27387 13.9818 3.36715C12.6063 1.52809 10.5847 0.586597 7.99286 0.567383C5.40609 0.586597 3.41737 1.53266 2.0806 3.37721C0.892081 5.01956 0.278028 7.31701 0.257812 10.1808C0.278028 13.0446 0.892081 15.3293 2.0806 16.9716C3.41737 18.8162 5.4162 19.7622 8.00213 19.7815C10.3025 19.7641 11.9231 19.1099 13.2582 17.6615C15.006 15.7648 14.953 13.3887 14.3777 11.9302C13.9355 10.8094 13.0552 9.91183 11.8675 9.35919M8.12932 13.5286C7.16739 13.5872 6.16839 13.1187 6.11869 12.1141C6.08248 11.3694 6.60724 10.5386 8.18828 10.4398C8.90284 10.3878 9.62059 10.4413 10.3219 10.599C10.1399 13.0712 9.07104 13.4719 8.12932 13.5286Z" fill="white"/>
 </svg>
-
                         </a>
                         <!-- LinkedIn -->
                         <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
@@ -560,22 +552,6 @@
     </div>
     </div>
 </footer>
-
-<!-- ============================================= -->
-<!-- UNIVERSAL POPUP/LIGHTBOX FOR VIDEOS & IMAGES  -->
-<!-- ============================================= -->
-<div id="lightbox" class="fixed inset-0 z-[999] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
-    <!-- Close button -->
-    <button id="lightbox-close" class="absolute top-4 right-4 text-white p-2 z-10">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
-    </button>
-    
-    <!-- Container for content -->
-    <div id="lightbox-content" class="relative w-full max-w-4xl max-h-[90vh] transform scale-95 transition-transform duration-300">
-        <!-- Content (Image or Video) will be injected here by JavaScript -->
-    </div>
-</div>
-
 
     <!-- SCRIPTS -->
     <script src="assets/js/swiper-bundle.min.js"></script>

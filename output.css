@@ -991,9 +991,6 @@
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
-  .pb-8 {
-    padding-bottom: calc(var(--spacing) * 8);
-  }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
   }
@@ -1694,6 +1691,9 @@
     font-display: swap;
     src: url("/assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
   }
+  #mobile-menu > .flex.flex-col.h-full.pt-10 {
+    overflow-y: auto;
+  }
   .hero-pagination {
     position: relative;
     display: flex;
@@ -1731,7 +1731,39 @@
     font-weight: 700;
     color: white;
   }
+  .upcoming-events-pagination {
+    align-items: center;
+    --swiper-pagination-color: #ffffff;
+  }
+  .upcoming-events-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #6b7280;
+    opacity: 0.7;
+    transition: background-color 0.3s ease;
+    margin: 0 4px !important;
+  }
+  .upcoming-events-pagination .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+    opacity: 1;
+  }
+  .literature-pagination {
+    --swiper-pagination-color: #ffffff;
+  }
+  .literature-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+  }
+  .literature-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.2);
+  }
   .events-pagination {
+    align-items: center;
     --swiper-pagination-color: #ffffff;
   }
   .events-pagination .swiper-pagination-bullet {

@@ -55,6 +55,10 @@
     font-display: swap;
     src: url("/assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
   }
+
+  #mobile-menu > .flex.flex-col.h-full.pt-10 {
+    overflow-y: auto;
+  }
   /* --- DEFINITIVE FIX FOR HERO SLIDER PAGINATION --- */
 
   /* This is the main container for the numbers AND the static line */
@@ -111,8 +115,47 @@
   }
    /* --- STYLES FOR UPCOMING EVENTS SLIDER --- */
 
+    /* --- Renamed from events-pagination for clarity --- */
+  .upcoming-events-pagination {
+    align-items: center;
+    --swiper-pagination-color: #ffffff;
+  }
+  .upcoming-events-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #6b7280; /* Gray color for inactive dots */
+    opacity: 0.7;
+    transition: background-color 0.3s ease;
+    margin: 0 4px !important; /* Add spacing between dots */
+  }
+
+  .upcoming-events-pagination .swiper-pagination-bullet-active {
+    background-color: #ffffff; /* White color for the active dot */
+    opacity: 1;
+  }
+
+    /* --- NEW: STYLES FOR LITERATURE SLIDER --- */
+  /* (Copied from art-culture-pagination styles) */
+   .literature-pagination {
+    --swiper-pagination-color: #ffffff;
+  }
+  .literature-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff; /* White color */
+    opacity: 0.4; /* Inactive dots are faded */
+    transition: all 0.3s ease;
+    margin: 0 4px !important;
+  }
+
+  .literature-pagination .swiper-pagination-bullet-active {
+    opacity: 1; /* Active dot is fully white */
+    transform: scale(1.2);
+  }
+
      /* --- UPCOMING EVENTS SLIDER --- */
   .events-pagination {
+    align-items: center;
     /* --- FIX: Override Swiper's default blue color --- */
     --swiper-pagination-color: #ffffff;
   }

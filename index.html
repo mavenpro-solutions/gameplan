@@ -348,9 +348,9 @@
                 </h2>
                 <!-- Slider Navigation Arrows -->
                 <div class="hidden md:flex items-center space-x-2">
-                     <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-left w-8 h-8"></i>
+                     <button id="events-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-left w-8 h-8"></i>
 </button>
-                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-right w-8 h-8"></i>
+                <button id="events-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-right w-8 h-8"></i>
 </button>
                 </div>
             </div>
@@ -453,9 +453,9 @@
             </h2>
             <!-- Slider Navigation Arrows -->
             <div class="hidden md:flex items-center space-x-2">
-                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-left w-8 h-8"></i>
+                 <button id="past-events-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-left w-8 h-8"></i>
 </button>
-                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-right w-8 h-8"></i>
+                <button id="past-events-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-right w-8 h-8"></i>
 </button>
             </div>
         </div>
@@ -826,9 +826,9 @@
             </h2>
             <!-- Slider Navigation Arrows -->
             <div class="hidden md:flex items-center space-x-2">
-                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-left w-8 h-8"></i>
+                 <button id="art-culture-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-left w-8 h-8"></i>
 </button>
-                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-right w-8 h-8"></i>
+                <button id="art-culture-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-right w-8 h-8"></i>
 </button>
             </div>
         </div>
@@ -905,7 +905,7 @@
 
 
 <!-- ============================================= -->
-<!-- 9. SIGNATURE EVENTS (CORPORATE) SECTION       -->
+<!-- 9. SIGNATURE EVENTS (others) SECTION       -->
 <!-- ============================================= -->
 <section class="bg-primary-blue py-20">
     <div class="container mx-auto px-4 md:px-6">
@@ -917,9 +917,9 @@
             </h2>
             <!-- Slider Navigation Arrows -->
             <div class="hidden md:flex items-center space-x-2">
-                 <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-left w-8 h-8"></i>
+                 <button id="corporate-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-left w-8 h-8"></i>
 </button>
-                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-right w-8 h-8"></i>
+                <button id="corporate-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><i class="ti ti-chevron-right w-8 h-8"></i>
 </button>
             </div>
         </div>
@@ -957,6 +957,19 @@
                 </div>
                 
                 <!-- Slide 3 -->
+                <div class="swiper-slide">
+                     <a href="#" class="block group relative overflow-hidden rounded-lg">
+                        <img src="assets/images/Rectangle 199.png" alt="Event: The large short films" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                            <h3 class="text-2xl font-bold">The large...</h3>
+                            <div class="flex justify-between items-end mt-2 opacity-80">
+                                <p>20 April 2025</p>
+                                <i class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"></i></div>
+                        </div>
+                    </a>
+                </div>
+                
                 <div class="swiper-slide">
                      <a href="#" class="block group relative overflow-hidden rounded-lg">
                         <img src="assets/images/Rectangle 199.png" alt="Event: The large short films" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105">
@@ -1321,36 +1334,41 @@
 <!-- ========================================================= -->
 <!-- 4. NEW EVENT ALERT POPUP (UPDATED DESIGN)                 -->
 <!-- ========================================================= -->
-<div id="event-alert" class="fixed bottom-50 md:bottom-70 right-5 z-50 w-[60vw] md:w-[90vw] max-w-sm transform overflow-hidden rounded-2xl bg-black/20 backdrop-blur-md transition-all duration-500 ease-in-out opacity-0 translate-y-10">
+<div id="event-alert" class="fixed bottom-5 right-5 z-50 w-[85vw] max-w-sm transform overflow-hidden rounded-2xl bg-black/20 backdrop-blur-md transition-all duration-500 ease-in-out opacity-0 translate-y-10 md:bottom-10 md:right-10">
     
     <!-- This div holds all the content and provides padding -->
     <div class="relative p-4">
-
-        <!-- Positioned "New Event Alert" Tag -->
-        <!-- <span class="absolute -top-0 left-4 z-10 rounded-lg bg-accent-red-alt px-2 py-1 text-sm font-bold text-white">New Event Alert</span> -->
         
         <!-- Positioned Close Button -->
-        <button id="close-alert-button" class="absolute right-3 top-3 z-10 p-1 text-white/70 transition-colors hover:text-white">
+        <button id="close-alert-button" class="absolute right-3 top-3 z-20 p-1 text-white/70 transition-colors hover:text-white">
             <i class="ti ti-x text-xl"></i>
         </button>
 
         <!-- Main Content Area -->
-        <div class="mt-6">
-            <span class="absolute left-4 z-10 rounded-lg bg-accent-red-alt px-2 py-2 text-sm font-bold text-white">New Event Alert</span>
-            <!-- Event Image with rounded corners inside the card -->
-            <img src="assets/images/Rectangle%20196.png" alt="Event Image" class="h-46 w-full rounded-xl object-cover pt-9">
+        <div>
+            <!-- Wrapper to position the ticker relative to the image -->
+            <div class="relative">
+                
+                <!-- "New Event Alert" Tag - Positioned over the image -->
+                <span class="absolute top-4 z-10 rounded-lg bg-accent-red-alt px-5 py-2 text-sm font-bold text-white">New Event Alert</span>
+                
+                <!-- Event Image with no fixed height -->
+                <img src="assets/images/Rectangle 178.png" alt="Event Image" class="w-full rounded-xl object-cover pt-12">
+            
+            </div>
             
             <!-- Text Details below the image -->
-            <div class="relative mt-5 text-white">
-                <h3 class="pr-8 text-xl md:text-2xl font-bold leading-tight">Reading and Writing India 2025</h3>
-                <div class="mt-3 space-y-1 text-white/80">
+            <div class="relative mt-4 text-white">
+                <h3 class="pr-8 text-xl font-bold leading-tight md:text-2xl">Reading and Writing India 2025</h3>
+                
+                <div class="mt-2 space-y-1 text-white/80">
                     <p class="text-base">30 September | 4pm Onwards</p>
                     <p class="text-sm">Writers Building, Kolkata</p>
                 </div>
 
                 <!-- Arrow Link (positioned relative to the text block) -->
                 <a href="#" class="absolute bottom-0 right-0 text-white/80 transition-colors hover:text-white">
-                    <i class="ti ti-arrow-right h-8 w-8"></i>
+                    <i class="ti ti-arrow-right text-4xl"></i>
                 </a>
             </div>
         </div>

@@ -37,6 +37,7 @@
   --color-medium-gray: #5B5B5B;
   --color-light-orange-bg: #FFF4E6;
   --color-dark-orange-text: #B35400;
+  /* --swiper-pagination-color: #ffffff; */
   --font-family: 'DarkerGrotesque' , sans-serif;
 }
 
@@ -55,7 +56,7 @@
     font-style: normal;
     font-weight: 200 700;
     font-display: swap;
-    src: url("/assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
+    src: url("assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
   }
 
   #mobile-menu > .flex.flex-col.h-full.pt-10 {
@@ -197,10 +198,10 @@
   }
 
  /* --- FIX: ADD STYLES FOR THE NEW SPORTS SLIDER --- */
-  .sports-events-pagination {
+  .sports-pagination {
     --swiper-pagination-color: #ffffff;
   }
-  .sports-events-pagination .swiper-pagination-bullet {
+  .sports-pagination .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: #ffffff;
@@ -208,7 +209,7 @@
     transition: all 0.3s ease;
     margin: 0 4px !important;
   }
-  .sports-events-pagination .swiper-pagination-bullet-active {
+  .sports-pagination .swiper-pagination-bullet-active {
     opacity: 1;
     transform: scale(1.2);
   }

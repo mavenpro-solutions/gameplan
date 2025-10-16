@@ -11,8 +11,11 @@
     --color-red-700: oklch(50.5% 0.213 27.518);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-zinc-300: oklch(87.1% 0.006 286.286);
+    --color-zinc-400: oklch(70.5% 0.015 286.067);
+    --color-zinc-500: oklch(55.2% 0.016 285.938);
+    --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -1124,15 +1127,6 @@
   .text-dark-teal {
     color: var(--color-dark-teal);
   }
-  .text-gray-400 {
-    color: var(--color-gray-400);
-  }
-  .text-gray-500 {
-    color: var(--color-gray-500);
-  }
-  .text-gray-800 {
-    color: var(--color-gray-800);
-  }
   .text-medium-gray {
     color: var(--color-medium-gray);
   }
@@ -1159,6 +1153,15 @@
     @supports (color: color-mix(in lab, red, red)) {
       color: color-mix(in oklab, var(--color-white) 80%, transparent);
     }
+  }
+  .text-zinc-400 {
+    color: var(--color-zinc-400);
+  }
+  .text-zinc-500 {
+    color: var(--color-zinc-500);
+  }
+  .text-zinc-800 {
+    color: var(--color-zinc-800);
   }
   .lowercase {
     text-transform: lowercase;
@@ -1328,17 +1331,17 @@
       }
     }
   }
-  .hover\:text-gray-300 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-gray-300);
-      }
-    }
-  }
   .hover\:text-white {
     &:hover {
       @media (hover: hover) {
         color: var(--color-white);
+      }
+    }
+  }
+  .hover\:text-zinc-300 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-zinc-300);
       }
     }
   }
@@ -1693,7 +1696,7 @@
     font-style: normal;
     font-weight: 200 700;
     font-display: swap;
-    src: url("/assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
+    src: url("assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
   }
   #mobile-menu > .flex.flex-col.h-full.pt-10 {
     overflow-y: auto;
@@ -1797,10 +1800,10 @@
     background-color: #ffffff;
     opacity: 1;
   }
-  .sports-events-pagination {
+  .sports-pagination {
     --swiper-pagination-color: #ffffff;
   }
-  .sports-events-pagination .swiper-pagination-bullet {
+  .sports-pagination .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: #ffffff;
@@ -1808,7 +1811,7 @@
     transition: all 0.3s ease;
     margin: 0 4px !important;
   }
-  .sports-events-pagination .swiper-pagination-bullet-active {
+  .sports-pagination .swiper-pagination-bullet-active {
     opacity: 1;
     transform: scale(1.2);
   }

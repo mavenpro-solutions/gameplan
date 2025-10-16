@@ -186,24 +186,43 @@ jQuery(document).ready(function($) {
     });
 
 
-     // --- NEW/FIXED: SIGNATURE (SPORTS) SLIDER ---
-    new Swiper('.sports-events-slider', {
-        loop: true,
-        spaceBetween: 30,
-        slidesPerView: 1,
-        breakpoints: {
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-        },
-        pagination: {
-            el: '.sports-events-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '#sports-events-next',
-            prevEl: '#sports-events-prev',
-        },
-    });
+// --- SIGNATURE (SPORTS) SLIDER ---
+new Swiper('.sports-slider', {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 1,
+    breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+    },
+    pagination: {
+        el: '.sports-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '#sports-next',
+        prevEl: '#sports-prev',
+    },
+});
+
+// --- SIGNATURE (LITERATURE) SLIDER ---
+new Swiper('.literature-slider', {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 1,
+    breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+    },
+    pagination: {
+        el: '.literature-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '#literature-next',
+        prevEl: '#literature-prev',
+    },
+});
 
     // --- NEW: SIGNATURE (ART & CULTURE) SLIDER ---
     new Swiper('.art-culture-slider', {

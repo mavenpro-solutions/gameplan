@@ -19,11 +19,8 @@
 <!-- 1. HEADER (WITH MULTILEVEL MENU)  -->
 <!-- =================================== -->
 <header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 md:p-6">
-    
-    <!-- Desktop Header Bar -->
     <div class="container mx-auto">
-        <div class="bg-accent-blue flex justify-between items-center px-6 py-2 rounded-md shadow-lg">
-            
+        <div class="header-bar">
             <!-- Logo -->
             <a href="index.html">
                 <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
@@ -33,50 +30,50 @@
             <!-- DESKTOP NAVIGATION      -->
             <!-- ======================= -->
             <nav class="hidden md:block">
-                <ul class="flex items-center space-x-8 text-lg text-white">
+                <ul class="desktop-nav">
                     
-                    <li><a href="index.html" class="hover:opacity-80 transition-opacity">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     
                     <!-- About (Has Submenu) -->
                     <li class="relative group">
-                        <a href="about.html" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="" class="nav-link has-submenu">
                             <span>About</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
                         <!-- Level 2 Dropdown -->
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-black/20">Our Team</a></li>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html" class="dropdown-item">About Us</a></li>
                         </ul>
                     </li>
                     
                     <!-- Sports (Has 3rd Level Submenu) -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="#" class="nav-link has-submenu">
                             <span>Sports</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
                         <!-- Level 2 Dropdown -->
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[220px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
+                        <ul class="dropdown-menu min-w-[220px]">
                             <!-- Cricket (Sub-group) -->
                             <li class="relative group/cricket">
-                                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-black/20">
+                                <a href="#" class="dropdown-item justify-between">
                                     <span>Cricket</span>
-                                    <i class="ti ti-chevron-right w-4 h-4"></i></a>
+                                    <i class="ti ti-chevron-right submenu-icon-right"></i></a>
                                 <!-- Level 3 Dropdown -->
-                                <ul class="absolute hidden group-hover/cricket:block left-full top-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2">
-                                    <li><a href="icc.html" class="block px-4 py-2 hover:bg-black/20">ICC</a></li>
-                                    <li><a href="ipl.html" class="block px-4 py-2 hover:bg-black/20">IPL</a></li>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="icc.html" class="dropdown-item">ICC</a></li>
+                                    <li><a href="ipl.html" class="dropdown-item">IPL</a></li>
                                 </ul>
                             </li>
-                            <li><a href="chess.html" class="block px-4 py-2 hover:bg-black/20">Tata Steel Chess</a></li>
+                            <li><a href="chess.html" class="dropdown-item">Tata Steel Chess</a></li>
                              <!-- 3D Signature (Sub-group) -->
                             <li class="relative group/3d">
-                                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-black/20">
+                                <a href="#" class="dropdown-item justify-between">
                                     <span>3D Signature</span>
-                                    <i class="ti ti-chevron-right w-4 h-4"></i></a>
+                                    <i class="ti ti-chevron-right submenu-icon-right"></i></a>
                                 <!-- Level 3 Dropdown -->
-                                <ul class="absolute hidden group-hover/3d:block left-full top-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2">
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-black/20">Football</a></li>
-                                    <li><a href="hockey.html" class="block px-4 py-2 hover:bg-black/20">Hockey</a></li>
-                                    <li><a href="kabaddi.html" class="block px-4 py-2 hover:bg-black/20">Kabaddi</a></li>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="#" class="dropdown-item">Football</a></li>
+                                    <li><a href="hockey.html" class="dropdown-item">Hockey</a></li>
+                                    <li><a href="kabaddi.html" class="dropdown-item">Kabaddi</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -84,34 +81,34 @@
 
                     <!-- Literature (Has Submenu) -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="#" class="nav-link has-submenu">
                             <span>Literature</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
-                            <li><a href="klm.html" class="block px-4 py-2 hover:bg-black/20">Kolkata Literary</a></li>
-                            <li><a href="blm.html" class="block px-4 py-2 hover:bg-black/20">BLM</a></li>
-                            <li><a href="jklm.html" class="block px-4 py-2 hover:bg-black/20">JLM</a></li>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="klm.html" class="dropdown-item">Kolkata Literary</a></li>
+                            <li><a href="blm.html" class="dropdown-item">BLM</a></li>
+                            <li><a href="jklm.html" class="dropdown-item">JLM</a></li>
                         </ul>
                     </li>
 
                     <!-- Art (Has Submenu) -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="#" class="nav-link has-submenu">
                             <span>Art</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
-                            <li><a href="bengal-biennale.html" class="block px-4 py-2 hover:bg-black/20">Bengal Biennale</a></li>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bengal-biennale.html" class="dropdown-item">Bengal Biennale</a></li>
                         </ul>
                     </li>
 
                      <!-- Others (Has Submenu) -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="#" class="nav-link has-submenu">
                             <span>Others</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
-                            <li><a href="aberlour.html" class="block px-4 py-2 hover:bg-black/20">Aberlour</a></li>
-                            <li><a href="absolut.html" class="block px-4 py-2 hover:bg-black/20">Absolut Art</a></li>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="aberlour.html" class="dropdown-item">Aberlour</a></li>
+                            <li><a href="absolut.html" class="dropdown-item">Absolut Art</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -128,52 +125,53 @@
     <!-- ======================= -->
     <!-- MOBILE MENU PANEL       -->
     <!-- ======================= -->
-    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-full max-w-md bg-accent-blue z-50 p-8 transform translate-x-full transition-transform duration-300 ease-in-out text-white">
+    <!-- FIX: Added `translate-x-full` back here to set the initial hidden state -->
+    <div id="mobile-menu" class="mobile-menu-panel translate-x-full">
         
-        <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none p-2"><i class="ti ti-x text-3xl"></i></button>
+        <button id="close-menu-button" class="mobile-menu-close-btn"><i class="ti ti-x text-3xl"></i></button>
 
-        <div class="flex flex-col h-full pt-10">
+        <div class="mobile-menu-content">
             <a href="index.html" class="mb-16"><img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10 brightness-0 invert"></a>
             
             <nav class="flex flex-col space-y-2">
-                <a href="index.html" class="text-3xl hover:opacity-80 transition-opacity py-2">Home</a>
+                <a href="index.html" class="mobile-nav-link">Home</a>
                 
                 <!-- About -->
                 <div>
-                    <a href="about.html" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="about.html" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>About</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
-                        <li><a href="#" class="text-2xl text-white/80 hover:text-white">Our Team</a></li>
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
+                        <li><a href="about.html" class="mobile-submenu-link">About us</a></li>
                     </ul>
                 </div>
 
                 <!-- Sports -->
                 <div>
-                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>Sports</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
                         <!-- Cricket Sub-Menu -->
                         <li>
-                             <a href="#" class="mobile-menu-parent flex items-center justify-between text-2xl text-white/80 hover:text-white">
+                             <a href="#" class="mobile-menu-parent mobile-submenu-link justify-between">
                                 <span>Cricket</span>
-                                <i class="ti ti-chevron-down text-base transition-transform"></i></a>
-                            <ul class="hidden pl-4 mt-2 space-y-2">
-                                <li><a href="icc.html" class="text-xl text-white/60 hover:text-white">ICC</a></li>
-                                <li><a href="ipl.html" class="text-xl text-white/60 hover:text-white">IPL</a></li>
+                                <i class="ti ti-chevron-down mobile-submenu-icon-nested"></i></a>
+                            <ul class="mobile-submenu-nested">
+                                <li><a href="icc.html" class="mobile-submenu-link-nested">ICC</a></li>
+                                <li><a href="ipl.html" class="mobile-submenu-link-nested">IPL</a></li>
                             </ul>
                         </li>
-                        <li><a href="chess.html" class="text-2xl text-white/80 hover:text-white">Tata Steel Chess</a></li>
+                        <li><a href="chess.html" class="mobile-submenu-link">Tata Steel Chess</a></li>
                          <!-- 3D Signature Sub-Menu -->
                         <li>
-                             <a href="#" class="mobile-menu-parent flex items-center justify-between text-2xl text-white/80 hover:text-white">
+                             <a href="#" class="mobile-menu-parent mobile-submenu-link justify-between">
                                 <span>3D Signature</span>
-                                <i class="ti ti-chevron-down text-base transition-transform"></i></a>
-                            <ul class="hidden pl-4 mt-2 space-y-2">
-                                <li><a href="#" class="text-xl text-white/60 hover:text-white">Football</a></li>
-                                <li><a href="hockey.html" class="text-xl text-white/60 hover:text-white">Hockey</a></li>
-                                <li><a href="kabaddi.html" class="text-xl text-white/60 hover:text-white">Kabaddi</a></li>
+                                <i class="ti ti-chevron-down mobile-submenu-icon-nested"></i></a>
+                            <ul class="mobile-submenu-nested">
+                                <li><a href="#" class="mobile-submenu-link-nested">Football</a></li>
+                                <li><a href="hockey.html" class="mobile-submenu-link-nested">Hockey</a></li>
+                                <li><a href="kabaddi.html" class="mobile-submenu-link-nested">Kabaddi</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -181,34 +179,34 @@
 
                 <!-- Literature -->
                 <div>
-                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>Literature</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
-                        <li><a href="klm.html" class="text-2xl text-white/80 hover:text-white">Kolkata Literary</a></li>
-                        <li><a href="blm.html" class="text-2xl text-white/80 hover:text-white">BLM</a></li>
-                        <li><a href="jklm.html" class="text-2xl text-white/80 hover:text-white">JLM</a></li>
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
+                        <li><a href="klm.html" class="mobile-submenu-link">Kolkata Literary</a></li>
+                        <li><a href="blm.html" class="mobile-submenu-link">BLM</a></li>
+                        <li><a href="jklm.html" class="mobile-submenu-link">JLM</a></li>
                     </ul>
                 </div>
 
                 <!-- Art -->
                  <div>
-                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>Art</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
-                        <li><a href="bengal-biennale.html" class="text-2xl text-white/80 hover:text-white">Bengal Biennale</a></li>
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
+                        <li><a href="bengal-biennale.html" class="mobile-submenu-link">Bengal Biennale</a></li>
                     </ul>
                 </div>
                 
                 <!-- Others -->
                  <div>
-                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>Others</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
-                        <li><a href="aberlour.html" class="text-2xl text-white/80 hover:text-white">Aberlour</a></li>
-                        <li><a href="absolut.html" class="text-2xl text-white/80 hover:text-white">Absolut Art</a></li>
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
+                        <li><a href="aberlour.html" class="mobile-submenu-link">Aberlour</a></li>
+                        <li><a href="absolut.html" class="mobile-submenu-link">Absolut Art</a></li>
                     </ul>
                 </div>
             </nav>
@@ -1279,10 +1277,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Bottom Link -->
-                <div class="md:mt-auto pt-4">
-                    <a href="#" class=" text-zinc-400 hover:text-white transition-colors tracking-wider">Privacy Policy</a>
-                </div>
+                
             </div>
 
             <!-- Column 3: Follow Us & Terms (Spans 4/12 on desktop) -->
@@ -1318,8 +1313,11 @@
                 </div>
                 <!-- Bottom Link -->
                 <div class="md:mt-auto pt-4">
+                     <a href="#" class=" text-zinc-400 hover:text-white transition-colors tracking-wider">Privacy Policy</a>
+                     <br>
                     <a href="#" class=" text-zinc-400 hover:text-white transition-colors tracking-wider">Terms & Conditions</a>
                 </div>
+                
             </div>
 
         </div>

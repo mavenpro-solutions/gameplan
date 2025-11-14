@@ -19,11 +19,8 @@
 <!-- 1. HEADER (WITH MULTILEVEL MENU)  -->
 <!-- =================================== -->
 <header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 md:p-6">
-    
-    <!-- Desktop Header Bar -->
     <div class="container mx-auto">
-        <div class="bg-accent-blue flex justify-between items-center px-6 py-2 rounded-md shadow-lg">
-            
+        <div class="header-bar">
             <!-- Logo -->
             <a href="index.html">
                 <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
@@ -33,50 +30,50 @@
             <!-- DESKTOP NAVIGATION      -->
             <!-- ======================= -->
             <nav class="hidden md:block">
-                <ul class="flex items-center space-x-8 text-lg text-white">
+                <ul class="desktop-nav">
                     
-                    <li><a href="index.html" class="hover:opacity-80 transition-opacity">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     
                     <!-- About (Has Submenu) -->
                     <li class="relative group">
-                        <a href="about.html" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="" class="nav-link has-submenu">
                             <span>About</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
                         <!-- Level 2 Dropdown -->
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-black/20">Our Team</a></li>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html" class="dropdown-item">About Us</a></li>
                         </ul>
                     </li>
                     
                     <!-- Sports (Has 3rd Level Submenu) -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="#" class="nav-link has-submenu">
                             <span>Sports</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
                         <!-- Level 2 Dropdown -->
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[220px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
+                        <ul class="dropdown-menu min-w-[220px]">
                             <!-- Cricket (Sub-group) -->
                             <li class="relative group/cricket">
-                                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-black/20">
+                                <a href="#" class="dropdown-item justify-between">
                                     <span>Cricket</span>
-                                    <i class="ti ti-chevron-right w-4 h-4"></i></a>
+                                    <i class="ti ti-chevron-right submenu-icon-right"></i></a>
                                 <!-- Level 3 Dropdown -->
-                                <ul class="absolute hidden group-hover/cricket:block left-full top-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2">
-                                    <li><a href="icc.html" class="block px-4 py-2 hover:bg-black/20">ICC</a></li>
-                                    <li><a href="ipl.html" class="block px-4 py-2 hover:bg-black/20">IPL</a></li>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="icc.html" class="dropdown-item">ICC</a></li>
+                                    <li><a href="ipl.html" class="dropdown-item">IPL</a></li>
                                 </ul>
                             </li>
-                            <li><a href="chess.html" class="block px-4 py-2 hover:bg-black/20">Tata Steel Chess</a></li>
+                            <li><a href="chess.html" class="dropdown-item">Tata Steel Chess</a></li>
                              <!-- 3D Signature (Sub-group) -->
                             <li class="relative group/3d">
-                                <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-black/20">
+                                <a href="#" class="dropdown-item justify-between">
                                     <span>3D Signature</span>
-                                    <i class="ti ti-chevron-right w-4 h-4"></i></a>
+                                    <i class="ti ti-chevron-right submenu-icon-right"></i></a>
                                 <!-- Level 3 Dropdown -->
-                                <ul class="absolute hidden group-hover/3d:block left-full top-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2">
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-black/20">Football</a></li>
-                                    <li><a href="hockey.html" class="block px-4 py-2 hover:bg-black/20">Hockey</a></li>
-                                    <li><a href="kabaddi.html" class="block px-4 py-2 hover:bg-black/20">Kabaddi</a></li>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="#" class="dropdown-item">Football</a></li>
+                                    <li><a href="hockey.html" class="dropdown-item">Hockey</a></li>
+                                    <li><a href="kabaddi.html" class="dropdown-item">Kabaddi</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -84,34 +81,34 @@
 
                     <!-- Literature (Has Submenu) -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="#" class="nav-link has-submenu">
                             <span>Literature</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
-                            <li><a href="klm.html" class="block px-4 py-2 hover:bg-black/20">Kolkata Literary</a></li>
-                            <li><a href="blm.html" class="block px-4 py-2 hover:bg-black/20">BLM</a></li>
-                            <li><a href="jklm.html" class="block px-4 py-2 hover:bg-black/20">JLM</a></li>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="klm.html" class="dropdown-item">Kolkata Literary</a></li>
+                            <li><a href="blm.html" class="dropdown-item">BLM</a></li>
+                            <li><a href="jklm.html" class="dropdown-item">JLM</a></li>
                         </ul>
                     </li>
 
                     <!-- Art (Has Submenu) -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="#" class="nav-link has-submenu">
                             <span>Art</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
-                            <li><a href="bengal-biennale.html" class="block px-4 py-2 hover:bg-black/20">Bengal Biennale</a></li>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="bengal-biennale.html" class="dropdown-item">Bengal Biennale</a></li>
                         </ul>
                     </li>
 
                      <!-- Others (Has Submenu) -->
                     <li class="relative group">
-                        <a href="#" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                        <a href="#" class="nav-link has-submenu">
                             <span>Others</span>
-                            <i class="ti ti-chevron-down w-4 h-4 mt-1"></i></a>
-                        <ul class="absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50">
-                            <li><a href="aberlour.html" class="block px-4 py-2 hover:bg-black/20">Aberlour</a></li>
-                            <li><a href="absolut.html" class="block px-4 py-2 hover:bg-black/20">Absolut Art</a></li>
+                            <i class="ti ti-chevron-down submenu-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="aberlour.html" class="dropdown-item">Aberlour</a></li>
+                            <li><a href="absolut.html" class="dropdown-item">Absolut Art</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -128,52 +125,53 @@
     <!-- ======================= -->
     <!-- MOBILE MENU PANEL       -->
     <!-- ======================= -->
-    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-full max-w-md bg-accent-blue z-50 p-8 transform translate-x-full transition-transform duration-300 ease-in-out text-white">
+    <!-- FIX: Added `translate-x-full` back here to set the initial hidden state -->
+    <div id="mobile-menu" class="mobile-menu-panel translate-x-full">
         
-        <button id="close-menu-button" class="absolute top-8 right-8 text-white focus:outline-none p-2"><i class="ti ti-x text-3xl"></i></button>
+        <button id="close-menu-button" class="mobile-menu-close-btn"><i class="ti ti-x text-3xl"></i></button>
 
-        <div class="flex flex-col h-full pt-10">
+        <div class="mobile-menu-content">
             <a href="index.html" class="mb-16"><img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10 brightness-0 invert"></a>
             
             <nav class="flex flex-col space-y-2">
-                <a href="index.html" class="text-3xl hover:opacity-80 transition-opacity py-2">Home</a>
+                <a href="index.html" class="mobile-nav-link">Home</a>
                 
                 <!-- About -->
                 <div>
-                    <a href="about.html" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="about.html" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>About</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
-                        <li><a href="#" class="text-2xl text-white/80 hover:text-white">Our Team</a></li>
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
+                        <li><a href="about.html" class="mobile-submenu-link">About us</a></li>
                     </ul>
                 </div>
 
                 <!-- Sports -->
                 <div>
-                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>Sports</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
                         <!-- Cricket Sub-Menu -->
                         <li>
-                             <a href="#" class="mobile-menu-parent flex items-center justify-between text-2xl text-white/80 hover:text-white">
+                             <a href="#" class="mobile-menu-parent mobile-submenu-link justify-between">
                                 <span>Cricket</span>
-                                <i class="ti ti-chevron-down text-base transition-transform"></i></a>
-                            <ul class="hidden pl-4 mt-2 space-y-2">
-                                <li><a href="icc.html" class="text-xl text-white/60 hover:text-white">ICC</a></li>
-                                <li><a href="ipl.html" class="text-xl text-white/60 hover:text-white">IPL</a></li>
+                                <i class="ti ti-chevron-down mobile-submenu-icon-nested"></i></a>
+                            <ul class="mobile-submenu-nested">
+                                <li><a href="icc.html" class="mobile-submenu-link-nested">ICC</a></li>
+                                <li><a href="ipl.html" class="mobile-submenu-link-nested">IPL</a></li>
                             </ul>
                         </li>
-                        <li><a href="chess.html" class="text-2xl text-white/80 hover:text-white">Tata Steel Chess</a></li>
+                        <li><a href="chess.html" class="mobile-submenu-link">Tata Steel Chess</a></li>
                          <!-- 3D Signature Sub-Menu -->
                         <li>
-                             <a href="#" class="mobile-menu-parent flex items-center justify-between text-2xl text-white/80 hover:text-white">
+                             <a href="#" class="mobile-menu-parent mobile-submenu-link justify-between">
                                 <span>3D Signature</span>
-                                <i class="ti ti-chevron-down text-base transition-transform"></i></a>
-                            <ul class="hidden pl-4 mt-2 space-y-2">
-                                <li><a href="#" class="text-xl text-white/60 hover:text-white">Football</a></li>
-                                <li><a href="hockey.html" class="text-xl text-white/60 hover:text-white">Hockey</a></li>
-                                <li><a href="kabaddi.html" class="text-xl text-white/60 hover:text-white">Kabaddi</a></li>
+                                <i class="ti ti-chevron-down mobile-submenu-icon-nested"></i></a>
+                            <ul class="mobile-submenu-nested">
+                                <li><a href="#" class="mobile-submenu-link-nested">Football</a></li>
+                                <li><a href="hockey.html" class="mobile-submenu-link-nested">Hockey</a></li>
+                                <li><a href="kabaddi.html" class="mobile-submenu-link-nested">Kabaddi</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -181,34 +179,34 @@
 
                 <!-- Literature -->
                 <div>
-                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>Literature</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
-                        <li><a href="klm.html" class="text-2xl text-white/80 hover:text-white">Kolkata Literary</a></li>
-                        <li><a href="blm.html" class="text-2xl text-white/80 hover:text-white">BLM</a></li>
-                        <li><a href="jklm.html" class="text-2xl text-white/80 hover:text-white">JLM</a></li>
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
+                        <li><a href="klm.html" class="mobile-submenu-link">Kolkata Literary</a></li>
+                        <li><a href="blm.html" class="mobile-submenu-link">BLM</a></li>
+                        <li><a href="jklm.html" class="mobile-submenu-link">JLM</a></li>
                     </ul>
                 </div>
 
                 <!-- Art -->
                  <div>
-                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>Art</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
-                        <li><a href="bengal-biennale.html" class="text-2xl text-white/80 hover:text-white">Bengal Biennale</a></li>
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
+                        <li><a href="bengal-biennale.html" class="mobile-submenu-link">Bengal Biennale</a></li>
                     </ul>
                 </div>
                 
                 <!-- Others -->
                  <div>
-                    <a href="#" class="mobile-menu-parent flex items-center justify-between text-3xl py-2">
+                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
                         <span>Others</span>
-                        <i class="ti ti-chevron-down text-xl transition-transform"></i></a>
-                    <ul class="hidden pl-4 mt-2 space-y-2">
-                        <li><a href="aberlour.html" class="text-2xl text-white/80 hover:text-white">Aberlour</a></li>
-                        <li><a href="absolut.html" class="text-2xl text-white/80 hover:text-white">Absolut Art</a></li>
+                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
+                    <ul class="mobile-submenu">
+                        <li><a href="aberlour.html" class="mobile-submenu-link">Aberlour</a></li>
+                        <li><a href="absolut.html" class="mobile-submenu-link">Absolut Art</a></li>
                     </ul>
                 </div>
             </nav>
@@ -233,7 +231,7 @@
             <div class="relative z-10 h-full w-full flex flex-col justify-end">
                 <div class="container mx-auto px-6 md:px-12 pb-32 sm:pb-40 md:pb-32">
                     <div class="max-w-2xl">
-                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Ruskin Bond & Malavika Banerjee</h1>
+                        <p class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Ruskin Bond & Malavika Banerjee</p>
                     </div>
                 </div>
             </div>
@@ -247,7 +245,7 @@
             <div class="relative z-10 h-full w-full flex flex-col justify-end">
                 <div class="container mx-auto px-6 md:px-12 pb-32 sm:pb-40 md:pb-32">
                     <div class="max-w-2xl">
-                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Another Featured Speaker</h1>
+                        <p class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Another Featured Speaker</p>
                     </div>
                 </div>
             </div>
@@ -261,7 +259,7 @@
             <div class="relative z-10 h-full w-full flex flex-col justify-end">
                 <div class="container mx-auto px-6 md:px-12 pb-32 sm:pb-40 md:pb-32">
                     <div class="max-w-2xl">
-                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Literary Discussions</h1>
+                        <p class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Literary Discussions</p>
                     </div>
                 </div>
             </div>
@@ -275,105 +273,57 @@
             <div class="relative z-10 h-full w-full flex flex-col justify-end">
                 <div class="container mx-auto px-6 md:px-12 pb-32 sm:pb-40 md:pb-32">
                     <div class="max-w-2xl">
-                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Engaging Audiences</h1>
+                        <p class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-wide text-white">Engaging Audiences</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!-- =================================== -->
-    <!-- 3. UI CONTROLS OVERLAY (FIXED)    -->
-    <!-- =================================== -->
-    <div class="absolute inset-0 z-20 pointer-events-none">
-        <!-- Left-side Slider Indicators (Now the Swiper Pagination) -->
-        <div class="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 pointer-events-auto">
-            <div class="hero-pagination">
-                <!-- Swiper will generate pagination bullets here -->
-            </div>
-        </div>
+
+<!-- =================================== -->
+<!-- BHUBANESWAR LITERARY MEET SECTION -->
+<!-- =================================== -->
+<section class="bg-light-orange-bg py-16 md:py-24" aria-labelledby="bhubaneswar-title">
+    <div class="container mx-auto px-6 md:px-10 max-w-8xl">
         
-       <!-- Right-side Slider Arrows (Now the Swiper Navigation) -->
-        <div class="absolute bottom-20 md:bottom-32 right-6 sm:right-10 md:right-16 pointer-events-auto">
-            <div class="flex space-x-6">
-                <button id="prev-slide" class="hero-button-prev">
-    <i class="ti ti-chevron-left text-4xl md:text-6xl"></i>
-</button>
-<button id="next-slide" class="hero-button-next">
-    <i class="ti ti-chevron-right text-4xl md:text-6xl"></i>
-</button>
-            </div>
-        </div>
+        <!-- Main page title, updated to H1 -->
+        <h1 id="bhubaneswar-title" class="text-dark-orange-text text-3xl font-bold uppercase tracking-widest mb-6">
+            BHUBANESWAR LITERARY MEET
+        </h1>
+        
+        <p class="text-zinc-800 text-lg leading-relaxed">
+            Gameplan launched the Bhubaneswar Literary Meet in 2016 to celebrate the rich literary and cultural legacy of Odisha.
+        </p>
+
     </div>
+</section>
 
-</div>
+<!-- =================================== -->
+<!-- "WHAT IS" DETAILS SECTION         -->
+<!-- =================================== -->
+<section class="bg-white py-16 md:py-24" aria-labelledby="what-is-blm-title">
+    <div class="container mx-auto px-6 md:px-10 max-w-8xl">
+        
+        <!-- Section Title -->
+        <h2 id="what-is-blm-title" class="text-dark-orange-text text-3xl font-bold mb-10">
+            What is the Bhubaneswar Literary Meet?
+        </h2>
+        
+        <!-- Styled, semantic list using the universal .list-styled class -->
+        <!-- The grid layout is handled by the class itself -->
+        <ul class="list-styled">
+            <li>An endeavour to take Odisha to a wider global audience and also to bring the world to Odisha</li>
+            <li>A platform for national and international authors to meet the local talent of Odisha</li>
+            <li>A forging of international connections with the local cultural ethos</li>
+        </ul>
 
-    <!-- =================================== -->
-    <!-- BHUBANESWAR LITERARY MEET SECTION (UPDATED) -->
-    <!-- =================================== -->
-    <section class="bg-light-orange-bg py-16 md:py-24">
-        <div class="container mx-auto px-6 md:px-10 max-w-8xl">
-            <h2 class="text-dark-orange-text text-3xl font-bold uppercase tracking-widest mb-6">
-                BHUBANESWAR LITERARY MEET
-            </h2>
-            <p class="text-zinc-800 text-lg leading-relaxed">
-                Gameplan launched the Bhubaneswar Literary Meet in 2016 to celebrate the rich literary and cultural legacy of Odisha.
-            </p>
-        </div>
-    </section>
-
-    <!-- =================================== -->
-    <!-- "WHAT IS" DETAILS SECTION (UPDATED) -->
-    <!-- =================================== -->
-    <section class="bg-white py-16 md:py-24">
-        <div class="container mx-auto px-6 md:px-10 max-w-8xl">
-            
-            <!-- Section Title -->
-            <h2 class="text-dark-orange-text text-3xl font-bold mb-10">
-                What is the Bhubaneswar Literary Meet?
-            </h2>
-            
-            <!-- Grid for Bullet Points -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
-                
-                <!-- Column 1 -->
-                <div class="space-y-8">
-                    <!-- Point 1 -->
-                    <div class="flex items-start">
-                        <span class="text-dark-orange-text text-xl mt-1 mr-4">•</span>
-                        <p class="text-zinc-800 text-lg leading-relaxed">
-                            An endeavour to take Odisha to a wider global audience and also to bring the world to Odisha
-                        </p>
-                    </div>
-                    
-                    <!-- Point 2 -->
-                    <div class="flex items-start">
-                        <span class="text-dark-orange-text text-xl mt-1 mr-4">•</span>
-                        <p class="text-zinc-800 text-lg leading-relaxed">
-                            A platform for national and international authors to meet the local talent of Odisha
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Column 2 -->
-                <div class="space-y-8">
-                    <!-- Point 3 -->
-                    <div class="flex items-start">
-                        <span class="text-dark-orange-text text-xl mt-1 mr-4">•</span>
-                        <p class="text-zinc-800 text-lg leading-relaxed">
-                           A forging of international connections with the local cultural ethos
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Additional Information Paragraph -->
-             <p class="text-zinc-800 text-lg leading-relaxed mt-16">
-                The Bhubaneswar Literary Meet has drawn premier authors and speakers from across India and the world. We have hosted eminent delegates such as Manoj Das, Ruskin Bond, Jayanta Mahapatra, Nayantara Sehgal, Kiran Nagarkar, Sharmila Tagore, Lord Meghnad Desai, Ileana Citaristi, Mark Tully, Nandita Das, Barkha Dutt and William Dalrymple, among others.
-            </p>
-        </div>
-    </section>
+        <!-- Additional Information Paragraph -->
+         <p class="text-zinc-800 text-lg leading-relaxed mt-16">
+            The Bhubaneswar Literary Meet has drawn premier authors and speakers from across India and the world. We have hosted eminent delegates such as Manoj Das, Ruskin Bond, Jayanta Mahapatra, Nayantara Sehgal, Kiran Nagarkar, Sharmila Tagore, Lord Meghnad Desai, Ileana Citaristi, Mark Tully, Nandita Das, Barkha Dutt and William Dalrymple, among others.
+        </p>
+        
+    </div>
+</section>
 
     <!-- =================================== -->
     <!-- CTA & SOCIALS SECTION (UPDATED)   -->
@@ -484,10 +434,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Bottom Link -->
-                <div class="md:mt-auto pt-4">
-                    <a href="#" class=" text-zinc-400 hover:text-white transition-colors tracking-wider">Privacy Policy</a>
-                </div>
+                
             </div>
 
             <!-- Column 3: Follow Us & Terms (Spans 4/12 on desktop) -->
@@ -513,6 +460,7 @@
                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.8667 9.35828C11.7303 6.62531 10.3556 5.06073 8.04761 5.04518C6.6561 5.03603 5.49285 5.6765 4.78024 6.85038L6.05047 7.79553C6.5845 6.91626 7.42766 6.73419 8.03835 6.74059C8.79897 6.74608 9.37175 6.9858 9.74321 7.45426C10.0128 7.79462 10.1939 8.26582 10.284 8.85963C9.609 8.73519 8.88179 8.69707 8.10237 8.74526C5.90727 8.8825 4.49722 10.2732 4.59156 12.2047C4.63958 13.1846 5.08853 14.0282 5.85673 14.579C6.50532 15.0447 7.34259 15.2716 8.21103 15.2204C9.35911 15.1518 10.2596 14.6769 10.8879 13.8068C11.3647 13.1462 11.6662 12.2898 11.7993 11.212C12.3468 11.5706 12.7511 12.0418 12.976 12.6091C13.3568 13.5735 13.3787 15.1582 12.1885 16.4501C11.1457 17.581 9.8923 18.0714 7.99792 18.086C5.89632 18.0696 4.30686 17.3367 3.27417 15.9103C2.3055 14.5744 1.806 12.6439 1.78747 10.1744C1.806 7.70404 2.30634 5.7744 3.27417 4.43765C4.30686 3.01123 5.89632 2.27927 7.99792 2.2628C10.1147 2.28018 11.7311 3.01489 12.8042 4.44954C13.3307 5.15223 13.7266 6.03607 13.9885 7.06631L15.4761 6.63629C15.1585 5.36724 14.6598 4.27387 13.9818 3.36715C12.6063 1.52809 10.5847 0.586597 7.99286 0.567383C5.40609 0.586597 3.41737 1.53266 2.0806 3.37721C0.892081 5.01956 0.278028 7.31701 0.257812 10.1808C0.278028 13.0446 0.892081 15.3293 2.0806 16.9716C3.41737 18.8162 5.4162 19.7622 8.00213 19.7815C10.3025 19.7641 11.9231 19.1099 13.2582 17.6615C15.006 15.7648 14.953 13.3887 14.3777 11.9302C13.9355 10.8094 13.0552 9.91183 11.8675 9.35919M8.12932 13.5286C7.16739 13.5872 6.16839 13.1187 6.11869 12.1141C6.08248 11.3694 6.60724 10.5386 8.18828 10.4398C8.90284 10.3878 9.62059 10.4413 10.3219 10.599C10.1399 13.0712 9.07104 13.4719 8.12932 13.5286Z" fill="white"/>
 </svg>
+
                         </a>
                         <!-- LinkedIn -->
                         <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
@@ -522,8 +470,11 @@
                 </div>
                 <!-- Bottom Link -->
                 <div class="md:mt-auto pt-4">
+                     <a href="#" class=" text-zinc-400 hover:text-white transition-colors tracking-wider">Privacy Policy</a>
+                     <br>
                     <a href="#" class=" text-zinc-400 hover:text-white transition-colors tracking-wider">Terms & Conditions</a>
                 </div>
+                
             </div>
 
         </div>

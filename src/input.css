@@ -51,7 +51,7 @@
 
 @layer components {
 
-   @font-face {
+  @font-face {
     font-family: DarkerGrotesque;
     font-style: normal;
     font-weight: 200 700;
@@ -59,10 +59,89 @@
     src: url("assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
   }
 
-  #mobile-menu > .flex.flex-col.h-full.pt-10 {
-    overflow-y: auto;
+  /* ================================================ */
+  /* --- NEW: HEADER & NAVIGATION STYLES ---          */
+  /* ================================================ */
+  .header-bar {
+    @apply bg-accent-blue flex justify-between items-center px-6 py-2 rounded-md shadow-lg;
   }
-  /* --- DEFINITIVE FIX FOR HERO SLIDER PAGINATION --- */
+  .desktop-nav {
+    @apply flex items-center space-x-8 text-lg text-white;
+  }
+  .nav-link {
+    @apply hover:opacity-80 transition-opacity;
+  }
+  .nav-link.has-submenu {
+    @apply flex items-center gap-1;
+  }
+  .submenu-icon {
+    @apply w-4 h-4 mt-1;
+  }
+  .submenu-icon-right {
+    @apply w-4 h-4;
+  }
+  .dropdown-menu {
+    @apply absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50;
+  }
+  .dropdown-item {
+    @apply block px-4 py-2 hover:bg-black/20 flex items-center;
+  }
+  .dropdown-submenu {
+    @apply absolute hidden group-hover/cricket:block group-hover/3d:block left-full top-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2;
+  }
+  
+  /* --- Mobile Menu --- */
+  .mobile-menu-panel {
+    /* FIX: Removed `translate-x-full` from this component's base style */
+    @apply fixed top-0 right-0 h-full w-full max-w-md bg-accent-blue z-50 p-8 transform transition-transform duration-300 ease-in-out text-white;
+  }
+  .mobile-menu-close-btn {
+    @apply absolute top-8 right-8 text-white focus:outline-none p-2;
+  }
+  .mobile-menu-content {
+    @apply flex flex-col h-full pt-10 overflow-y-auto;
+  }
+  .mobile-nav-link {
+    @apply text-3xl hover:opacity-80 transition-opacity py-2;
+  }
+  .mobile-nav-link-parent {
+    @apply flex items-center justify-between text-3xl py-2;
+  }
+  .mobile-submenu-icon {
+    @apply text-xl transition-transform;
+  }
+   .mobile-submenu-icon-nested {
+    @apply text-base transition-transform;
+  }
+  .mobile-submenu {
+    @apply hidden pl-4 mt-2 space-y-2;
+  }
+  .mobile-submenu-nested {
+    @apply hidden pl-4 mt-2 space-y-2;
+  }
+  .mobile-submenu-link {
+    @apply text-2xl text-white/80 hover:text-white flex items-center;
+  }
+  .mobile-submenu-link-nested {
+    @apply text-xl text-white/60 hover:text-white;
+  }
+
+  /* ================================================ */
+  /* --- UNIVERSAL STYLED LIST COMPONENT ---          */
+  /* ================================================ */
+  .list-styled {
+    /* Sets up the multi-column layout for the list container */
+    @apply grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 list-none p-0;
+  }
+  .list-styled li {
+    /* Aligns the bullet and text */
+    @apply flex items-start text-zinc-800 text-xl leading-relaxed;
+  }
+  .list-styled li::before {
+    /* Creates and styles the custom bullet point */
+    content: '*';
+    @apply text-medium-gray text-xl mt-1 mr-4 font-bold;
+  }
 
   /* This is the main container for the numbers AND the static line */
   .hero-pagination {

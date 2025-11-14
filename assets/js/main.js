@@ -160,6 +160,10 @@ jQuery(document).ready(function($) {
             el: '.events-pagination',
             clickable: true,
         },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false, // Continue autoplay after user interaction
+        },
         navigation: {
             nextEl: '#events-next',
             prevEl: '#events-prev',
@@ -178,6 +182,10 @@ jQuery(document).ready(function($) {
         pagination: {
             el: '.past-events-pagination',
             clickable: true,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false, // Continue autoplay after user interaction
         },
         navigation: {
             nextEl: '#past-events-next',
@@ -199,6 +207,10 @@ new Swiper('.sports-slider', {
         el: '.sports-pagination',
         clickable: true,
     },
+    autoplay: {
+            delay: 5000,
+            disableOnInteraction: false, // Continue autoplay after user interaction
+        },
     navigation: {
         nextEl: '#sports-next',
         prevEl: '#sports-prev',
@@ -237,6 +249,10 @@ new Swiper('.literature-slider', {
             el: '.art-culture-pagination',
             clickable: true,
         },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false, // Continue autoplay after user interaction
+        },
         navigation: {
             nextEl: '#art-culture-next',
             prevEl: '#art-culture-prev',
@@ -255,6 +271,10 @@ new Swiper('.literature-slider', {
         pagination: {
             el: '.corporate-pagination',
             clickable: true,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false, // Continue autoplay after user interaction
         },
         navigation: {
             nextEl: '#corporate-next',
@@ -275,6 +295,10 @@ new Swiper('.literature-slider', {
         pagination: {
             el: '.team-pagination',
             clickable: true,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false, // Continue autoplay after user interaction
         },
         navigation: {
             nextEl: '#team-next',

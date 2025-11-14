@@ -66,7 +66,7 @@
     @apply bg-accent-blue flex justify-between items-center px-6 py-2 rounded-md shadow-lg;
   }
   .desktop-nav {
-    @apply flex items-center space-x-8 text-lg text-white;
+    @apply flex items-center space-x-8 text-xl text-white;
   }
   .nav-link {
     @apply hover:opacity-80 transition-opacity;
@@ -135,12 +135,12 @@
   }
   .list-styled li {
     /* Aligns the bullet and text */
-    @apply flex items-start text-zinc-800 text-xl leading-relaxed;
+    @apply flex items-start text-zinc-800 text-2xl leading-relaxed;
   }
   .list-styled li::before {
     /* Creates and styles the custom bullet point */
     content: '*';
-    @apply text-medium-gray text-xl mt-1 mr-4 font-bold;
+    @apply text-medium-gray text-2xl mt-1 mr-4 font-bold;
   }
 
   /* This is the main container for the numbers AND the static line */

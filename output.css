@@ -87,7 +87,6 @@
     --color-accent-magenta: #B51A50;
     --color-light-pink-bg: #FFE6EF;
     --color-light-cyan-bg: #E0FFFE;
-    --color-dark-charcoal: #383838;
     --color-light-peach-bg: #FFE6CE;
     --color-rust-text: #B35800;
     --color-dark-red-text: #B71610;
@@ -104,7 +103,6 @@
     --color-medium-gray: #5B5B5B;
     --color-light-orange-bg: #FFF4E6;
     --color-dark-orange-text: #B35400;
-    --font-family: 'DarkerGrotesque' , sans-serif;
   }
 }
 @layer base {

@@ -1,651 +1,1113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gameplan - Where Champions Complete</title>
-    
-    <!-- Local CSS build from input.css -->
-    <link href="./output.css" rel="stylesheet">
-    
-    <!-- Swiper.js CSS Library -->
-    <link rel="stylesheet" href="src/swiper-bundle.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-<!-- <link rel="stylesheet" href="src/tabler-icons.min.css"> -->
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gameplan - Where Champions Complete</title>
 
-<!-- =================================== -->
-<!-- 1. HEADER (WITH MULTILEVEL MENU)  -->
-<!-- =================================== -->
-<header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 md:p-6">
-    <div class="container mx-auto">
-        <div class="header-bar">
-            <!-- Logo -->
-            <a href="index.html">
-                <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
-            </a>
-            
-            <!-- ======================= -->
-            <!-- DESKTOP NAVIGATION      -->
-            <!-- ======================= -->
-            <nav class="hidden md:block">
-                <ul class="desktop-nav">
-                    
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    
-                    
-                    <!-- Sports (Has 3rd Level Submenu) -->
-                    <li class="relative group">
-                        <a href="#" class="nav-link has-submenu">
-                            <span>Sports</span>
-                            <i class="ti ti-chevron-down submenu-icon"></i></a>
-                        <!-- Level 2 Dropdown -->
-                        <ul class="dropdown-menu min-w-[220px]">
-                            <!-- Cricket (Sub-group) -->
-                            <li class="relative group/cricket">
-                                <a href="#" class="dropdown-item justify-between">
-                                    <span>Cricket</span>
-                                    <i class="ti ti-chevron-right submenu-icon-right"></i></a>
-                                <!-- Level 3 Dropdown -->
-                                <ul class="dropdown-submenu">
-                                    <li><a href="icc.html" class="dropdown-item">ICC</a></li>
-                                    <li><a href="#" class="dropdown-item">IPL</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="chess.html" class="dropdown-item">Tata Steel Chess</a></li>
-                             <!-- 3D Signature (Sub-group) -->
-                            <li class="relative group/3d">
-                                <a href="#" class="dropdown-item justify-between">
-                                    <span>3D Signature</span>
-                                    <i class="ti ti-chevron-right submenu-icon-right"></i></a>
-                                <!-- Level 3 Dropdown -->
-                                <ul class="dropdown-submenu">
-                                    <li><a href="#" class="dropdown-item">Football</a></li>
-                                    <li><a href="#" class="dropdown-item">Hockey</a></li>
-                                    <li><a href="#" class="dropdown-item">Kabaddi</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+		<!-- Local CSS build from input.css -->
+		<link href="./assets/css/custom.css" rel="stylesheet" />
 
-                    <!-- Literature (Has Submenu) -->
-                    <li class="relative group">
-                        <a href="#" class="nav-link has-submenu">
-                            <span>Literature</span>
-                            <i class="ti ti-chevron-down submenu-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="dropdown-item">Kolkata Literary</a></li>
-                            <li><a href="blm.html" class="dropdown-item">BLM</a></li>
-                            <li><a href="#" class="dropdown-item">JLM</a></li>
-                        </ul>
-                    </li>
+		<!-- Swiper.js CSS Library -->
+		<link rel="stylesheet" href="src/swiper-bundle.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+		/>
+		<!-- <link rel="stylesheet" href="src/tabler-icons.min.css"> -->
+	</head>
+	<body>
+		<!-- =================================== -->
+		<!-- 1. HEADER (WITH MULTILEVEL MENU)  -->
+		<!-- =================================== -->
+		<header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 md:p-6">
+			<div class="container mx-auto">
+				<div class="header-bar">
+					<!-- Logo -->
+					<a href="index.html">
+						<img
+							src="assets/images/logo/logo.png"
+							alt="Gameplan Logo"
+							class="h-10"
+						/>
+					</a>
 
-                    <!-- Art (Has Submenu) -->
-                    <li class="relative group">
-                        <a href="#" class="nav-link has-submenu">
-                            <span>Art</span>
-                            <i class="ti ti-chevron-down submenu-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="bengal-biennale.html" class="dropdown-item">Bengal Biennale</a></li>
-                        </ul>
-                    </li>
+					<!-- ======================= -->
+					<!-- DESKTOP NAVIGATION      -->
+					<!-- ======================= -->
+					<nav class="hidden md:block">
+						<ul class="desktop-nav">
+							<li><a href="index.html" class="nav-link">Home</a></li>
+							<li><a href="about.html" class="nav-link">About Us</a></li>
 
-                     <!-- Others (Has Submenu) -->
-                    <li class="relative group">
-                        <a href="#" class="nav-link has-submenu">
-                            <span>Others</span>
-                            <i class="ti ti-chevron-down submenu-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="dropdown-item">Aberlour</a></li>
-                            <li><a href="absolut.html" class="dropdown-item">Absolut Art</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+							<!-- Sports (Has 3rd Level Submenu) -->
+							<li class="relative group">
+								<a href="#" class="nav-link has-submenu">
+									<span>Sports</span>
+									<i class="ti ti-chevron-down submenu-icon"></i
+								></a>
+								<!-- Level 2 Dropdown -->
+								<ul class="dropdown-menu min-w-[220px]">
+									<!-- Cricket (Sub-group) -->
+									<li class="relative group/cricket">
+										<a href="#" class="dropdown-item justify-between">
+											<span>Cricket</span>
+											<i class="ti ti-chevron-right submenu-icon-right"></i
+										></a>
+										<!-- Level 3 Dropdown -->
+										<ul class="dropdown-submenu">
+											<li><a href="icc.html" class="dropdown-item">ICC</a></li>
+											<li><a href="#" class="dropdown-item">IPL</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="chess.html" class="dropdown-item"
+											>Tata Steel Chess</a
+										>
+									</li>
+									<!-- 3D Signature (Sub-group) -->
+									<li class="relative group/3d">
+										<a href="#" class="dropdown-item justify-between">
+											<span>3D Signature</span>
+											<i class="ti ti-chevron-right submenu-icon-right"></i
+										></a>
+										<!-- Level 3 Dropdown -->
+										<ul class="dropdown-submenu">
+											<li><a href="#" class="dropdown-item">Football</a></li>
+											<li><a href="#" class="dropdown-item">Hockey</a></li>
+											<li><a href="#" class="dropdown-item">Kabaddi</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="focus:outline-none text-white">
-                    <i class="ti ti-menu-2 text-3xl"></i></button>
-            </div>
-        </div>
-    </div>
+							<!-- Literature (Has Submenu) -->
+							<li class="relative group">
+								<a href="#" class="nav-link has-submenu">
+									<span>Literature</span>
+									<i class="ti ti-chevron-down submenu-icon"></i
+								></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#" class="dropdown-item">Kolkata Literary</a>
+									</li>
+									<li><a href="blm.html" class="dropdown-item">BLM</a></li>
+									<li><a href="#" class="dropdown-item">JLM</a></li>
+								</ul>
+							</li>
 
-    <!-- ======================= -->
-    <!-- MOBILE MENU PANEL       -->
-    <!-- ======================= -->
-    <!-- FIX: Added `translate-x-full` back here to set the initial hidden state -->
-    <div id="mobile-menu" class="mobile-menu-panel translate-x-full">
-        
-        <button id="close-menu-button" class="mobile-menu-close-btn"><i class="ti ti-x text-3xl"></i></button>
+							<!-- Art (Has Submenu) -->
+							<li class="relative group">
+								<a href="#" class="nav-link has-submenu">
+									<span>Art</span>
+									<i class="ti ti-chevron-down submenu-icon"></i
+								></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="bengal-biennale.html" class="dropdown-item"
+											>Bengal Biennale</a
+										>
+									</li>
+								</ul>
+							</li>
 
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mb-16"><img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10 brightness-0 invert"></a>
-            
-            <nav class="flex flex-col space-y-2">
-                <a href="index.html" class="mobile-nav-link">Home</a>
+							<!-- Others (Has Submenu) -->
+							<li class="relative group">
+								<a href="#" class="nav-link has-submenu">
+									<span>Others</span>
+									<i class="ti ti-chevron-down submenu-icon"></i
+								></a>
+								<ul class="dropdown-menu">
+									<li><a href="#" class="dropdown-item">Aberlour</a></li>
+									<li>
+										<a href="absolut.html" class="dropdown-item">Absolut Art</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
 
-                <a href="about.html" class="mobile-nav-link">About us</a>
-                
+					<!-- Mobile Menu Button -->
+					<div class="md:hidden">
+						<button
+							id="mobile-menu-button"
+							class="focus:outline-none text-white"
+						>
+							<i class="ti ti-menu-2 text-3xl"></i>
+						</button>
+					</div>
+				</div>
+			</div>
 
-                <!-- Sports -->
-                <div>
-                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
-                        <span>Sports</span>
-                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
-                    <ul class="mobile-submenu">
-                        <!-- Cricket Sub-Menu -->
-                        <li>
-                             <a href="#" class="mobile-menu-parent mobile-submenu-link justify-between">
-                                <span>Cricket</span>
-                                <i class="ti ti-chevron-down mobile-submenu-icon-nested"></i></a>
-                            <ul class="mobile-submenu-nested">
-                                <li><a href="icc.html" class="mobile-submenu-link-nested">ICC</a></li>
-                                <li><a href="#" class="mobile-submenu-link-nested">IPL</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="mobile-submenu-link">Tata Steel Chess</a></li>
-                         <!-- 3D Signature Sub-Menu -->
-                        <li>
-                             <a href="#" class="mobile-menu-parent mobile-submenu-link justify-between">
-                                <span>3D Signature</span>
-                                <i class="ti ti-chevron-down mobile-submenu-icon-nested"></i></a>
-                            <ul class="mobile-submenu-nested">
-                                <li><a href="#" class="mobile-submenu-link-nested">Football</a></li>
-                                <li><a href="#" class="mobile-submenu-link-nested">Hockey</a></li>
-                                <li><a href="#" class="mobile-submenu-link-nested">Kabaddi</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+			<!-- ======================= -->
+			<!-- MOBILE MENU PANEL       -->
+			<!-- ======================= -->
+			<!-- FIX: Added `translate-x-full` back here to set the initial hidden state -->
+			<div id="mobile-menu" class="mobile-menu-panel translate-x-full">
+				<button id="close-menu-button" class="mobile-menu-close-btn">
+					<i class="ti ti-x text-3xl"></i>
+				</button>
 
-                <!-- Literature -->
-                <div>
-                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
-                        <span>Literature</span>
-                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
-                    <ul class="mobile-submenu">
-                        <li><a href="#" class="mobile-submenu-link">Kolkata Literary</a></li>
-                        <li><a href="blm.html" class="mobile-submenu-link">BLM</a></li>
-                        <li><a href="#" class="mobile-submenu-link">JLM</a></li>
-                    </ul>
-                </div>
+				<div class="mobile-menu-content">
+					<a href="index.html" class="mb-16"
+						><img
+							src="assets/images/logo/logo.png"
+							alt="Gameplan Logo"
+							class="h-10 brightness-0 invert"
+					/></a>
 
-                <!-- Art -->
-                 <div>
-                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
-                        <span>Art</span>
-                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
-                    <ul class="mobile-submenu">
-                        <li><a href="bengal-biennale.html" class="mobile-submenu-link">Bengal Biennale</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Others -->
-                 <div>
-                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
-                        <span>Others</span>
-                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
-                    <ul class="mobile-submenu">
-                        <li><a href="#" class="mobile-submenu-link">Aberlour</a></li>
-                        <li><a href="absolut.html" class="mobile-submenu-link">Absolut Art</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
+					<nav class="flex flex-col space-y-2">
+						<a href="index.html" class="mobile-nav-link">Home</a>
 
+						<a href="about.html" class="mobile-nav-link">About us</a>
 
-<!-- HERO SECTION FOR ABOUT PAGE -->
-<!-- HERO SECTION FOR ABOUT PAGE -->
-<main>
-    <section class="relative h-[80vh] min-h-[700px] flex flex-col justify-end text-white">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0">
-            <!-- IMPORTANT: Replace with the correct image path for the about page hero -->
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/Rectangle\ 178.png');"></div>
-            <!-- Gradient Overlay from bottom to top for better text readability -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-        </div>
-        
-        <!-- Content -->
-        <div class="relative z-10 container mx-auto px-6 md:px-10 pb-20">
-            <h1 class="text-6xl md:text-8xl font-bold tracking-wider">About Gameplan</h1>
-        </div>
-    </section>
+						<!-- Sports -->
+						<div>
+							<a href="#" class="mobile-menu-parent mobile-nav-link-parent">
+								<span>Sports</span>
+								<i class="ti ti-chevron-down mobile-submenu-icon"></i
+							></a>
+							<ul class="mobile-submenu">
+								<!-- Cricket Sub-Menu -->
+								<li>
+									<a
+										href="#"
+										class="mobile-menu-parent mobile-submenu-link justify-between"
+									>
+										<span>Cricket</span>
+										<i class="ti ti-chevron-down mobile-submenu-icon-nested"></i
+									></a>
+									<ul class="mobile-submenu-nested">
+										<li>
+											<a href="icc.html" class="mobile-submenu-link-nested"
+												>ICC</a
+											>
+										</li>
+										<li>
+											<a href="#" class="mobile-submenu-link-nested">IPL</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" class="mobile-submenu-link">Tata Steel Chess</a>
+								</li>
+								<!-- 3D Signature Sub-Menu -->
+								<li>
+									<a
+										href="#"
+										class="mobile-menu-parent mobile-submenu-link justify-between"
+									>
+										<span>3D Signature</span>
+										<i class="ti ti-chevron-down mobile-submenu-icon-nested"></i
+									></a>
+									<ul class="mobile-submenu-nested">
+										<li>
+											<a href="#" class="mobile-submenu-link-nested"
+												>Football</a
+											>
+										</li>
+										<li>
+											<a href="#" class="mobile-submenu-link-nested">Hockey</a>
+										</li>
+										<li>
+											<a href="#" class="mobile-submenu-link-nested">Kabaddi</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 
-    <!-- ABOUT CONTENT & "PLAY ON" SECTION -->
-    <section class="bg-primary-blue py-20 md:py-28">
-        <div class="container mx-auto px-6 md:px-10">
-            <!-- About Text -->
-            <div class="max-w-7xl mx-auto text-white space-y-4 text-base md:text-2xl leading-relaxed">
-                <p>
-                    Gameplan Sports Private Limited was established in 1998 at a time when sports marketing was a nascent industry in India. Over the last 25 years Gameplan has worked with sponsorship, in stadium advertising, player management, franchise leagues including Indian Premier League, Indian Super League and Pro Kabaddi League. Gameplan has been associated with Kolkata Knight Riders since the inception of IPL in 2008. The company has also worked with content management and digital marketing, among other verticals in sports.
-                </p>
-                <p>
-                    In 2012 we diversified in arts and culture based events. The Kolkata Literary Meet is now one of India’s foremost culture events and Gameplan has also worked with cinema (commissioning films for the pioneering Royal Stag Barrel Select Large Short Films) besides curating cultural events in classical music and art. In 2018, Gameplan started and introduced Tata Steel Chess India which has since become India’s foremost chess event and also the first to offer equal prize money in the open and women’s competition.
-                </p>
-            </div>
-            
-            <!-- "PLAY ON" Banner Text -->
-            <div class="text-end -mb-20 md:-mb-32 mt-16 md:mt-24">
-                <h2 class="text-7xl md:text-10xl lg:text-[150px] font-bold text-accent-red  uppercase">
-                    PLAY ON
-                </h2>
-            </div>
-        </div>
-    </section>
+						<!-- Literature -->
+						<div>
+							<a href="#" class="mobile-menu-parent mobile-nav-link-parent">
+								<span>Literature</span>
+								<i class="ti ti-chevron-down mobile-submenu-icon"></i
+							></a>
+							<ul class="mobile-submenu">
+								<li>
+									<a href="#" class="mobile-submenu-link">Kolkata Literary</a>
+								</li>
+								<li><a href="blm.html" class="mobile-submenu-link">BLM</a></li>
+								<li><a href="#" class="mobile-submenu-link">JLM</a></li>
+							</ul>
+						</div>
 
-    <!-- =================================== -->
-<!-- OUR SERVICES GRID SECTION           -->
-<!-- =================================== -->
-<section class="bg-light-beige py-20 md:py-28">
-    <div class="container mx-auto px-4 md:px-6">
-        
-        <!-- Grid Container -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+						<!-- Art -->
+						<div>
+							<a href="#" class="mobile-menu-parent mobile-nav-link-parent">
+								<span>Art</span>
+								<i class="ti ti-chevron-down mobile-submenu-icon"></i
+							></a>
+							<ul class="mobile-submenu">
+								<li>
+									<a href="bengal-biennale.html" class="mobile-submenu-link"
+										>Bengal Biennale</a
+									>
+								</li>
+							</ul>
+						</div>
 
-            <!-- Card 1: Sports -->
-            <div class="group">
-                <div class="bg-accent-blue py-4 px-6">
-                    <h3 class="text-white text-lg font-bold uppercase tracking-widest">Sports</h3>
-                </div>
-                <div>
-                    <!-- Replace with your actual image path -->
-                    <img src="assets/images/Rectangle 248.png" alt="A scene from a sports event" class="w-full h-auto object-cover">
-                </div>
-            </div>
+						<!-- Others -->
+						<div>
+							<a href="#" class="mobile-menu-parent mobile-nav-link-parent">
+								<span>Others</span>
+								<i class="ti ti-chevron-down mobile-submenu-icon"></i
+							></a>
+							<ul class="mobile-submenu">
+								<li><a href="#" class="mobile-submenu-link">Aberlour</a></li>
+								<li>
+									<a href="absolut.html" class="mobile-submenu-link"
+										>Absolut Art</a
+									>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-            <!-- Card 2: Literature -->
-            <div class="group">
-                <div class="bg-accent-green py-4 px-6">
-                    <h3 class="text-white text-lg font-bold uppercase tracking-widest">Literature</h3>
-                </div>
-                <div>
-                    <!-- Replace with your actual image path -->
-                    <img src="assets/images/Rectangle 248.png" alt="A panel discussion at a literary event" class="w-full h-auto object-cover">
-                </div>
-            </div>
+		<!-- HERO SECTION FOR ABOUT PAGE -->
+		<!-- HERO SECTION FOR ABOUT PAGE -->
+		<main>
+			<section
+				class="relative h-[80vh] min-h-[700px] flex flex-col justify-end text-white"
+			>
+				<!-- Background Image with Overlay -->
+				<div class="absolute inset-0 z-0">
+					<!-- IMPORTANT: Replace with the correct image path for the about page hero -->
+					<div
+						class="absolute inset-0 bg-cover bg-center"
+						style="background-image: url('assets/images/Rectangle\ 178.png')"
+					></div>
+					<!-- Gradient Overlay from bottom to top for better text readability -->
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+					></div>
+				</div>
 
-            <!-- Card 3: Art & Culture -->
-            <div class="group">
-                <div class="bg-dark-brown py-4 px-6">
-                    <h3 class="text-white text-lg font-bold uppercase tracking-widest">Art </h3>
-                </div>
-                <div>
-                    <!-- Replace with your actual image path -->
-                    <img src="assets/images/Rectangle 248.png" alt="People looking at art in a gallery" class="w-full h-auto object-cover">
-                </div>
-            </div>
+				<!-- Content -->
+				<div class="relative z-10 container mx-auto px-6 md:px-10 pb-20">
+					<h1 class="text-6xl md:text-8xl font-bold tracking-wider">
+						About Gameplan
+					</h1>
+				</div>
+			</section>
 
-            <!-- Card 4: Corporate Event & Engagement -->
-            <div class="group">
-                <div class="bg-primary-blue py-4 px-6">
-                    <h3 class="text-white text-lg font-bold uppercase tracking-widest">Others</h3>
-                </div>
-                <div>
-                    <!-- Replace with your actual image path -->
-                    <img src="assets/images/Rectangle 248.png" alt="A corporate event in progress" class="w-full h-auto object-cover">
-                </div>
-            </div>
+			<section class="bg-primary-blue py-20 md:py-28 ">
+				<div class="container mx-auto px-6 md:px-10">
+					<!-- About Text -->
+					<div
+						class="max-w-7xl mx-auto text-white space-y-4 text-base md:text-2xl leading-relaxed"
+					>
+						<p>
+							Gameplan Sports Private Limited was established in 1998 at a time
+							when sports marketing was a nascent industry in India. Over the
+							last 25 years Gameplan has worked with sponsorship, in stadium
+							advertising, player management, franchise leagues including Indian
+							Premier League, Indian Super League and Pro Kabaddi League.
+							Gameplan has been associated with Kolkata Knight Riders since the
+							inception of IPL in 2008. The company has also worked with content
+							management and digital marketing, among other verticals in sports.
+						</p>
+						<p>
+							In 2012 we diversified in arts and culture based events. The
+							Kolkata Literary Meet is now one of India’s foremost culture
+							events and Gameplan has also worked with cinema (commissioning
+							films for the pioneering Royal Stag Barrel Select Large Short
+							Films) besides curating cultural events in classical music and
+							art. In 2018, Gameplan started and introduced Tata Steel Chess
+							India which has since become India’s foremost chess event and also
+							the first to offer equal prize money in the open and women’s
+							competition.
+						</p>
+					</div>
 
-        </div>
-    </div>
-</section>
+					<!-- "PLAY ON" Banner Text -->
+					<div class="text-end -mb-20 md:-mb-32 mt-16 md:mt-24">
+						<h2
+							class="text-7xl md:text-10xl lg:text-[150px] font-bold text-accent-red uppercase"
+						>
+							PLAY ON
+						</h2>
+					</div>
+				</div>
+			</section>
+			<section class="bg-light-beige py-20 md:py-28">
+				<div class="container mx-auto px-4 md:px-6">
+					<!-- Grid Container -->
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+						<!-- Card 1: Sports -->
+						<div class="group">
+							<div class="bg-accent-blue py-4 px-6">
+								<h3
+									class="text-white text-lg font-bold uppercase tracking-widest"
+								>
+									Sports
+								</h3>
+							</div>
+							<div>
+								<!-- Replace with your actual image path -->
+								<img
+									src="assets/images/Rectangle 248.png"
+									alt="A scene from a sports event"
+									class="w-full h-auto object-cover"
+								/>
+							</div>
+						</div>
 
-<!-- =================================== -->
-<!-- 9. TRUSTED BRANDS SECTION (EXPANDED) -->
-<!-- =================================== -->
-<section class="bg-white py-20">
-    <div class="container mx-auto px-4 md:px-6">
+						<!-- Card 2: Literature -->
+						<div class="group">
+							<div class="bg-accent-green py-4 px-6">
+								<h3
+									class="text-white text-lg font-bold uppercase tracking-widest"
+								>
+									Literature
+								</h3>
+							</div>
+							<div>
+								<!-- Replace with your actual image path -->
+								<img
+									src="assets/images/Rectangle 248.png"
+									alt="A panel discussion at a literary event"
+									class="w-full h-auto object-cover"
+								/>
+							</div>
+						</div>
 
-        <!-- Section Header -->
-        <div class="text-center">
-            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-[#e53935]">
-                Brands Who Trust Our Plans
-            </h2>
-        </div>
+						<!-- Card 3: Art & Culture -->
+						<div class="group">
+							<div class="bg-dark-brown py-4 px-6">
+								<h3
+									class="text-white text-lg font-bold uppercase tracking-widest"
+								>
+									Art
+								</h3>
+							</div>
+							<div>
+								<!-- Replace with your actual image path -->
+								<img
+									src="assets/images/Rectangle 248.png"
+									alt="People looking at art in a gallery"
+									class="w-full h-auto object-cover"
+								/>
+							</div>
+						</div>
 
-        <!-- Responsive Logo Wall -->
-        <div class="mt-16 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-8 gap-y-12">
-            
-            <!-- Row 1 -->
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-             <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
-            </div>
+						<!-- Card 4: Corporate Event & Engagement -->
+						<div class="group">
+							<div class="bg-primary-blue py-4 px-6">
+								<h3
+									class="text-white text-lg font-bold uppercase tracking-widest"
+								>
+									Others
+								</h3>
+							</div>
+							<div>
+								<!-- Replace with your actual image path -->
+								<img
+									src="assets/images/Rectangle 248.png"
+									alt="A corporate event in progress"
+									class="w-full h-auto object-cover"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="bg-white py-20">
+				<div class="container mx-auto px-4 md:px-6">
+					<!-- Section Header -->
+					<div class="text-center">
+						<h2
+							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-[#e53935]"
+						>
+							Brands Who Trust Our Plans
+						</h2>
+					</div>
 
-            <!-- Row 2 -->
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-             <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
-            </div>
+					<!-- Responsive Logo Wall -->
+					<div
+						class="mt-16 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-8 gap-y-12"
+					>
+						<!-- Row 1 -->
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+								alt="ESPN Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+								alt="Google Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+								alt="Pepsi Logo"
+								class="h-12 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+								alt="IPL Logo"
+								class="h-16 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+								alt="Tata Steel Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+								alt="Amazon Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+								alt="Coca-Cola Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+								alt="Mastercard Logo"
+								class="h-10 filter transition-all duration-300"
+							/>
+						</div>
 
-            <!-- Row 3 -->
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-             <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
-            </div>
+						<!-- Row 2 -->
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+								alt="ESPN Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+								alt="Google Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+								alt="Pepsi Logo"
+								class="h-12 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+								alt="IPL Logo"
+								class="h-16 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+								alt="Tata Steel Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+								alt="Amazon Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+								alt="Coca-Cola Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+								alt="Mastercard Logo"
+								class="h-10 filter transition-all duration-300"
+							/>
+						</div>
 
-            <!-- Row 4 -->
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-             <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
-            </div>
-            
-             <!-- Row 5 -->
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png" alt="Google Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png" alt="Pepsi Logo" class="h-12 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png" alt="IPL Logo" class="h-16 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png" alt="Tata Steel Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-             <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png" alt="Amazon Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png" alt="Coca-Cola Logo" class="h-8 filter  transition-all duration-300">
-            </div>
-            <div class="flex justify-center items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png" alt="Mastercard Logo" class="h-10 filter  transition-all duration-300">
-            </div>
+						<!-- Row 3 -->
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+								alt="ESPN Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+								alt="Google Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+								alt="Pepsi Logo"
+								class="h-12 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+								alt="IPL Logo"
+								class="h-16 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+								alt="Tata Steel Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+								alt="Amazon Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+								alt="Coca-Cola Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+								alt="Mastercard Logo"
+								class="h-10 filter transition-all duration-300"
+							/>
+						</div>
 
-        </div>
-    </div>
-</section>
+						<!-- Row 4 -->
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+								alt="ESPN Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+								alt="Google Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+								alt="Pepsi Logo"
+								class="h-12 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+								alt="IPL Logo"
+								class="h-16 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+								alt="Tata Steel Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+								alt="Amazon Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+								alt="Coca-Cola Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+								alt="Mastercard Logo"
+								class="h-10 filter transition-all duration-300"
+							/>
+						</div>
 
+						<!-- Row 5 -->
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+								alt="ESPN Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+								alt="Google Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+								alt="Pepsi Logo"
+								class="h-12 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+								alt="IPL Logo"
+								class="h-16 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+								alt="Tata Steel Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+								alt="Amazon Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+								alt="Coca-Cola Logo"
+								class="h-8 filter transition-all duration-300"
+							/>
+						</div>
+						<div class="flex justify-center items-center">
+							<img
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+								alt="Mastercard Logo"
+								class="h-10 filter transition-all duration-300"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
 
+			<section class="bg-accent-blue py-20">
+				<div class="container mx-auto px-4 md:px-6">
+					<!-- Section Header -->
+					<div class="flex justify-between items-center mb-10">
+						<h2
+							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
+						>
+							Meet Our Team
+						</h2>
+						<!-- Slider Navigation Arrows -->
+						<div class="hidden md:flex items-center space-x-2">
+							<button
+								id="team-prev"
+								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+							>
+								<svg
+									width="20"
+									height="35"
+									viewBox="0 0 20 35"
+									fill="none"
+									class="w-8 h-8"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z"
+										fill="white"
+									/>
+								</svg>
+							</button>
+							<button
+								id="team-next"
+								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+							>
+								<svg
+									width="20"
+									height="35"
+									viewBox="0 0 20 35"
+									fill="none"
+									class="w-8 h-8"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z"
+										fill="white"
+									/>
+								</svg>
+							</button>
+						</div>
+					</div>
 
-<!-- =================================== -->
-<!-- 10. MEET OUR TEAM SECTION           -->
-<!-- =================================== -->
-<section class="bg-accent-blue py-20">
-    <div class="container mx-auto px-4 md:px-6">
-        
-        <!-- Section Header -->
-        <div class="flex justify-between items-center mb-10">
-            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white">
-                Meet Our Team
-            </h2>
-            <!-- Slider Navigation Arrows -->
-            <div class="hidden md:flex items-center space-x-2">
-                <button id="team-prev" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.0716 33.3985C18.1488 34.302 16.65 34.302 15.7272 33.3985L0.691438 18.6737C-0.231331 17.7702 -0.231331 16.3057 0.691438 15.4022L15.7272 0.677391C16.65 -0.226109 18.1488 -0.226109 19.0716 0.677391C19.9944 1.58089 19.9944 3.04842 19.0716 3.95192L5.70337 17.038L19.0716 30.124C19.9944 31.0275 19.9944 32.495 19.0716 33.3985Z" fill="white"/>
-</svg>
-</button>
-                <button id="team-next" class="text-white/70 hover:text-white transition-colors p-2 text-3xl"><svg width="20" height="35" viewBox="0 0 20 35" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.928405 0.677625C1.85118 -0.225875 3.35 -0.225875 4.27277 0.677625L19.3086 15.4024C20.2313 16.3059 20.2313 17.7705 19.3086 18.674L4.27277 33.3988C3.35 34.3023 1.85118 34.3023 0.928405 33.3988C0.00563569 32.4953 0.00563569 31.0278 0.928405 30.1243L14.2966 17.0382L0.928405 3.95215C0.00563569 3.04865 0.00563569 1.58112 0.928405 0.677625Z" fill="white"/>
-</svg>
-</button>
-            </div>
-        </div>
+					<!-- Team Slider -->
+					<div class="swiper team-slider">
+						<div class="swiper-wrapper">
+							<!-- Slide 1: Jeet Banerjee -->
+							<div class="swiper-slide">
+								<div class="text-center">
+									<img
+										src="assets/images/Rectangle 169.png"
+										alt="Jeet Banerjee"
+										class="w-full object-cover"
+									/>
+									<h3
+										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+									>
+										Jeet Banerjee
+									</h3>
+									<p class="text-white/80 uppercase text-sm tracking-widest">
+										Director
+									</p>
+								</div>
+							</div>
 
-        <!-- Team Slider -->
-        <div class="swiper team-slider">
-            <div class="swiper-wrapper">
-                
-                <!-- Slide 1: Jeet Banerjee -->
-                <div class="swiper-slide">
-                    <div class="text-center">
-                        <img src="assets/images/Rectangle 169.png" alt="Jeet Banerjee" class="w-full object-cover">
-                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Jeet Banerjee</h3>
-                        <p class="text-white/80 uppercase text-sm tracking-widest">Director</p>
-                    </div>
-                </div>
+							<!-- Slide 2: Malavika Banerjee -->
+							<div class="swiper-slide">
+								<div class="text-center">
+									<img
+										src="assets/images/Rectangle 169.png"
+										alt="Malavika Banerjee"
+										class="w-full object-cover"
+									/>
+									<h3
+										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+									>
+										Malavika Banerjee
+									</h3>
+									<p class="text-white/80 uppercase text-sm tracking-widest">
+										Director
+									</p>
+								</div>
+							</div>
 
-                <!-- Slide 2: Malavika Banerjee -->
-                <div class="swiper-slide">
-                     <div class="text-center">
-                        <img src="assets/images/Rectangle 169.png" alt="Malavika Banerjee" class="w-full object-cover">
-                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Malavika Banerjee</h3>
-                        <p class="text-white/80 uppercase text-sm tracking-widest">Director</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 3: Prem Khatwani -->
-                <div class="swiper-slide">
-                     <div class="text-center">
-                        <img src="assets/images/Rectangle 169.png" alt="Prem Khatwani" class="w-full object-cover">
-                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Prem Khatwani</h3>
-                        <p class="text-white/80 uppercase text-sm tracking-widest">Director</p>
-                    </div>
-                </div>
+							<!-- Slide 3: Prem Khatwani -->
+							<div class="swiper-slide">
+								<div class="text-center">
+									<img
+										src="assets/images/Rectangle 169.png"
+										alt="Prem Khatwani"
+										class="w-full object-cover"
+									/>
+									<h3
+										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+									>
+										Prem Khatwani
+									</h3>
+									<p class="text-white/80 uppercase text-sm tracking-widest">
+										Director
+									</p>
+								</div>
+							</div>
 
-                <!-- Slide 4 (Example) -->
-                <div class="swiper-slide">
-                     <div class="text-center">
-                        <img src="assets/images/Rectangle 169.png" alt="Team Member" class="w-full object-cover">
-                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Sujata Sen</h3>
-                        <p class="text-white/80 uppercase text-sm tracking-widest">Consultant</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 5 (Example) -->
-                <div class="swiper-slide">
-                     <div class="text-center">
-                        <img src="assets/images/Rectangle 169.png" alt="Team Member" class="w-full object-cover">
-                        <h3 class="text-xl font-bold text-white uppercase mt-6 tracking-wider">Another Member</h3>
-                        <p class="text-white/80 uppercase text-sm tracking-widest">Manager</p>
-                    </div>
-                </div>
+							<!-- Slide 4 (Example) -->
+							<div class="swiper-slide">
+								<div class="text-center">
+									<img
+										src="assets/images/Rectangle 169.png"
+										alt="Team Member"
+										class="w-full object-cover"
+									/>
+									<h3
+										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+									>
+										Sujata Sen
+									</h3>
+									<p class="text-white/80 uppercase text-sm tracking-widest">
+										Consultant
+									</p>
+								</div>
+							</div>
 
-            </div>
-        </div>
+							<!-- Slide 5 (Example) -->
+							<div class="swiper-slide">
+								<div class="text-center">
+									<img
+										src="assets/images/Rectangle 169.png"
+										alt="Team Member"
+										class="w-full object-cover"
+									/>
+									<h3
+										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+									>
+										Another Member
+									</h3>
+									<p class="text-white/80 uppercase text-sm tracking-widest">
+										Manager
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-        <!-- Slider Pagination Dots -->
-        <div class="team-pagination mt-8 text-center"></div>
+					<!-- Slider Pagination Dots -->
+					<div class="team-pagination mt-8 text-center"></div>
+				</div>
+			</section>
+		</main>
 
-    </div>
-</section>
+		<!-- =================================== -->
+		<!-- 11. FOOTER SECTION (UPDATED)        -->
+		<!-- =================================== -->
+		<footer class="bg-black text-white">
+			<!-- Top Red Banner -->
+			<div class="bg-accent-red py-10 md:py-14">
+				<div
+					class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-6"
+				>
+					<!-- 'font-teko' must be defined in your CSS/Tailwind config for this font family -->
+					<h2
+						class="text-6xl md:text-7xl font-bold font-teko uppercase leading-none tracking-wide"
+					>
+						PLAY ON
+					</h2>
+					<!-- Vertical divider on desktop -->
+					<h3
+						class="text-xl md:text-2xl font-medium leading-tight text-center md:text-left"
+					>
+						Every Event<br />Every Experience
+					</h3>
+				</div>
+			</div>
 
-</main>
+			<!-- Main Footer Content -->
+			<div class="container mx-auto px-6 md:px-10 py-16 lg:py-20 text-lg">
+				<!-- Grid: Stacks on mobile (text-center), 3 columns on desktop (text-left) -->
+				<div
+					class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 text-center md:text-left"
+				>
+					<!-- Column 1: Logo & Offices (Spans 4/12 on desktop) -->
+					<div
+						class="md:col-span-5 lg:col-span-4 flex flex-col items-center md:items-start space-y-10"
+					>
+						<!-- Logo -->
+						<img
+							src="assets/images/logo/logo.png"
+							alt="Gameplan Logo"
+							class="h-8"
+						/>
 
+						<!-- Offices Container -->
+						<div class="space-y-6">
+							<div>
+								<h4
+									class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
+								>
+									Head Office
+								</h4>
+								<p class="uppercase leading-relaxed text-white">
+									L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
+									700017.
+								</p>
+							</div>
+							<div>
+								<h4
+									class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
+								>
+									Bhubaneshwar Office
+								</h4>
+								<p class="uppercase leading-relaxed text-white">
+									L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
+									700017.
+								</p>
+							</div>
+							<div>
+								<h4
+									class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
+								>
+									Jharkhand Office
+								</h4>
+								<p class="uppercase leading-relaxed text-white">
+									L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
+									700017.
+								</p>
+							</div>
+						</div>
+					</div>
 
-<!-- =================================== -->
-<!-- 11. FOOTER SECTION (UPDATED)        -->
-<!-- =================================== -->
-<footer class="bg-black text-white">
-    
-    <!-- Top Red Banner -->
-    <div class="bg-accent-red py-10 md:py-14">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-6">
-            <!-- 'font-teko' must be defined in your CSS/Tailwind config for this font family -->
-            <h2 class="text-6xl md:text-7xl font-bold font-teko uppercase leading-none tracking-wide">PLAY ON</h2>
-            <!-- Vertical divider on desktop -->
-            <h3 class="text-xl md:text-2xl font-medium leading-tight text-center md:text-left">
-                Every Event<br>Every Experience
-            </h3>
-        </div>
-    </div>
+					<!-- Column 2: Contact & Privacy (Spans 4/12 on desktop) -->
+					<!-- Uses flex-col justify-between to push Privacy Policy to bottom on desktop -->
+					<div
+						class="md:col-span-3 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10"
+					>
+						<div>
+							<h4
+								class="text-lg text-white font-bold uppercase tracking-[0.2em] mb-6"
+							>
+								Contact
+							</h4>
+							<div class="uppercase space-y-2 leading-relaxed text-white">
+								<a
+									href="mailto:mail@gameplan.co.in"
+									class="hover:text-zinc-300 transition-colors lowercase text-lg"
+									>mail@gameplan.co.in</a
+								>
+								<div class="mt-5 space-y-1 text-lg">
+									<p>+ 91 (0) 33 2282 1960/61</p>
+									<p>+ 91 (0) 33 3290 4947</p>
+									<p>+ 91 (0) 33 2282 1959</p>
+								</div>
+							</div>
+						</div>
+						<!-- Bottom Link -->
+						<div class="md:mt-auto pt-4">
+							<a
+								href="#"
+								class="text-zinc-400 hover:text-white transition-colors tracking-wider"
+								>Privacy Policy</a
+							>
+						</div>
+					</div>
 
-    <!-- Main Footer Content -->
-    <div class="container mx-auto px-6 md:px-10 py-16 lg:py-20 text-lg">
-        <!-- Grid: Stacks on mobile (text-center), 3 columns on desktop (text-left) -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 text-center md:text-left">
-            
-            <!-- Column 1: Logo & Offices (Spans 4/12 on desktop) -->
-            <div class="md:col-span-5 lg:col-span-4 flex flex-col items-center md:items-start space-y-10">
-                <!-- Logo -->
-                <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-8">
-                
-                <!-- Offices Container -->
-                <div class="space-y-6 ">
-                    <div>
-                        <h4 class=" text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2">Head Office</h4>
-                        <p class=" uppercase leading-relaxed text-white">L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
-                    </div>
-                    <div>
-                        <h4 class=" text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2">Bhubaneshwar Office</h4>
-                        <p class=" uppercase leading-relaxed text-white">L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
-                    </div>
-                    <div>
-                        <h4 class=" text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2">Jharkhand Office</h4>
-                        <p class=" uppercase leading-relaxed text-white">L&T Chambers – 4th floor,<br>16 Camac Street, Kolkata – 700017.</p>
-                    </div>
-                </div>
-            </div>
+					<!-- Column 3: Follow Us & Terms (Spans 4/12 on desktop) -->
+					<!-- Uses flex-col justify-between to push Terms to bottom on desktop -->
+					<div
+						class="md:col-span-4 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10"
+					>
+						<div>
+							<h4 class="text-white font-bold uppercase tracking-[0.2em] mb-6">
+								Follow Us On
+							</h4>
+							<div
+								class="flex items-center justify-center md:justify-start gap-3"
+							>
+								<!-- Facebook -->
+								<a
+									href="#"
+									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
+								>
+									<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+										/>
+									</svg>
+								</a>
+								<!-- X (Twitter) -->
+								<a
+									href="#"
+									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
+								>
+									<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+										/>
+									</svg>
+								</a>
+								<!-- Instagram -->
+								<a
+									href="#"
+									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
+								>
+									<svg
+										class="w-4 h-4"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<rect
+											x="2"
+											y="2"
+											width="20"
+											height="20"
+											rx="5"
+											ry="5"
+										></rect>
+										<path
+											d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+										></path>
+										<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+									</svg>
+								</a>
+								<!-- Threads (@ symbol style) -->
+								<a
+									href="#"
+									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
+								>
+									<svg
+										width="16"
+										height="20"
+										viewBox="0 0 16 20"
+										fill="none"
+										stroke="currentColor"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M11.8667 9.35828C11.7303 6.62531 10.3556 5.06073 8.04761 5.04518C6.6561 5.03603 5.49285 5.6765 4.78024 6.85038L6.05047 7.79553C6.5845 6.91626 7.42766 6.73419 8.03835 6.74059C8.79897 6.74608 9.37175 6.9858 9.74321 7.45426C10.0128 7.79462 10.1939 8.26582 10.284 8.85963C9.609 8.73519 8.88179 8.69707 8.10237 8.74526C5.90727 8.8825 4.49722 10.2732 4.59156 12.2047C4.63958 13.1846 5.08853 14.0282 5.85673 14.579C6.50532 15.0447 7.34259 15.2716 8.21103 15.2204C9.35911 15.1518 10.2596 14.6769 10.8879 13.8068C11.3647 13.1462 11.6662 12.2898 11.7993 11.212C12.3468 11.5706 12.7511 12.0418 12.976 12.6091C13.3568 13.5735 13.3787 15.1582 12.1885 16.4501C11.1457 17.581 9.8923 18.0714 7.99792 18.086C5.89632 18.0696 4.30686 17.3367 3.27417 15.9103C2.3055 14.5744 1.806 12.6439 1.78747 10.1744C1.806 7.70404 2.30634 5.7744 3.27417 4.43765C4.30686 3.01123 5.89632 2.27927 7.99792 2.2628C10.1147 2.28018 11.7311 3.01489 12.8042 4.44954C13.3307 5.15223 13.7266 6.03607 13.9885 7.06631L15.4761 6.63629C15.1585 5.36724 14.6598 4.27387 13.9818 3.36715C12.6063 1.52809 10.5847 0.586597 7.99286 0.567383C5.40609 0.586597 3.41737 1.53266 2.0806 3.37721C0.892081 5.01956 0.278028 7.31701 0.257812 10.1808C0.278028 13.0446 0.892081 15.3293 2.0806 16.9716C3.41737 18.8162 5.4162 19.7622 8.00213 19.7815C10.3025 19.7641 11.9231 19.1099 13.2582 17.6615C15.006 15.7648 14.953 13.3887 14.3777 11.9302C13.9355 10.8094 13.0552 9.91183 11.8675 9.35919M8.12932 13.5286C7.16739 13.5872 6.16839 13.1187 6.11869 12.1141C6.08248 11.3694 6.60724 10.5386 8.18828 10.4398C8.90284 10.3878 9.62059 10.4413 10.3219 10.599C10.1399 13.0712 9.07104 13.4719 8.12932 13.5286Z"
+											fill="white"
+										/>
+									</svg>
+								</a>
+								<!-- LinkedIn -->
+								<a
+									href="#"
+									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
+								>
+									<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<!-- Bottom Link -->
+						<div class="md:mt-auto pt-4">
+							<a
+								href="#"
+								class="text-zinc-400 hover:text-white transition-colors tracking-wider"
+								>Terms & Conditions</a
+							>
+						</div>
+					</div>
+				</div>
 
-            <!-- Column 2: Contact & Privacy (Spans 4/12 on desktop) -->
-            <!-- Uses flex-col justify-between to push Privacy Policy to bottom on desktop -->
-            <div class="md:col-span-3 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10">
-                <div>
-                    <h4 class="text-lg text-white font-bold uppercase tracking-[0.2em] mb-6">Contact</h4>
-                    <div class=" uppercase space-y-2 leading-relaxed text-white">
-                        <a href="mailto:mail@gameplan.co.in" class="hover:text-zinc-300 transition-colors lowercase text-lg">mail@gameplan.co.in</a>
-                        <div class="mt-5 space-y-1 text-lg">
-                            <p>+ 91 (0) 33 2282 1960/61</p>
-                            <p>+ 91 (0) 33 3290 4947</p>
-                            <p>+ 91 (0) 33 2282 1959</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Bottom Link -->
-                <div class="md:mt-auto pt-4">
-                    <a href="#" class=" text-zinc-400 hover:text-white transition-colors tracking-wider">Privacy Policy</a>
-                </div>
-            </div>
-
-            <!-- Column 3: Follow Us & Terms (Spans 4/12 on desktop) -->
-            <!-- Uses flex-col justify-between to push Terms to bottom on desktop -->
-            <div class="md:col-span-4 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10">
-                <div>
-                    <h4 class=" text-white font-bold uppercase tracking-[0.2em] mb-6">Follow Us On</h4>
-                    <div class="flex items-center justify-center md:justify-start gap-3">
-                        <!-- Facebook -->
-                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                        </a>
-                        <!-- X (Twitter) -->
-                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <!-- Instagram -->
-                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
-                        <!-- Threads (@ symbol style) -->
-                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
-                           <svg width="16" height="20" viewBox="0 0 16 20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.8667 9.35828C11.7303 6.62531 10.3556 5.06073 8.04761 5.04518C6.6561 5.03603 5.49285 5.6765 4.78024 6.85038L6.05047 7.79553C6.5845 6.91626 7.42766 6.73419 8.03835 6.74059C8.79897 6.74608 9.37175 6.9858 9.74321 7.45426C10.0128 7.79462 10.1939 8.26582 10.284 8.85963C9.609 8.73519 8.88179 8.69707 8.10237 8.74526C5.90727 8.8825 4.49722 10.2732 4.59156 12.2047C4.63958 13.1846 5.08853 14.0282 5.85673 14.579C6.50532 15.0447 7.34259 15.2716 8.21103 15.2204C9.35911 15.1518 10.2596 14.6769 10.8879 13.8068C11.3647 13.1462 11.6662 12.2898 11.7993 11.212C12.3468 11.5706 12.7511 12.0418 12.976 12.6091C13.3568 13.5735 13.3787 15.1582 12.1885 16.4501C11.1457 17.581 9.8923 18.0714 7.99792 18.086C5.89632 18.0696 4.30686 17.3367 3.27417 15.9103C2.3055 14.5744 1.806 12.6439 1.78747 10.1744C1.806 7.70404 2.30634 5.7744 3.27417 4.43765C4.30686 3.01123 5.89632 2.27927 7.99792 2.2628C10.1147 2.28018 11.7311 3.01489 12.8042 4.44954C13.3307 5.15223 13.7266 6.03607 13.9885 7.06631L15.4761 6.63629C15.1585 5.36724 14.6598 4.27387 13.9818 3.36715C12.6063 1.52809 10.5847 0.586597 7.99286 0.567383C5.40609 0.586597 3.41737 1.53266 2.0806 3.37721C0.892081 5.01956 0.278028 7.31701 0.257812 10.1808C0.278028 13.0446 0.892081 15.3293 2.0806 16.9716C3.41737 18.8162 5.4162 19.7622 8.00213 19.7815C10.3025 19.7641 11.9231 19.1099 13.2582 17.6615C15.006 15.7648 14.953 13.3887 14.3777 11.9302C13.9355 10.8094 13.0552 9.91183 11.8675 9.35919M8.12932 13.5286C7.16739 13.5872 6.16839 13.1187 6.11869 12.1141C6.08248 11.3694 6.60724 10.5386 8.18828 10.4398C8.90284 10.3878 9.62059 10.4413 10.3219 10.599C10.1399 13.0712 9.07104 13.4719 8.12932 13.5286Z" fill="white"/>
-</svg>
-
-                        </a>
-                        <!-- LinkedIn -->
-                        <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <!-- Bottom Link -->
-                <div class="md:mt-auto pt-4">
-                    <a href="#" class=" text-zinc-400 hover:text-white transition-colors tracking-wider">Terms & Conditions</a>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Bottom Copyright with Divider -->
-        <div class="border-t border-white mt-16 pt-8 text-center text-zinc-500 text-md">
-        © Gameplan Copyright 2025, All Rights Reserved
-    </div>
-    </div>
-</footer>
-    <!-- SCRIPTS -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
-</body>
+				<!-- Bottom Copyright with Divider -->
+				<div
+					class="border-t border-white mt-16 pt-8 text-center text-zinc-500 text-md"
+				>
+					© Gameplan Copyright 2025, All Rights Reserved
+				</div>
+			</div>
+		</footer>
+		<!-- SCRIPTS -->
+		<script src="assets/js/swiper-bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
 </html>

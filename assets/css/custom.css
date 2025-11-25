@@ -25,7 +25,6 @@
     --container-2xl: 42rem;
     --container-3xl: 48rem;
     --container-4xl: 56rem;
-    --container-6xl: 72rem;
     --container-7xl: 80rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
@@ -792,9 +791,6 @@
   .bg-accent-red-alt {
     background-color: var(--color-accent-red-alt);
   }
-  .bg-accent-teal {
-    background-color: var(--color-accent-teal);
-  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -1108,6 +1104,9 @@
   }
   .text-accent-teal {
     color: var(--color-accent-teal);
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-dark-gold-text {
     color: var(--color-dark-gold-text);
@@ -1719,7 +1718,7 @@
     font-style: normal;
     font-weight: 200 700;
     font-display: swap;
-    src: url("assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
+    src: url("../fonts/DarkerGrotesque-Bold.woff") format("woff");
   }
   .header-bar {
     display: flex;

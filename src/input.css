@@ -56,7 +56,7 @@
     font-style: normal;
     font-weight: 200 700;
     font-display: swap;
-    src: url("assets/fonts/DarkerGrotesque-Bold.woff") format("woff");
+    src: url("../fonts/DarkerGrotesque-Bold.woff") format("woff");
   }
 
   /* ================================================ */

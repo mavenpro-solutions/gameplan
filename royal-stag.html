@@ -11,192 +11,15 @@
     <!-- Swiper.js CSS Library -->
     <link rel="stylesheet" href="src/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <!-- LIGHTGALLERY CSS (Add these lines) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
 <!-- <link rel="stylesheet" href="src/tabler-icons.min.css"> -->
 </head>
 <body>
 
 <!-- =================================== -->
 <!-- 1. HEADER (WITH MULTILEVEL MENU)  -->
-<!-- =================================== -->
-<header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 md:p-6">
-    <div class="container mx-auto">
-        <div class="header-bar">
-            <!-- Logo -->
-            <a href="index.html">
-                <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10">
-            </a>
-            
-            <!-- ======================= -->
-            <!-- DESKTOP NAVIGATION      -->
-            <!-- ======================= -->
-            <nav class="hidden md:block">
-                <ul class="desktop-nav">
-                    
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    
-                    
-                    <!-- Sports (Has 3rd Level Submenu) -->
-                    <li class="relative group">
-                        <a href="#" class="nav-link has-submenu">
-                            <span>Sports</span>
-                            <i class="ti ti-chevron-down submenu-icon"></i></a>
-                        <!-- Level 2 Dropdown -->
-                        <ul class="dropdown-menu min-w-[220px]">
-                            <!-- Cricket (Sub-group) -->
-                            <li class="relative group/cricket">
-                                <a href="#" class="dropdown-item justify-between">
-                                    <span>Cricket</span>
-                                    <i class="ti ti-chevron-right submenu-icon-right"></i></a>
-                                <!-- Level 3 Dropdown -->
-                                <ul class="dropdown-submenu">
-                                    <li><a href="icc.html" class="dropdown-item">ICC</a></li>
-                                    <li><a href="#" class="dropdown-item">IPL</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="chess.html" class="dropdown-item">Tata Steel Chess</a></li>
-                             <!-- 3D Signature (Sub-group) -->
-                            <li class="relative group/3d">
-                                <a href="#" class="dropdown-item justify-between">
-                                    <span>3D Signature</span>
-                                    <i class="ti ti-chevron-right submenu-icon-right"></i></a>
-                                <!-- Level 3 Dropdown -->
-                                <ul class="dropdown-submenu">
-                                    <li><a href="#" class="dropdown-item">Football</a></li>
-                                    <li><a href="#" class="dropdown-item">Hockey</a></li>
-                                    <li><a href="#" class="dropdown-item">Kabaddi</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
 
-                    <!-- Literature (Has Submenu) -->
-                    <li class="relative group">
-                        <a href="#" class="nav-link has-submenu">
-                            <span>Literature</span>
-                            <i class="ti ti-chevron-down submenu-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="dropdown-item">Kolkata Literary</a></li>
-                            <li><a href="blm.html" class="dropdown-item">BLM</a></li>
-                            <li><a href="#" class="dropdown-item">JLM</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Art (Has Submenu) -->
-                    <li class="relative group">
-                        <a href="#" class="nav-link has-submenu">
-                            <span>Art</span>
-                            <i class="ti ti-chevron-down submenu-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="bengal-biennale.html" class="dropdown-item">Bengal Biennale</a></li>
-                        </ul>
-                    </li>
-
-                     <!-- Others (Has Submenu) -->
-                    <li class="relative group">
-                        <a href="#" class="nav-link has-submenu">
-                            <span>Others</span>
-                            <i class="ti ti-chevron-down submenu-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="dropdown-item">Aberlour</a></li>
-                            <li><a href="absolut.html" class="dropdown-item">Absolut Art</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="focus:outline-none text-white">
-                    <i class="ti ti-menu-2 text-3xl"></i></button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ======================= -->
-    <!-- MOBILE MENU PANEL       -->
-    <!-- ======================= -->
-    <!-- FIX: Added `translate-x-full` back here to set the initial hidden state -->
-    <div id="mobile-menu" class="mobile-menu-panel translate-x-full">
-        
-        <button id="close-menu-button" class="mobile-menu-close-btn"><i class="ti ti-x text-3xl"></i></button>
-
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mb-16"><img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-10 brightness-0 invert"></a>
-            
-            <nav class="flex flex-col space-y-2">
-                <a href="index.html" class="mobile-nav-link">Home</a>
-
-                <a href="about.html" class="mobile-nav-link">About us</a>
-                
-
-                <!-- Sports -->
-                <div>
-                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
-                        <span>Sports</span>
-                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
-                    <ul class="mobile-submenu">
-                        <!-- Cricket Sub-Menu -->
-                        <li>
-                             <a href="#" class="mobile-menu-parent mobile-submenu-link justify-between">
-                                <span>Cricket</span>
-                                <i class="ti ti-chevron-down mobile-submenu-icon-nested"></i></a>
-                            <ul class="mobile-submenu-nested">
-                                <li><a href="icc.html" class="mobile-submenu-link-nested">ICC</a></li>
-                                <li><a href="#" class="mobile-submenu-link-nested">IPL</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="mobile-submenu-link">Tata Steel Chess</a></li>
-                         <!-- 3D Signature Sub-Menu -->
-                        <li>
-                             <a href="#" class="mobile-menu-parent mobile-submenu-link justify-between">
-                                <span>3D Signature</span>
-                                <i class="ti ti-chevron-down mobile-submenu-icon-nested"></i></a>
-                            <ul class="mobile-submenu-nested">
-                                <li><a href="#" class="mobile-submenu-link-nested">Football</a></li>
-                                <li><a href="#" class="mobile-submenu-link-nested">Hockey</a></li>
-                                <li><a href="#" class="mobile-submenu-link-nested">Kabaddi</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Literature -->
-                <div>
-                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
-                        <span>Literature</span>
-                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
-                    <ul class="mobile-submenu">
-                        <li><a href="#" class="mobile-submenu-link">Kolkata Literary</a></li>
-                        <li><a href="blm.html" class="mobile-submenu-link">BLM</a></li>
-                        <li><a href="#" class="mobile-submenu-link">JLM</a></li>
-                    </ul>
-                </div>
-
-                <!-- Art -->
-                 <div>
-                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
-                        <span>Art</span>
-                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
-                    <ul class="mobile-submenu">
-                        <li><a href="bengal-biennale.html" class="mobile-submenu-link">Bengal Biennale</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Others -->
-                 <div>
-                    <a href="#" class="mobile-menu-parent mobile-nav-link-parent">
-                        <span>Others</span>
-                        <i class="ti ti-chevron-down mobile-submenu-icon"></i></a>
-                    <ul class="mobile-submenu">
-                        <li><a href="#" class="mobile-submenu-link">Aberlour</a></li>
-                        <li><a href="absolut.html" class="mobile-submenu-link">Absolut Art</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
 
 <main>
     <!-- HERO SECTION WRAPPER -->
@@ -320,8 +143,8 @@
 <section class="bg-white py-16 md:py-24">
     <div class="container mx-auto px-6 md:px-10 max-w-7xl">
         
-        <!-- Video List Container -->
-        <div class="space-y-16">
+        <!-- ADDED ID "video-gallery-1" and CLASS "gallery-container" -->
+        <div id="video-gallery-1" class="gallery-container space-y-16">
 
             <!-- Video Item 1 -->
             <article class="w-full">
@@ -329,16 +152,16 @@
                     SOMAYER SMRITIMALA | GOUTAM GHOSE
                 </h3>
                 
-                <!-- Video Card -->
-                <!-- Note: Replaced local image with YouTube Thumbnail fetcher -->
-                <a href="#" 
-                   class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden aspect-video bg-gray-200" 
-                   data-type="video" 
-                   data-src="https://www.youtube.com/embed/fBIE8wPv78s?si=_K8dLNEpeYXWYN9T">
+                <!-- 
+                   1. href: Put the full YouTube Link here.
+                   2. class: Added 'gallery-item'
+                -->
+                <a href="https://www.youtube.com/watch?v=fBIE8wPv78s" 
+                   class="gallery-item block relative group rounded-lg shadow-lg overflow-hidden aspect-video bg-gray-200">
                    
-                    <!-- Fetch Thumbnail from YouTube (Using the ID from the link above: fBIE8wPv78s) -->
+                    <!-- Page Banner/Thumbnail -->
                     <img src="https://img.youtube.com/vi/fBIE8wPv78s/maxresdefault.jpg" 
-                         alt="Thumbnail for Somayer Smritimala" 
+                         alt="Thumbnail" 
                          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                     
                     <!-- Play Button Overlay -->
@@ -351,58 +174,10 @@
                 </a>
             </article>
 
-            <!-- Video Item 2 -->
-            <article class="w-full">
-                <h3 class="text-dark-gold-text text-3xl  font-semibold uppercase tracking-widest mb-6">
-                    ANUKUL | SUJOY GHOSH
-                </h3>
-                
-                <a href="#" 
-                   class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden aspect-video bg-gray-200" 
-                   data-type="video" 
-                   data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2">
-                   
-                    <!-- Replace 'YOUR_VIDEO_ID_2' in the URL below with the actual ID -->
-                    <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_2/maxresdefault.jpg" 
-                         alt="Thumbnail for Anukul" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
-                        <svg class="w-20 h-20 text-white transform transition-transform duration-300 group-hover:scale-110 drop-shadow-lg" viewBox="0 0 165 116" fill="none">
-                            <path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/>
-                            <path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/>
-                        </svg>
-                    </div>
-                </a>
-            </article>
+            <!-- Example: Adding another video is simple now -->
+            <!-- Just copy Article, change href, and change img src -->
 
-            <!-- Video Item 3 -->
-            <article class="w-full">
-                <h3 class="text-dark-gold-text text-3xl font-semibold uppercase tracking-widest mb-6">
-                    DEATH OF A FATHER | CHAITANYA TAMHANE
-                </h3>
-                
-                <a href="#" 
-                   class="js-lightbox block relative group rounded-lg shadow-lg overflow-hidden aspect-video bg-gray-200" 
-                   data-type="video" 
-                   data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3">
-                   
-                    <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_3/maxresdefault.jpg" 
-                         alt="Thumbnail for Death of a Father" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
-                        <svg class="w-20 h-20 text-white transform transition-transform duration-300 group-hover:scale-110 drop-shadow-lg" viewBox="0 0 165 116" fill="none">
-                            <path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/>
-                            <path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/>
-                        </svg>
-                    </div>
-                </a>
-            </article>
-            
         </div>
-
-        <!-- View More Button Removed as requested -->
     </div>
 </section>
 
@@ -410,93 +185,73 @@
 <!-- THE BARTENDER SERIES SECTION                            -->
 <!-- ========================================================= -->
 <section class="bg-light-tan-bg py-16 md:py-24">
-    <div class="container mx-auto px-6 md:px-10 max-w-7xl">
-        
-        <!-- Section Title -->
-        <h2 class="text-dark-gold-text text-3xl md:text-4xl font-bold uppercase tracking-widest mb-12">
-            THE BARTENDER SERIES
-        </h2>
-        
-        <!-- Video List Container (Grid Layout for Structure) -->
-        <div class="grid grid-cols-1 gap-16">
+  <div class="container mx-auto px-6 md:px-10 max-w-7xl">
+    <h2 class="text-dark-gold-text text-3xl md:text-4xl font-bold uppercase tracking-widest mb-12">
+      THE BARTENDER SERIES
+    </h2>
 
-            <!-- Video Item 1 -->
-            <article class="group">
-                <h3 class="text-dark-gold-text text-2xl font-semibold uppercase tracking-widest mb-6">
-                    BADMINTON | DIBAKAR BANERJEE
-                </h3>
-                
-                <a href="#" 
-                   class="js-lightbox block relative rounded-lg shadow-xl overflow-hidden aspect-video bg-white" 
-                   data-type="video" 
-                   data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4">
-                    
-                    <!-- YouTube Banner Fetch -->
-                    <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_4/maxresdefault.jpg" 
-                         alt="Thumbnail for Badminton" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
-                        <svg class="w-20 h-20 text-white transform transition-transform duration-300 group-hover:scale-110 drop-shadow-lg" viewBox="0 0 165 116" fill="none">
-                            <path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/>
-                            <path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/>
-                        </svg>
-                    </div>
-                </a>
-            </article>
+    <!-- Gallery -->
+    <div id="video-gallery-2" class="gallery-container grid grid-cols-1 gap-16">
 
-            <!-- Video Item 2 -->
-            <article class="group">
-                <h3 class="text-dark-gold-text text-2xl font-semibold uppercase tracking-widest mb-6">
-                    NEXT PLEASE | RISHAV KAPOOR
-                </h3>
-                
-                <a href="#" 
-                   class="js-lightbox block relative rounded-lg shadow-xl overflow-hidden aspect-video bg-white" 
-                   data-type="video" 
-                   data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_5">
-                    
-                    <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_5/maxresdefault.jpg" 
-                         alt="Thumbnail for Next Please" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
-                        <svg class="w-20 h-20 text-white transform transition-transform duration-300 group-hover:scale-110 drop-shadow-lg" viewBox="0 0 165 116" fill="none">
-                            <path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/>
-                            <path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/>
-                        </svg>
-                    </div>
-                </a>
-            </article>
-            
-            <!-- Video Item 3 -->
-            <article class="group">
-                <h3 class="text-dark-gold-text text-2xl font-semibold uppercase tracking-widest mb-6">
-                    THE PROMISE | TIGMANSHU DHULIA
-                </h3>
-                
-                <a href="#" 
-                   class="js-lightbox block relative rounded-lg shadow-xl overflow-hidden aspect-video bg-white" 
-                   data-type="video" 
-                   data-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_6">
-                    
-                    <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_6/maxresdefault.jpg" 
-                         alt="Thumbnail for The Promise" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
-                        <svg class="w-20 h-20 text-white transform transition-transform duration-300 group-hover:scale-110 drop-shadow-lg" viewBox="0 0 165 116" fill="none">
-                            <path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/>
-                            <path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/>
-                        </svg>
-                    </div>
-                </a>
-            </article>
-        </div>
+      <!-- Video Item (modal playback) -->
+      <article class="group">
+        <h3 class="text-dark-gold-text text-2xl font-semibold uppercase tracking-widest mb-6">
+          BADMINTON | DIBAKAR BANERJEE
+        </h3>
 
-        <!-- Load More Button Removed -->
+        <!-- Add data-inline="true" if you want inline playback instead of modal -->
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_HERE"
+           class="gallery-item block relative rounded-lg shadow-xl overflow-hidden aspect-video bg-white"
+           aria-label="BADMINTON | DIBAKAR BANERJEE">
+           
+          <!-- Lightweight inline SVG placeholder (keeps layout, avoids external thumbnail URL) -->
+          <img
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='720' viewBox='0 0 1280 720'><rect width='100%25' height='100%25' fill='%23f3f2f0'/><g fill='%23d1cfc9'><circle cx='640' cy='360' r='90'/></g></svg>"
+            alt="Video thumbnail placeholder"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          
+          <div class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
+            <svg class="w-20 h-20 text-white transform transition-transform duration-300 group-hover:scale-110 drop-shadow-lg" viewBox="0 0 165 116" fill="none" aria-hidden="true">
+              <path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/>
+              <path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/>
+            </svg>
+          </div>
+        </a>
+      </article>
+
+      <!-- Add more <article> blocks like the one above for more videos -->
+      <!-- Example: inline playback item -->
+      <article class="group">
+        <h3 class="text-dark-gold-text text-2xl font-semibold uppercase tracking-widest mb-6">
+          INLINE EXAMPLE | ARTIST NAME
+        </h3>
+
+        <a href="https://www.youtube.com/watch?v=fBIE8wPv78s"
+           class="gallery-item block relative rounded-lg shadow-xl overflow-hidden aspect-video bg-white"
+           data-inline="true"
+           aria-label="INLINE EXAMPLE | ARTIST NAME">
+          <img
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='720' viewBox='0 0 1280 720'><rect width='100%25' height='100%25' fill='%23f3f2f0'/><g fill='%23d1cfc9'><circle cx='640' cy='360' r='90'/></g></svg>"
+            alt="Video thumbnail placeholder"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
+            <!-- same play icon -->
+            <svg class="w-20 h-20 text-white transform transition-transform duration-300 group-hover:scale-110 drop-shadow-lg" viewBox="0 0 165 116" fill="none" aria-hidden="true">
+              <path d="M160.831 18.0363C159.888 14.5502 158.047 11.372 155.494 8.81823C152.94 6.26445 149.762 4.42419 146.276 3.48071C133.513 0 82.1481 0 82.1481 0C82.1481 0 30.7804 0.105359 18.0178 3.58607C14.5317 4.52961 11.3535 6.36996 8.79982 8.92386C6.24615 11.4778 4.40608 14.6561 3.46284 18.1423C-0.397543 40.819 -1.89506 75.3729 3.56884 97.1424C4.51218 100.629 6.35229 103.807 8.90596 106.361C11.4596 108.914 14.6377 110.755 18.1238 111.698C30.8864 115.179 82.2529 115.179 82.2529 115.179C82.2529 115.179 133.619 115.179 146.381 111.698C149.867 110.755 153.045 108.914 155.599 106.361C158.153 103.807 159.993 100.629 160.936 97.1424C165.008 74.4337 166.263 39.9009 160.831 18.0363Z" fill="#FF0000"/>
+              <path d="M65.7988 82.2693L108.41 57.5882L65.7988 32.9072V82.2693Z" fill="white"/>
+            </svg>
+          </div>
+        </a>
+      </article>
+
     </div>
+  </div>
 </section>
+
+<!-- 
+    NOTE: I REMOVED THE CUSTOM #lightbox DIV FROM HERE.
+    LIGHTGALLERY CREATES ITS OWN MODAL AUTOMATICALLY.
+-->
 
 </main>
 
@@ -611,6 +366,33 @@
     </div>
 </footer>
 
+
+<!-- 1. VIDEO MODAL -->
+<div id="video-popup-modal" class="hidden fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4">
+    <div class="relative w-full max-w-5xl aspect-video bg-black shadow-2xl rounded-lg overflow-hidden">
+        <button id="video-popup-close" class="absolute top-4 right-4 z-20 text-white hover:text-red-500 bg-black/50 hover:bg-black/80 rounded-full p-2 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div id="video-player-container" class="w-full h-full"></div>
+    </div>
+</div>
+
+<!-- 2. IMAGE GALLERY SWIPER MODAL -->
+<div id="gallery-popup-modal" class="hidden fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md">
+    <button id="gallery-popup-close" class="absolute top-4 right-4 z-50 text-white hover:text-gray-300 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    <div class="swiper gallery-popup-swiper w-full h-full">
+        <div class="swiper-wrapper" id="gallery-swiper-wrapper"></div>
+        <div class="swiper-button-next gallery-button-next text-white after:text-4xl"></div>
+        <div class="swiper-button-prev gallery-button-prev text-white after:text-4xl"></div>
+    </div>
+</div>
+
 <!-- ============================================= -->
 <!-- UNIVERSAL POPUP/LIGHTBOX FOR VIDEOS & IMAGES  -->
 <!-- ============================================= -->
@@ -630,7 +412,112 @@
     <!-- SCRIPTS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- LIGHTGALLERY JS (Add these lines) -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/video/lg-video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- -----------------------
+     Thumbnail fetch + setup script
+     (place after the gallery or before </body>)
+     ----------------------- -->
+<script>
+  /* Helper: parse YouTube ID from many URL forms */
+  function getYouTubeIdFromUrl(url) {
+    if (!url) return null;
+    const regExp = /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]{11}).*/;
+    const match = url.match(regExp);
+    return (match && match[1] && match[1].length === 11) ? match[1] : null;
+  }
+
+  /* JSONP fetch for YouTube oEmbed to get official thumbnail_url (no API key) */
+  function fetchYouTubeThumbnailByOEmbed(videoUrl, successCb, errorCb, timeoutMs = 6000) {
+    const id = getYouTubeIdFromUrl(videoUrl) || ('noid' + Math.floor(Math.random() * 100000));
+    const callbackName = 'yt_oembed_cb_' + id + '_' + Date.now();
+    const src = 'https://www.youtube.com/oembed?url=' + encodeURIComponent(videoUrl) + '&format=json&callback=' + callbackName;
+
+    // create global callback
+    window[callbackName] = function(data) {
+      cleanup();
+      if (data && data.thumbnail_url) {
+        successCb(data.thumbnail_url, data);
+      } else {
+        errorCb && errorCb(new Error('No thumbnail_url in oEmbed response'));
+      }
+    };
+
+    const script = document.createElement('script');
+    script.src = src;
+    script.onerror = function() {
+      cleanup();
+      errorCb && errorCb(new Error('oEmbed JSONP network error'));
+    };
+    document.body.appendChild(script);
+
+    const to = setTimeout(function() {
+      cleanup();
+      errorCb && errorCb(new Error('oEmbed JSONP timeout'));
+    }, timeoutMs);
+
+    function cleanup() {
+      try { delete window[callbackName]; } catch(e) { window[callbackName] = undefined; }
+      if (script.parentNode) script.parentNode.removeChild(script);
+      clearTimeout(to);
+    }
+  }
+
+  /* Initialize gallery items after DOM ready */
+  (function initGalleryThumbnails($) {
+    $(document).ready(function() {
+      $('#video-gallery-2 .gallery-item').each(function() {
+        const $anchor = $(this);
+        const href = $anchor.attr('href') || $anchor.data('youtube-url') || '';
+        const vid = getYouTubeIdFromUrl(href);
+        const $img = $anchor.find('img').first();
+
+        // decide whether this item should use inline playback
+        if ($anchor.data('inline') === true || $anchor.attr('data-inline') === 'true') {
+          $anchor.addClass('js-youtube-inline-trigger'); // your inline logic uses this class
+        } else {
+          $anchor.addClass('js-video-popup-trigger'); // your modal/popup logic uses this class
+        }
+
+        // invalid URL handling
+        if (!vid) {
+          $anchor.addClass('video-invalid');
+          $img.length && $img.attr('alt', 'Invalid YouTube URL');
+          return;
+        }
+
+        // fetch the thumbnail using oEmbed (no img.youtube.com string used)
+        fetchYouTubeThumbnailByOEmbed(href,
+          function(thumbnailUrl, oembedData) {
+            if ($img.length) {
+              $img.attr('src', thumbnailUrl);
+              if (oembedData && oembedData.title) {
+                $img.attr('alt', oembedData.title);
+                $anchor.attr('aria-label', oembedData.title);
+              }
+            } else {
+              // create and prepend if missing
+              const $newImg = $('<img>', {
+                src: thumbnailUrl,
+                alt: (oembedData && oembedData.title) || 'YouTube video thumbnail',
+                class: 'w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
+              });
+              $anchor.prepend($newImg);
+            }
+          },
+          function(err) {
+            // failed to fetch thumbnail — mark for styling fallback
+            $anchor.addClass('thumbnail-failed');
+            console.warn('oEmbed thumbnail fetch failed for', href, err);
+          }
+        );
+      });
+    });
+  })(jQuery);
+</script>
 
 </body>
 </html>

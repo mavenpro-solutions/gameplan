@@ -59,72 +59,95 @@
     src: url("../fonts/DarkerGrotesque-Bold.woff") format("woff");
   }
 
-  /* ================================================ */
-  /* --- NEW: HEADER & NAVIGATION STYLES ---          */
-  /* ================================================ */
-  .header-bar {
-    @apply bg-accent-blue flex justify-between items-center px-6 py-2 rounded-md shadow-lg;
-  }
-  .desktop-nav {
-    @apply flex items-center space-x-8 text-xl text-white;
-  }
-  .nav-link {
-    @apply hover:opacity-80 transition-opacity;
-  }
-  .nav-link.has-submenu {
-    @apply flex items-center gap-1;
-  }
-  .submenu-icon {
-    @apply w-4 h-4 mt-1;
-  }
-  .submenu-icon-right {
-    @apply w-4 h-4;
-  }
-  .dropdown-menu {
-    @apply absolute hidden group-hover:block top-full left-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2 z-50;
-  }
-  .dropdown-item {
-    @apply block px-4 py-2 hover:bg-black/20 flex items-center;
-  }
-  .dropdown-submenu {
-    @apply absolute hidden group-hover/cricket:block group-hover/3d:block left-full top-0 min-w-[200px] bg-accent-blue rounded-md shadow-lg py-2;
-  }
   
-  /* --- Mobile Menu --- */
-  .mobile-menu-panel {
-    /* FIX: Removed `translate-x-full` from this component's base style */
-    @apply fixed top-0 right-0 h-full w-full max-w-md bg-accent-blue z-50 p-8 transform transition-transform duration-300 ease-in-out text-white;
-  }
-  .mobile-menu-close-btn {
-    @apply absolute top-8 right-8 text-white focus:outline-none p-2;
-  }
-  .mobile-menu-content {
-    @apply flex flex-col h-full pt-10 overflow-y-auto;
-  }
-  .mobile-nav-link {
-    @apply text-3xl hover:opacity-80 transition-opacity py-2;
-  }
-  .mobile-nav-link-parent {
-    @apply flex items-center justify-between text-3xl py-2;
-  }
-  .mobile-submenu-icon {
-    @apply text-xl transition-transform;
-  }
-   .mobile-submenu-icon-nested {
-    @apply text-base transition-transform;
-  }
-  .mobile-submenu {
-    @apply hidden pl-4 mt-2 space-y-2;
-  }
-  .mobile-submenu-nested {
-    @apply hidden pl-4 mt-2 space-y-2;
-  }
-  .mobile-submenu-link {
-    @apply text-2xl text-white/80 hover:text-white flex items-center;
-  }
-  .mobile-submenu-link-nested {
-    @apply text-xl text-white/60 hover:text-white;
-  }
+    /* --- DESKTOP MENU --- */
+    #main-desktop-menu {
+        @apply hidden md:block font-family; 
+
+        li {
+            @apply cursor-pointer relative;
+            
+            a {
+                @apply flex items-center px-3 py-2 text-white text-lg font-bold hover:text-white/80 transition-colors;
+                
+                /* Icon spacing */
+                i {
+                    @apply ml-1 mt-1;
+                }
+            }
+        }
+
+        /* Top Level Styles */
+        & > ul {
+            @apply flex items-center gap-2;
+        }
+
+        /* Dropdown Box */
+        .dropdown-menu {
+            @apply absolute z-50 w-56 bg-accent-blue shadow-2xl hidden border-t-2 border-white/10 rounded-b-md;
+            
+            li {
+                @apply hover:bg-black/20;
+                a {
+                    @apply px-4 py-3 text-lg font-normal block w-full;
+                }
+            }
+            li + li {
+                @apply border-t border-white/10;
+            }
+        }
+
+        /* Level 2 Positioning */
+        & > ul > .dropdown > .dropdown-menu {
+            @apply top-[120%] left-0 pt-2; 
+        }
+        
+        /* Bridge for hovering */
+        & > ul > .dropdown > .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 20px;
+            transform: translateY(-100%);
+        }
+
+        /* Level 3 Positioning (Right side flyout) */
+        & > ul .dropdown .dropdown .dropdown-menu {
+            @apply left-full top-0 ml-1 rounded-md;
+        }
+    }
+
+    /* --- MOBILE MENU --- */
+    #main-mobile-menu {
+        @apply fixed top-0 left-0 z-50 w-full h-svh overflow-y-auto font-family transition-all duration-300 ease-in-out bg-black/0 select-none md:hidden invisible;
+
+        &.open {
+            @apply bg-black/60 visible select-auto;
+            .menu { @apply translate-x-0; }
+        }
+
+        .menu {
+            @apply px-6 h-svh flex flex-col transition-all duration-300 ease-in-out max-w-[300px] w-full -translate-x-full bg-accent-blue relative z-[2] shadow-2xl;
+        }
+
+        ul li {
+            @apply text-xl text-white select-none cursor-pointer;
+            
+            /* Ensures link and icon spread apart */
+            a { 
+                @apply w-full py-3 flex items-center justify-between border-b border-white/10; 
+            }
+        }
+
+        /* Nested Menu Styling */
+        .dropdown > .dropdown-menu {
+            display: none;
+            @apply pl-4 bg-black/10;
+            
+            li a { 
+                @apply text-lg py-2 border-none text-white/80; 
+            }
+        }
+    }
 
   /* ================================================ */
   /* --- UNIVERSAL STYLED LIST COMPONENT ---          */

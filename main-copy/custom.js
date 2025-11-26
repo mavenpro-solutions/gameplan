@@ -103,28 +103,6 @@ jQuery(document).ready(function($) {
         }, 500);
     });
 
-   // =========================================================
-   // --- 4. NEW: LIGHTGALLERY INITIALIZATION (Universal) ---
-   // =========================================================
-   
-   // This finds any element with class .gallery-container and initializes it.
-   // This works for Videos AND Images automatically.
-   const galleries = document.querySelectorAll('.gallery-container');
-   
-   galleries.forEach(gallery => {
-       lightGallery(gallery, {
-           selector: '.gallery-item', // It looks for <a> tags with this class
-           plugins: [lgVideo, lgThumbnail, lgZoom],
-           speed: 500,
-           // Mobile settings to ensure it works well on phones
-           mobileSettings: {
-               controls: true,
-               showCloseIcon: true,
-               download: false,
-           }
-       });
-   });
-
    // --- 4. UNIVERSAL LIGHTBOX/POPUP LOGIC (UPDATED) ---
     const lightbox = $('#lightbox');
     const lightboxContent = $('#lightbox-content');
@@ -324,6 +302,40 @@ new Swiper('.literature-slider', {
             prevEl: '#corporate-prev',
         },
     });
+// Generic initializer for all dynamic signature sliders (emitted from PHP as "<div class='swiper {slug}-slider'>")
+$('[class$="-slider"].swiper').each(function() {
+    var $container = $(this);
+    var classes = $container.attr('class').split(/\s+/);
+    var sliderClass = classes.find(function(c) { return c !== 'swiper' && c.endsWith('-slider'); });
+    if (!sliderClass) return;
+
+    var base = sliderClass.replace(/-slider$/, '');
+    var paginationSelector = '.' + base + '-pagination';
+    var nextSelector = '#' + base + '-next';
+    var prevSelector = '#' + base + '-prev';
+
+    new Swiper('.' + sliderClass, {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        },
+        pagination: {
+            el: paginationSelector,
+            clickable: true,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: nextSelector,
+            prevEl: prevSelector,
+        },
+    });
+});
 
 
     // --- 8. MEET OUR TEAM SLIDER (This might be number 10 or 11 now) ---

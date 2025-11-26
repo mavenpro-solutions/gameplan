@@ -185,46 +185,52 @@
     </div>
 </nav>
 		<main>
-			<div class="relative h-screen min-h-[400px] lg:min-h-[800px] overflow-hidden hero-swiper bg-black">
+			<!-- 
+    1. h-svh: Uses strict viewport height (great for mobile).
+    2. No min-h used.
+    3. bg-[#031123]: Deep blue fallback color.
+-->
+<div class="relative h-svh w-full overflow-hidden hero-swiper bg-[#031123]">
+    
     <!-- =================================== -->
     <!-- HERO SLIDER CONTAINER             -->
     <!-- =================================== -->
     <div class="swiper-wrapper">
         
         <!-- ================= SLIDE 1 ================= -->
-        <div class="swiper-slide hero-slide" data-slide="0">
+        <div class="swiper-slide hero-slide relative w-full h-full" data-slide="0">
             
-            <!-- LAYER 1: BLURRED BACKGROUND (Fills the screen, provides the "Blend" effect) -->
-            <!-- scale-110 ensures the blurred edges don't bleed white/transparency -->
-            <div class="absolute inset-0 bg-cover bg-center blur-2xl opacity-70 scale-110 transition-transform duration-700"
-                 style="background-image: url('assets/images/Rectangle\ 197.png')">
+            <!-- LAYER 1: AMBIENT BACKGROUND (Fills the screen) -->
+            <!-- This provides the professional "Blur" effect top and bottom -->
+            <div class="absolute inset-0 bg-cover bg-center blur-3xl opacity-40 scale-125 transition-transform duration-1000"
+                 style="background-image: url('assets/images/sample.jpg')">
             </div>
 
-            <!-- LAYER 2: CRYSTAL CLEAR MAIN IMAGE -->
+            <!-- LAYER 2: MAIN IMAGE (Crystal Clear, NEVER CUT) -->
             <!-- 
-               Mobile: bg-[length:100%_auto] -> Forces full width (no left/right cut).
-               Mobile: bg-center -> Vertically centers the image.
-               Desktop: md:bg-cover -> Fills the screen normally.
-               Desktop: md:bg-top -> Aligns to top.
+               1. top-1: Adds your requested 4px top gap.
+               2. bg-contain: Ensures the WHOLE 1200x800 image fits within the screen.
+               3. bg-center: Centers it perfectly.
+               4. bg-no-repeat: Prevents tiling.
+               5. drop-shadow-2xl: Makes the sharp image pop off the blurred background.
             -->
-            <div class="absolute inset-0 bg-no-repeat bg-[length:100%_auto] bg-center md:bg-cover md:bg-top z-0"
-                 style="background-image: url('assets/images/Rectangle\ 197.png')">
+            <div class="absolute inset-0 top-1 bg-contain bg-center bg-no-repeat drop-shadow-2xl z-10"
+                 style="background-image: url('assets/images/sample.jpg')">
             </div>
 
-            <!-- LAYER 3: TOP BLUR GAP (Subtle Blend at the very top) -->
-            <div class="absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-black/20 to-transparent blur-sm z-10"></div>
+            <!-- LAYER 3: GRADIENT OVERLAY (Text Readability) -->
+            <!-- Starts transparent at top, gets dark at bottom to support text -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#031123] via-[#031123]/40 to-transparent z-20"></div>
             
-            <!-- LAYER 4: DARK GRADIENT OVERLAY (For Text Readability - NO BLUR here to keep image clear) -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
-            
-            <!-- LAYER 5: CONTENT -->
-            <div class="relative z-20 h-full w-full flex flex-col justify-end">
-                <div class="container mx-auto px-6 md:px-12 pb-24 sm:pb-32 md:pb-32">
-                    <div class="max-w-3xl">
-                        <h1 class="text-2xl sm:text-5xl md:text-6xl font-bold leading-[1.1] md:leading-tight tracking-wide text-white drop-shadow-md">
+            <!-- LAYER 4: CONTENT -->
+            <div class="relative z-30 h-full w-full flex flex-col justify-end">
+                <!-- Padding adjusted to push text up slightly from absolute bottom -->
+                <div class="container mx-auto px-6 md:px-12 pb-28 sm:pb-36 md:pb-40">
+                    <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] md:leading-tight tracking-wide text-white drop-shadow-lg mb-6">
                             Ruskin Bond & Malavika Banerjee
                         </h1>
-                        <button class="mt-6 md:mt-8 bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1 md:py-3 px-4 md:px-10 text-base md:text-lg rounded-md transition-colors shadow-lg">
+                        <button class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-3 px-10 text-base md:text-lg rounded-md transition-all shadow-lg border border-white/10 hover:scale-105 transform duration-300">
                             Learn More
                         </button>
                     </div>
@@ -233,32 +239,29 @@
         </div>
 
         <!-- ================= SLIDE 2 ================= -->
-        <div class="swiper-slide hero-slide" data-slide="1">
+        <div class="swiper-slide hero-slide relative w-full h-full" data-slide="1">
             
-            <!-- LAYER 1: BLURRED BACKGROUND -->
-            <div class="absolute inset-0 bg-cover bg-center blur-2xl opacity-70 scale-110"
+            <!-- Ambient Background -->
+            <div class="absolute inset-0 bg-cover bg-center blur-3xl opacity-40 scale-125"
                  style="background-image: url('assets/images/Rectangle\ 178.png')">
             </div>
 
-            <!-- LAYER 2: CRYSTAL CLEAR MAIN IMAGE -->
-            <div class="absolute inset-0 bg-no-repeat bg-[length:100%_auto] bg-center md:bg-cover md:bg-top z-0"
+            <!-- Main Image (No Cut) -->
+            <div class="absolute inset-0 top-1 bg-contain bg-center bg-no-repeat drop-shadow-2xl z-10"
                  style="background-image: url('assets/images/Rectangle\ 178.png')">
             </div>
 
-            <!-- LAYER 3: TOP BLUR GAP -->
-            <div class="absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-black/20 to-transparent blur-sm z-10"></div>
-
-            <!-- LAYER 4: OVERLAY -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
+            <!-- Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#031123] via-[#031123]/40 to-transparent z-20"></div>
             
-            <!-- LAYER 5: CONTENT -->
-            <div class="relative z-20 h-full w-full flex flex-col justify-end">
-                <div class="container mx-auto px-6 md:px-12 pb-24 sm:pb-32 md:pb-32">
-                    <div class="max-w-3xl">
-                        <h1 class="text-2xl sm:text-5xl md:text-6xl font-bold leading-[1.1] md:leading-tight tracking-wide text-white drop-shadow-md">
-                            Ruskin Bond & Malavika Banerjee
+            <!-- Content -->
+            <div class="relative z-30 h-full w-full flex flex-col justify-end">
+                <div class="container mx-auto px-6 md:px-12 pb-28 sm:pb-36 md:pb-40">
+                    <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                        <h1 class="text-4xl sm:text-4xl md:text-5xl font-bold leading-[1.1] md:leading-tight tracking-wide text-white drop-shadow-lg mb-6">
+                            Between Home & the World - Abanindranath Tagore
                         </h1>
-                        <button class="mt-6 md:mt-8 bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1 md:py-3 px-4 md:px-10 text-base md:text-lg rounded-md transition-colors shadow-lg">
+                        <button class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-3 px-10 text-base md:text-lg rounded-md transition-all shadow-lg border border-white/10 hover:scale-105 transform duration-300">
                             Learn More
                         </button>
                     </div>
@@ -267,33 +270,30 @@
         </div>
 
         <!-- ================= SLIDE 3 ================= -->
-        <div class="swiper-slide hero-slide" data-slide="2">
+        <div class="swiper-slide hero-slide relative w-full h-full" data-slide="2">
             
-            <!-- LAYER 1: BLURRED BACKGROUND -->
-            <div class="absolute inset-0 bg-cover bg-center blur-2xl opacity-70 scale-110"
+            <!-- Ambient Background -->
+            <div class="absolute inset-0 bg-cover bg-center blur-3xl opacity-40 scale-125"
                  style="background-image: url('assets/images/Rectangle\ 181.png')">
             </div>
 
-            <!-- LAYER 2: CRYSTAL CLEAR MAIN IMAGE -->
-            <div class="absolute inset-0 bg-no-repeat bg-[length:100%_auto] bg-center md:bg-cover md:bg-top z-0"
+            <!-- Main Image (No Cut) -->
+            <div class="absolute inset-0 top-1 bg-contain bg-center bg-no-repeat drop-shadow-2xl z-10"
                  style="background-image: url('assets/images/Rectangle\ 181.png')">
             </div>
 
-            <!-- LAYER 3: TOP BLUR GAP -->
-            <div class="absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-black/20 to-transparent blur-sm z-10"></div>
-
-            <!-- LAYER 4: OVERLAY -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
+            <!-- Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#031123] via-[#031123]/40 to-transparent z-20"></div>
             
-            <!-- LAYER 5: CONTENT -->
-            <div class="relative z-20 h-full w-full flex flex-col justify-end">
-                <div class="container mx-auto px-6 md:px-12 pb-24 sm:pb-32 md:pb-32">
-                    <div class="max-w-3xl">
-                        <h1 class="text-2xl sm:text-5xl md:text-6xl font-bold leading-[1.1] md:leading-tight tracking-wide text-white drop-shadow-md">
-                            Ruskin Bond & Malavika Banerjee
+            <!-- Content -->
+            <div class="relative z-30 h-full w-full flex flex-col justify-end">
+                <div class="container mx-auto px-6 md:px-12 pb-28 sm:pb-36 md:pb-40">
+                    <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] md:leading-tight tracking-wide text-white drop-shadow-lg mb-6">
+                            Literary Discussions
                         </h1>
-                        <button class="mt-6 md:mt-8 bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1 md:py-3 px-4 md:px-10 text-base md:text-lg rounded-md transition-colors shadow-lg">
-                            Learn More
+                        <button class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-3 px-10 text-base md:text-lg rounded-md transition-all shadow-lg border border-white/10 hover:scale-105 transform duration-300">
+                            View Schedule
                         </button>
                     </div>
                 </div>
@@ -301,33 +301,30 @@
         </div>
 
         <!-- ================= SLIDE 4 ================= -->
-        <div class="swiper-slide hero-slide" data-slide="3">
+        <div class="swiper-slide hero-slide relative w-full h-full" data-slide="3">
             
-            <!-- LAYER 1: BLURRED BACKGROUND -->
-            <div class="absolute inset-0 bg-cover bg-center blur-2xl opacity-70 scale-110"
+            <!-- Ambient Background -->
+            <div class="absolute inset-0 bg-cover bg-center blur-3xl opacity-40 scale-125"
                  style="background-image: url('assets/images/Rectangle\ 198.png')">
             </div>
 
-            <!-- LAYER 2: CRYSTAL CLEAR MAIN IMAGE -->
-            <div class="absolute inset-0 bg-no-repeat bg-[length:100%_auto] bg-center md:bg-cover md:bg-top z-0"
+            <!-- Main Image (No Cut) -->
+            <div class="absolute inset-0 top-1 bg-contain bg-center bg-no-repeat drop-shadow-2xl z-10"
                  style="background-image: url('assets/images/Rectangle\ 198.png')">
             </div>
 
-            <!-- LAYER 3: TOP BLUR GAP -->
-            <div class="absolute top-0 left-0 right-0 h-4 bg-gradient-to-b from-black/20 to-transparent blur-sm z-10"></div>
-
-            <!-- LAYER 4: OVERLAY -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
+            <!-- Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#031123] via-[#031123]/40 to-transparent z-20"></div>
             
-            <!-- LAYER 5: CONTENT -->
-            <div class="relative z-20 h-full w-full flex flex-col justify-end">
-                <div class="container mx-auto px-6 md:px-12 pb-24 sm:pb-32 md:pb-32">
-                    <div class="max-w-3xl">
-                        <h1 class="text-2xl sm:text-5xl md:text-6xl font-bold leading-[1.1] md:leading-tight tracking-wide text-white drop-shadow-md">
-                            Ruskin Bond & Malavika Banerjee
+            <!-- Content -->
+            <div class="relative z-30 h-full w-full flex flex-col justify-end">
+                <div class="container mx-auto px-6 md:px-12 pb-28 sm:pb-36 md:pb-40">
+                    <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] md:leading-tight tracking-wide text-white drop-shadow-lg mb-6">
+                            Engaging Audiences
                         </h1>
-                        <button class="mt-6 md:mt-8 bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1 md:py-3 px-4 md:px-10 text-base md:text-lg rounded-md transition-colors shadow-lg">
-                            Learn More
+                        <button class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-3 px-10 text-base md:text-lg rounded-md transition-all shadow-lg border border-white/10 hover:scale-105 transform duration-300">
+                            Get Tickets
                         </button>
                     </div>
                 </div>
@@ -338,7 +335,7 @@
     <!-- =================================== -->
     <!-- 3. UI CONTROLS OVERLAY            -->
     <!-- =================================== -->
-    <div class="absolute inset-0 z-30 pointer-events-none">
+    <div class="absolute inset-0 z-40 pointer-events-none">
         <!-- Left-side Slider Indicators -->
         <div class="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 pointer-events-auto">
             <div class="hero-pagination"></div>
@@ -348,19 +345,19 @@
         <div class="hidden lg:flex absolute bottom-35 md:bottom-32 right-6 sm:right-10 md:right-16 pointer-events-auto">
             <div class="flex space-x-6">
                 <button id="prev-slide" class="hero-button-prev transition-transform hover:scale-110">
-                    <i class="ti ti-chevron-left text-4xl md:text-6xl drop-shadow-md"></i>
+                    <i class="ti ti-chevron-left text-4xl md:text-6xl drop-shadow-md text-white"></i>
                 </button>
                 <button id="next-slide" class="hero-button-next transition-transform hover:scale-110">
-                    <i class="ti ti-chevron-right text-4xl md:text-6xl drop-shadow-md"></i>
+                    <i class="ti ti-chevron-right text-4xl md:text-6xl drop-shadow-md text-white"></i>
                 </button>
             </div>
         </div>
 
         <!-- BOTTOM EXPLORE TEXT & ARROW -->
-        <!-- <div class="relative z-10 h-full w-full flex flex-col justify-end pt-10 md:pb-8 pb-4">
-            <p class="md:text-4xl text-xl text-center drop-shadow-sm">Explore Our Landmarks</p>
-            <i class="ti ti-chevrons-down text-4xl md:text-6xl mx-auto mt-2 animate-bounce drop-shadow-sm"></i>
-        </div> -->
+        <div class="relative z-10 h-full w-full flex flex-col justify-end pt-10 md:pb-8 pb-4">
+            <p class="md:text-4xl text-xl text-center drop-shadow-sm text-white/80 tracking-widest font-light">Explore Our Landmarks</p>
+            <i class="ti ti-chevrons-down text-4xl md:text-6xl mx-auto mt-2 animate-bounce drop-shadow-sm text-white/80"></i>
+        </div>
     </div>
 </div>
 			<!-- =================================== -->

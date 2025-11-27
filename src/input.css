@@ -187,6 +187,8 @@
     width: 2px;
     height: 96px;
     background-color: white;
+   
+    @apply hidden lg:block;
   }
 
   /* This styles all the numbers (the <span> tags) */

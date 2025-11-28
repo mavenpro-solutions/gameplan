@@ -60,6 +60,7 @@
   }
 
   
+
     /* --- DESKTOP MENU --- */
     #main-desktop-menu {
         @apply hidden md:block font-family; 
@@ -68,7 +69,8 @@
             @apply cursor-pointer relative;
             
             a {
-                @apply flex items-center px-3 py-2 text-white text-lg font-bold hover:text-white/80 transition-colors;
+                /* CHANGED: Reduced text-2xl to text-lg to prevent crowding */
+                @apply flex items-center px-3 py-2 text-white text-xl font-bold hover:text-white/80 transition-colors;
                 
                 /* Icon spacing */
                 i {
@@ -82,14 +84,15 @@
             @apply flex items-center gap-2;
         }
 
-        /* Dropdown Box */
+        /* Dropdown Box - General Style */
         .dropdown-menu {
             @apply absolute z-50 w-56 bg-accent-blue shadow-2xl hidden border-t-2 border-white/10 rounded-b-md;
             
             li {
                 @apply hover:bg-black/20;
                 a {
-                    @apply px-4 py-3 text-lg font-normal block w-full;
+                    /* CHANGED: Reduced text-2xl to text-lg here too */
+                    @apply px-4 py-3 text-xl font-normal block w-full;
                 }
             }
             li + li {
@@ -97,9 +100,18 @@
             }
         }
 
-        /* Level 2 Positioning */
+        /* ================================================= */
+        /* LEVEL 1 POSITIONING (Main Menu -> Dropdown)       */
+        /* ================================================= */
+        
+        /* Default: Open to the Left (Standard) */
         & > ul > .dropdown > .dropdown-menu {
             @apply top-[120%] left-0 pt-2; 
+        }
+
+        /* FIX: For the LAST 2 ITEMS (Art & Others), Align to Right so they don't cut off */
+        & > ul > .dropdown:nth-last-child(-n+2) > .dropdown-menu {
+            @apply left-auto right-0;
         }
         
         /* Bridge for hovering */
@@ -110,9 +122,18 @@
             transform: translateY(-100%);
         }
 
-        /* Level 3 Positioning (Right side flyout) */
+        /* ================================================= */
+        /* LEVEL 2 POSITIONING (Nested Dropdowns)            */
+        /* ================================================= */
+
+        /* Default: Pop out to the RIGHT */
         & > ul .dropdown .dropdown .dropdown-menu {
             @apply left-full top-0 ml-1 rounded-md;
+        }
+
+        /* FIX: For the LAST 2 ITEMS, Pop out to the LEFT */
+        & > ul > .dropdown:nth-last-child(-n+2) .dropdown .dropdown-menu {
+            @apply left-auto right-full mr-1 ml-0;
         }
     }
 

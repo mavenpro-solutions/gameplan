@@ -18,10 +18,10 @@
 <!-- =================================== -->
 <!-- FLOATING HEADER (With Icons & KZ Logic) -->
 <!-- =================================== -->
-<header id="main-header" class="fixed top-0 left-0 w-full z-40 p-4 lg:p-6 transition-all duration-300">
+<header id="main-header" class="sticky top-0 left-0 w-full z-50 bg-accent-blue shadow-md">
     
-    <!-- Inner Floating Bar -->
-    <div class="container mx-auto bg-accent-blue rounded-lg shadow-2xl flex items-center justify-between px-6 py-3 relative">
+    <!-- Inner Container (No rounded corners, standard layout) -->
+    <div class="container mx-auto flex items-center justify-between px-6 py-3 relative">
         
         <!-- Logo -->
         <a href="index.html" class="block shrink-0">
@@ -31,7 +31,7 @@
         <!-- Desktop Menu -->
         <menu id="main-desktop-menu" class="hidden md:block">
             <ul class="flex items-center gap-1 text-white">
-                <li><a href="index.html">Home</a></li>
+                <li ><a href="index.html" >Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 
                 <!-- Sports -->
@@ -194,13 +194,7 @@
        On Desktop (width 1440px) -> Height becomes 960px.
     3. No 'h-screen' or 'min-h': No extra space is used.
 -->
-	<div class="block lg:hidden">
-		<br>
-		<br>
-		<br>
-		<br>
-	
-	</div>
+
 <div class="relative w-full aspect-[1.5] overflow-hidden hero-swiper bg-primary-dark-blue">
     
     <!-- =================================== -->
@@ -320,7 +314,7 @@
     <!-- =================================== -->
     <div class="absolute inset-0 z-40 pointer-events-none">
         <!-- Left-side Slider Indicators -->
-        <div class="absolute top-1/2 -translate-y-1/2 left-4 md:left-12 pointer-events-auto">
+        <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-4 md:left-12 pointer-events-auto">
             <div class="hero-pagination"></div>
         </div>
 
@@ -2027,63 +2021,52 @@
 			</div>
 		</footer>
 
-		<!-- ========================================================= -->
-		<!-- 4. NEW EVENT ALERT POPUP (UPDATED DESIGN)                 -->
-		<!-- ========================================================= -->
-		<div
-			id="event-alert"
-			class="fixed bottom-5 right-5 z-50 w-[85vw] max-w-sm transform overflow-hidden rounded-2xl bg-black/20 backdrop-blur-md transition-all duration-500 ease-in-out opacity-0 translate-y-10 md:bottom-10 md:right-10"
-		>
-			<!-- This div holds all the content and provides padding -->
-			<div class="relative p-4">
-				<!-- Positioned Close Button -->
-				<button
-					id="close-alert-button"
-					class="absolute right-3 top-3 z-20 p-1 text-white/70 transition-colors hover:text-white"
-				>
-					<i class="ti ti-x text-xl"></i>
-				</button>
+<!-- PASTE THIS IN YOUR HTML FILE AND RUN TAILWIND BUILD -->
 
-				<!-- Main Content Area -->
-				<div>
-					<!-- Wrapper to position the ticker relative to the image -->
-					<div class="relative">
-						<!-- "New Event Alert" Tag - Positioned over the image -->
-						<span
-							class="absolute top-4 z-10 rounded-lg bg-accent-red-alt px-5 py-2 text-sm font-bold text-white"
-							>New Event Alert</span
-						>
+<!-- 1. The Container (Holds the stack of alerts) -->
+<div class="fixed bottom-5 right-5 z-50 flex w-[90vw] max-w-sm flex-col gap-3 md:bottom-10 md:right-10">
 
-						<!-- Event Image with no fixed height -->
-						<img
-							src="assets/images/Rectangle 178.png"
-							alt="Event Image"
-							class="w-full rounded-xl object-cover pt-12"
-						/>
-					</div>
+    <!-- EXAMPLE ALERT 1 -->
+    <div class="relative w-full">
+        <!-- Unique ID for this specific checkbox -->
+        <input type="checkbox" id="close-1" class="peer hidden" />
 
-					<!-- Text Details below the image -->
-					<div class="relative mt-4 text-white">
-						<h3 class="pr-8 text-xl font-bold leading-tight md:text-2xl">
-							Reading and Writing India 2025
-						</h3>
+        <!-- Card Wrapper -->
+        <!-- peer-checked logic: shrink max-height to 0, fade opacity, remove margin -->
+        <div class="relative w-full transform overflow-hidden rounded-2xl border border-white/10 bg-black/20 backdrop-blur-md shadow-lg transition-all duration-500 ease-in-out peer-checked:max-h-0 peer-checked:opacity-0 peer-checked:mb-0 peer-checked:pointer-events-none">
+            
+            <!-- Close Button -->
+            <label for="close-1" class="absolute right-3 top-3 z-30 cursor-pointer p-1 text-white/70 hover:text-white transition-colors">
+                <i class="ti ti-x text-xl"></i>
+            </label>
 
-						<div class="mt-2 space-y-1 text-white/80">
-							<p class="text-base">30 September | 4pm Onwards</p>
-							<p class="text-sm">Writers Building, Kolkata</p>
-						</div>
+            <!-- Content -->
+            <div class="relative z-10 p-4">
+                <div class="mb-3">
+                    <span class="inline-block rounded-lg bg-accent-red-alt px-3 py-1 text-xs font-bold text-white shadow-sm">
+                        New Event Alert
+                    </span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative h-14 w-14 flex-shrink-0">
+                        <img src="assets/images/logo-placeholder.png" class="h-full w-full rounded-full border border-white/20 object-cover" />
+                    </div>
+                    <div class="flex-grow min-w-0 text-white">
+                        <h3 class="truncate text-base font-bold leading-tight">Event One</h3>
+                        <div class="my-1.5 h-px w-full bg-white/30"></div>
+                        <div class="flex items-center text-xs text-white/90">
+                            <span class="font-semibold">24 Nov, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Link Overlay -->
+            <a href="#" class="absolute inset-0 z-0"></a>
+        </div>
+    </div>
 
-						<!-- Arrow Link (positioned relative to the text block) -->
-						<a
-							href="#"
-							class="absolute bottom-0 right-0 text-white/80 transition-colors hover:text-white"
-						>
-							<i class="ti ti-arrow-right text-4xl"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+</div>
 
 		<!-- ============================================= -->
 		<!-- UNIVERSAL POPUP/LIGHTBOX FOR VIDEOS & IMAGES  -->

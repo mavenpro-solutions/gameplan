@@ -1,192 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Gameplan - Where Champions Complete</title>
-		<!-- Local CSS build from input.css -->
-		<link href="./assets/css/custom.css" rel="stylesheet" />
-		<!-- Swiper.js CSS Library -->
-		<link rel="stylesheet" href="src/swiper-bundle.min.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
-		/>
-		<!-- <link rel="stylesheet" href="src/tabler-icons.min.css"> -->
-	</head>
-	<body>
-<!-- =================================== -->
-<!-- FLOATING HEADER (With Icons & KZ Logic) -->
-<!-- =================================== -->
-<header id="main-header" class="sticky top-0 left-0 w-full z-50 bg-accent-blue shadow-md">
-    
-    <!-- Inner Container (No rounded corners, standard layout) -->
-    <div class="container mx-auto flex items-center justify-between px-6 py-3 relative">
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gameplan - Where Champions Complete</title>
+    <!-- Local CSS build from input.css -->
+    <link href="./assets/css/custom.css" rel="stylesheet" />
+    <!-- Swiper.js CSS Library -->
+    <link rel="stylesheet" href="src/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <!-- <link rel="stylesheet" href="src/tabler-icons.min.css"> -->
+  </head>
+  <body>
+    <!-- =================================== -->
+    <!-- FLOATING HEADER (With Icons & KZ Logic) -->
+    <!-- =================================== -->
+    <header
+      id="main-header"
+      class="sticky top-0 left-0 w-full z-50 bg-accent-blue shadow-md"
+    >
+      <!-- Inner Container (No rounded corners, standard layout) -->
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-3 relative"
+      >
         <!-- Logo -->
         <a href="index.html" class="block shrink-0">
-            <img src="assets/images/logo/logo.png" alt="Gameplan Logo" class="h-8 md:h-10">
+          <img
+            src="assets/images/logo/logo.png"
+            alt="Gameplan Logo"
+            class="h-8 md:h-10"
+          />
         </a>
 
         <!-- Desktop Menu -->
         <menu id="main-desktop-menu" class="hidden md:block">
-            <ul class="flex items-center gap-1 text-white">
-                <li ><a href="index.html" >Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                
-                <!-- Sports -->
-                <li class="dropdown">
-                    <a href="#">
-                        Sports <i class="ti ti-chevron-down submenu-icon ml-1 text-sm"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown">
-                            <!-- Right chevron for nested desktop items -->
-                            <a href="#" class="flex justify-between items-center">
-                                Cricket <i class="ti ti-chevron-right text-sm"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="icc.html">ICC</a></li>
-                                <li><a href="#">IPL</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="chess.html">Tata Steel Chess</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="flex justify-between items-center">
-                                3D Signature <i class="ti ti-chevron-right text-sm"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Football</a></li>
-                                <li><a href="#">Hockey</a></li>
-                                <li><a href="#">Kabaddi</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+          <ul class="flex items-center gap-1 text-white">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
 
-                <!-- Literature -->
+            <!-- Sports -->
+            <li class="dropdown">
+              <a href="#">
+                Sports
+                <i class="ti ti-chevron-down submenu-icon ml-1 text-sm"></i>
+              </a>
+              <ul class="dropdown-menu">
                 <li class="dropdown">
-                    <a href="#">
-                        Literature <i class="ti ti-chevron-down submenu-icon ml-1 text-sm"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Kolkata Literary</a></li>
-                        <li><a href="blm.html">BLM</a></li>
-                        <li><a href="#">JLM</a></li>
-                    </ul>
+                  <!-- Right chevron for nested desktop items -->
+                  <a href="#" class="flex justify-between items-center">
+                    Cricket <i class="ti ti-chevron-right text-sm"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="icc.html">ICC</a></li>
+                    <li><a href="#">IPL</a></li>
+                  </ul>
                 </li>
+                <li><a href="chess.html">Tata Steel Chess</a></li>
+                <li class="dropdown">
+                  <a href="#" class="flex justify-between items-center">
+                    3D Signature <i class="ti ti-chevron-right text-sm"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Hockey</a></li>
+                    <li><a href="#">Kabaddi</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
 
-                <!-- Art -->
-                <li class="dropdown">
-                    <a href="#">
-                        Art <i class="ti ti-chevron-down submenu-icon ml-1 text-sm"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="bengal-biennale.html">Bengal Biennale</a></li>
-                    </ul>
-                </li>
+            <!-- Literature -->
+            <li class="dropdown">
+              <a href="#">
+                Literature
+                <i class="ti ti-chevron-down submenu-icon ml-1 text-sm"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Kolkata Literary</a></li>
+                <li><a href="blm.html">BLM</a></li>
+                <li><a href="#">JLM</a></li>
+              </ul>
+            </li>
 
-                <!-- Others -->
-                <li class="dropdown">
-                    <a href="#">
-                        Others <i class="ti ti-chevron-down submenu-icon ml-1 text-sm"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Aberlour</a></li>
-                        <li><a href="absolut.html">Absolut Art</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <!-- Art -->
+            <li class="dropdown">
+              <a href="#">
+                Art <i class="ti ti-chevron-down submenu-icon ml-1 text-sm"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="bengal-biennale.html">Bengal Biennale</a></li>
+              </ul>
+            </li>
+
+            <!-- Others -->
+            <li class="dropdown">
+              <a href="#">
+                Others
+                <i class="ti ti-chevron-down submenu-icon ml-1 text-sm"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Aberlour</a></li>
+                <li><a href="absolut.html">Absolut Art</a></li>
+              </ul>
+            </li>
+          </ul>
         </menu>
 
         <!-- Mobile Menu Toggle Button -->
         <button class="menu-btn md:hidden text-white focus:outline-none p-1">
-            <i class="ti ti-menu-2 text-3xl"></i>
+          <i class="ti ti-menu-2 text-3xl"></i>
         </button>
-    </div>
-</header>
+      </div>
+    </header>
 
-<!-- Mobile Menu -->
-<nav id="main-mobile-menu">
-    <div class="overlay absolute w-full h-full top-0 left-0 z-[1]"></div>
-    <div class="menu">
+    <!-- Mobile Menu -->
+    <nav id="main-mobile-menu">
+      <div class="overlay absolute w-full h-full top-0 left-0 z-[1]"></div>
+      <div class="menu">
         <div class="flex items-center justify-between my-4 mb-8">
-            <a href="/">
-                <img src="assets/images/logo/logo.png" class="w-32 brightness-0 invert" alt="logo">
-            </a>
-            <button class="menu-close text-white">
-                <i class="ti ti-x text-3xl"></i>
-            </button>
+          <a href="/">
+            <img
+              src="assets/images/logo/logo.png"
+              class="w-32 brightness-0 invert"
+              alt="logo"
+            />
+          </a>
+          <button class="menu-close text-white">
+            <i class="ti ti-x text-3xl"></i>
+          </button>
         </div>
-        
+
         <!-- Mobile Links -->
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            
-            <li class="dropdown">
-                <a class="flex justify-between items-center">
-                    Sports <i class="ti ti-chevron-down transition-transform duration-300"></i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li class="dropdown">
-                        <a class="flex justify-between items-center">
-                            Cricket <i class="ti ti-chevron-down transition-transform duration-300"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="icc.html">ICC</a></li>
-                            <li><a href="#">IPL</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="chess.html">Tata Steel Chess</a></li>
-                    <li class="dropdown">
-                        <a class="flex justify-between items-center">
-                            3D Signature <i class="ti ti-chevron-down transition-transform duration-300"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Football</a></li>
-                            <li><a href="#">Hockey</a></li>
-                            <li><a href="#">Kabaddi</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
 
-            <li class="dropdown">
+          <li class="dropdown">
+            <a class="flex justify-between items-center">
+              Sports
+              <i
+                class="ti ti-chevron-down transition-transform duration-300"
+              ></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown">
                 <a class="flex justify-between items-center">
-                    Literature <i class="ti ti-chevron-down transition-transform duration-300"></i>
+                  Cricket
+                  <i
+                    class="ti ti-chevron-down transition-transform duration-300"
+                  ></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Kolkata Literary</a></li>
-                    <li><a href="blm.html">BLM</a></li>
-                    <li><a href="#">JLM</a></li>
+                  <li><a href="icc.html">ICC</a></li>
+                  <li><a href="#">IPL</a></li>
                 </ul>
-            </li>
+              </li>
+              <li><a href="chess.html">Tata Steel Chess</a></li>
+              <li class="dropdown">
+                <a class="flex justify-between items-center">
+                  3D Signature
+                  <i
+                    class="ti ti-chevron-down transition-transform duration-300"
+                  ></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Football</a></li>
+                  <li><a href="#">Hockey</a></li>
+                  <li><a href="#">Kabaddi</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
 
-            <li class="dropdown">
-                <a class="flex justify-between items-center">
-                    Art <i class="ti ti-chevron-down transition-transform duration-300"></i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="bengal-biennale.html">Bengal Biennale</a></li>
-                </ul>
-            </li>
+          <li class="dropdown">
+            <a class="flex justify-between items-center">
+              Literature
+              <i
+                class="ti ti-chevron-down transition-transform duration-300"
+              ></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Kolkata Literary</a></li>
+              <li><a href="blm.html">BLM</a></li>
+              <li><a href="#">JLM</a></li>
+            </ul>
+          </li>
 
-            <li class="dropdown">
-                <a class="flex justify-between items-center">
-                    Others <i class="ti ti-chevron-down transition-transform duration-300"></i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Aberlour</a></li>
-                    <li><a href="absolut.html">Absolut Art</a></li>
-                </ul>
-            </li>
+          <li class="dropdown">
+            <a class="flex justify-between items-center">
+              Art
+              <i
+                class="ti ti-chevron-down transition-transform duration-300"
+              ></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="bengal-biennale.html">Bengal Biennale</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a class="flex justify-between items-center">
+              Others
+              <i
+                class="ti ti-chevron-down transition-transform duration-300"
+              ></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Aberlour</a></li>
+              <li><a href="absolut.html">Absolut Art</a></li>
+            </ul>
+          </li>
         </ul>
-    </div>
-</nav>
-		<main>
-
-<!-- 
+      </div>
+    </nav>
+    <main>
+      <!-- 
     1. w-full: Width fills the screen.
     2. aspect-[1.5]: This LOCKS the height to match your 1200x800 image ratio exactly.
        (1200 / 800 = 1.5). 
@@ -195,1918 +226,2039 @@
     3. No 'h-screen' or 'min-h': No extra space is used.
 -->
 
-<div class="relative w-full aspect-[1.5] overflow-hidden hero-swiper bg-primary-dark-blue">
-    
-    <!-- =================================== -->
-    <!-- HERO SLIDER CONTAINER             -->
-    <!-- =================================== -->
-    <div class="swiper-wrapper">
-        
-
-
-        <!-- ================= SLIDE 2 ================= -->
-        <div class="swiper-slide hero-slide relative w-full h-full" data-slide="1">
-            
+      <!-- 
+    CHANGES:
+    1. aspect-[1.5]: Keeps the image ratio locked for all screens under 1440px (Mobile, Tablet, Laptop).
+    2. min-[1440px]:aspect-auto: Only unlocks aspect ratio on very large screens.
+    3. min-[1440px]:h-[calc(100vh-76px)]: Sets full height only for large screens.
+-->
+      <div
+        class="relative w-full aspect-[1.5] md:aspect-auto md:h-[calc(100vh-76px)] overflow-hidden hero-swiper bg-primary-dark-blue"
+      >
+        <!-- =================================== -->
+        <!-- HERO SLIDER CONTAINER             -->
+        <!-- =================================== -->
+        <div class="swiper-wrapper">
+          <!-- ================= SLIDE 1 ================= -->
+          <div
+            class="swiper-slide hero-slide relative w-full h-full"
+            data-slide="1"
+          >
             <!-- Main Image -->
-            <div class="absolute inset-0 bg-cover bg-center z-0"
-                 style="background-image: url('assets/images/hero-1.jpg')">
-            </div>
+            <!-- 
+               UPDATED:
+               1. bg-cover: Ensures image ALWAYS fills the space behind text (No black bars).
+               2. min-[1440px]:bg-top: Pins image to top on large screens.
+            -->
+            <div
+              class="absolute inset-0 bg-cover bg-center md:bg-top z-0"
+              style="background-image: url('assets/images/hero-1.jpg')"
+            ></div>
 
             <!-- Gradient -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10"></div>
-            
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10"
+            ></div>
+
             <!-- Content -->
             <div class="relative z-20 h-full w-full flex flex-col justify-end">
-                <div class="container mx-auto px-4 md:px-12 pb-6 sm:pb-16 md:pb-24">
-                    <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
-                        <h1 class="text-xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide text-white drop-shadow-md mb-2 md:mb-6">
-                            Between Home & the World - Abanindranath Tagore
-                        </h1>
-                        <button class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1.5 px-4 text-xs md:py-3 md:px-10 md:text-lg rounded-md transition-all shadow-lg border border-white/10">
-                            Learn More
-                        </button>
-                    </div>
+              <div
+                class="container mx-auto px-4 md:px-12 pb-6 sm:pb-16 md:pb-24"
+              >
+                <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                  <h1
+                    class="text-xl sm:text-2xl md:text-4xl font-bold leading-tight tracking-wide text-white drop-shadow-md mb-2 md:mb-6"
+                  >
+                    Between Home & the World - Abanindranath Tagore
+                  </h1>
+                  <button
+                    class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1.5 px-4 text-xs md:py-3 md:px-10 md:text-lg rounded-md transition-all shadow-lg border border-white/10"
+                  >
+                    Learn More
+                  </button>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-		        <div class="swiper-slide hero-slide relative w-full h-full" data-slide="1">
-            
-            <!-- Main Image -->
-            <div class="absolute inset-0 bg-cover bg-center z-0"
-                 style="background-image: url('assets/images/hero-2.jpg')">
-            </div>
-
-            <!-- Gradient -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10"></div>
-            
-            <!-- Content -->
+          <!-- ================= SLIDE 2 ================= -->
+          <div
+            class="swiper-slide hero-slide relative w-full h-full"
+            data-slide="1"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center md:bg-top z-0"
+              style="background-image: url('assets/images/hero-2.jpg')"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10"
+            ></div>
             <div class="relative z-20 h-full w-full flex flex-col justify-end">
-                <div class="container mx-auto px-4 md:px-12 pb-6 sm:pb-16 md:pb-24">
-                    <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
-                        <h1 class="text-xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide text-white drop-shadow-md mb-2 md:mb-6">
-                            Between Home & the World - Abanindranath Tagore
-                        </h1>
-                        <button class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1.5 px-4 text-xs md:py-3 md:px-10 md:text-lg rounded-md transition-all shadow-lg border border-white/10">
-                            Learn More
-                        </button>
-                    </div>
+              <div
+                class="container mx-auto px-4 md:px-12 pb-6 sm:pb-16 md:pb-24"
+              >
+                <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                  <h1
+                    class="text-xl sm:text-2xl md:text-4xl font-bold leading-tight tracking-wide text-white drop-shadow-md mb-2 md:mb-6"
+                  >
+                    Between Home & the World - Abanindranath Tagore
+                  </h1>
+                  <button
+                    class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1.5 px-4 text-xs md:py-3 md:px-10 md:text-lg rounded-md transition-all shadow-lg border border-white/10"
+                  >
+                    Learn More
+                  </button>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-
-		        <div class="swiper-slide hero-slide relative w-full h-full" data-slide="1">
-            
-            <!-- Main Image -->
-            <div class="absolute inset-0 bg-cover bg-center z-0"
-                 style="background-image: url('assets/images/hero-3.jpg')">
-            </div>
-
-            <!-- Gradient -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10"></div>
-            
-            <!-- Content -->
+          <!-- ================= SLIDE 3 ================= -->
+          <div
+            class="swiper-slide hero-slide relative w-full h-full"
+            data-slide="1"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center md:bg-top z-0"
+              style="background-image: url('assets/images/hero-3.jpg')"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10"
+            ></div>
             <div class="relative z-20 h-full w-full flex flex-col justify-end">
-                <div class="container mx-auto px-4 md:px-12 pb-6 sm:pb-16 md:pb-24">
-                    <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
-                        <h1 class="text-xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide text-white drop-shadow-md mb-2 md:mb-6">
-                            Between Home & the World - Abanindranath Tagore
-                        </h1>
-                        <button class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1.5 px-4 text-xs md:py-3 md:px-10 md:text-lg rounded-md transition-all shadow-lg border border-white/10">
-                            Learn More
-                        </button>
-                    </div>
+              <div
+                class="container mx-auto px-4 md:px-12 pb-6 sm:pb-16 md:pb-24"
+              >
+                <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                  <h1
+                    class="text-xl sm:text-2xl md:text-4xl font-bold leading-tight tracking-wide text-white drop-shadow-md mb-2 md:mb-6"
+                  >
+                    Between Home & the World - Abanindranath Tagore
+                  </h1>
+                  <button
+                    class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1.5 px-4 text-xs md:py-3 md:px-10 md:text-lg rounded-md transition-all shadow-lg border border-white/10"
+                  >
+                    Learn More
+                  </button>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-		        <div class="swiper-slide hero-slide relative w-full h-full" data-slide="1">
-            
-            <!-- Main Image -->
-            <div class="absolute inset-0 bg-cover bg-center z-0"
-                 style="background-image: url('assets/images/hero-4.jpg')">
-            </div>
-
-            <!-- Gradient -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10"></div>
-            
-            <!-- Content -->
+          <!-- ================= SLIDE 4 ================= -->
+          <div
+            class="swiper-slide hero-slide relative w-full h-full"
+            data-slide="1"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center md:bg-top z-0"
+              style="background-image: url('assets/images/hero-4.jpg')"
+            ></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10"
+            ></div>
             <div class="relative z-20 h-full w-full flex flex-col justify-end">
-                <div class="container mx-auto px-4 md:px-12 pb-6 sm:pb-16 md:pb-24">
-                    <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
-                        <h1 class="text-xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide text-white drop-shadow-md mb-2 md:mb-6">
-                            Between Home & the World - Abanindranath Tagore
-                        </h1>
-                        <button class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1.5 px-4 text-xs md:py-3 md:px-10 md:text-lg rounded-md transition-all shadow-lg border border-white/10">
-                            Learn More
-                        </button>
-                    </div>
+              <div
+                class="container mx-auto px-4 md:px-12 pb-6 sm:pb-16 md:pb-24"
+              >
+                <div class="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+                  <h1
+                    class="text-xl sm:text-2xl md:text-4xl font-bold leading-tight tracking-wide text-white drop-shadow-md mb-2 md:mb-6"
+                  >
+                    Between Home & the World - Abanindranath Tagore
+                  </h1>
+                  <button
+                    class="bg-accent-red-alt hover:bg-opacity-90 text-white font-bold py-1.5 px-4 text-xs md:py-3 md:px-10 md:text-lg rounded-md transition-all shadow-lg border border-white/10"
+                  >
+                    Learn More
+                  </button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
 
-
-    </div>
-
-    <!-- =================================== -->
-    <!-- 3. UI CONTROLS OVERLAY            -->
-    <!-- =================================== -->
-    <div class="absolute inset-0 z-40 pointer-events-none">
-        <!-- Left-side Slider Indicators -->
-        <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-4 md:left-12 pointer-events-auto">
+        <!-- =================================== -->
+        <!-- 3. UI CONTROLS OVERLAY            -->
+        <!-- =================================== -->
+        <div class="absolute inset-0 z-40 pointer-events-none">
+          <!-- Left-side Slider Indicators -->
+          <div
+            class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-4 md:left-12 pointer-events-auto"
+          >
             <div class="hero-pagination"></div>
-        </div>
+          </div>
 
-        <!-- Right-side Slider Arrows -->
-        <div class="hidden lg:flex absolute bottom-35 md:bottom-32 right-6 sm:right-10 md:right-16 pointer-events-auto">
+          <!-- Right-side Slider Arrows -->
+          <div
+            class="hidden lg:flex absolute bottom-35 md:bottom-32 right-6 sm:right-10 md:right-16 pointer-events-auto"
+          >
             <div class="flex space-x-6">
-                <button id="prev-slide" class="hero-button-prev transition-transform hover:scale-110">
-                    <i class="ti ti-chevron-left text-4xl md:text-6xl drop-shadow-md text-white"></i>
-                </button>
-                <button id="next-slide" class="hero-button-next transition-transform hover:scale-110">
-                    <i class="ti ti-chevron-right text-4xl md:text-6xl drop-shadow-md text-white"></i>
-                </button>
+              <button
+                id="prev-slide"
+                class="hero-button-prev transition-transform hover:scale-110"
+              >
+                <i
+                  class="ti ti-chevron-left text-4xl md:text-6xl drop-shadow-md text-white"
+                ></i>
+              </button>
+              <button
+                id="next-slide"
+                class="hero-button-next transition-transform hover:scale-110"
+              >
+                <i
+                  class="ti ti-chevron-right text-4xl md:text-6xl drop-shadow-md text-white"
+                ></i>
+              </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <!-- =================================== -->
+      <!-- 5. UPCOMING EVENTS SECTION (NOW VISIBLE) -->
+      <!-- =================================== -->
+      <section class="bg-primary-blue py-20">
+        <div class="container mx-auto px-4 md:px-6">
+          <!-- Section Header -->
+          <div class="flex justify-between items-center mb-10">
+            <h2
+              class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
+            >
+              Upcoming Events
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+              <button
+                id="events-prev"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-left w-8 h-8"></i>
+              </button>
+              <button
+                id="events-next"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-right w-8 h-8"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Events Slider -->
+          <div class="swiper events-slider">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <a href="#" class="block group">
+                  <div class="bg-accent-red p-6 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                      The Shakti of Music 2025
+                    </h3>
+                    <div class="flex justify-between items-center text-white">
+                      <div>
+                        <p>4 September 2025</p>
+                        <p class="text-sm">Kolkata</p>
+                      </div>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/images/Rectangle 178.png"
+                    alt="Zakir Hussain playing tabla"
+                    class="w-full h-72 object-cover rounded-b-lg"
+                  />
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <a href="#" class="block group">
+                  <div class="bg-accent-red p-6 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                      Good Economics for Hard Times
+                    </h3>
+                    <div class="flex justify-between items-center text-white">
+                      <div>
+                        <p>28 September 2025</p>
+                        <p class="text-sm">Kolkata</p>
+                      </div>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/images/Rectangle 178.png"
+                    alt="Abhijit Banerjee speaking"
+                    class="w-full h-72 object-cover rounded-b-lg"
+                  />
+                </a>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <a href="#" class="block group">
+                  <div class="bg-accent-red p-6 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                      The Shakti of Music 2025
+                    </h3>
+                    <div class="flex justify-between items-center text-white">
+                      <div>
+                        <p>27 September 2025</p>
+                        <p class="text-sm">Kolkata</p>
+                      </div>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/images/Rectangle 181.png"
+                    alt="Shakti band performing"
+                    class="w-full h-72 object-cover rounded-b-lg"
+                  />
+                </a>
+              </div>
+
+              <!-- Slide 4 (Example) -->
+              <div class="swiper-slide">
+                <a href="#" class="block group">
+                  <div class="bg-accent-red p-6 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                      Another Great Event
+                    </h3>
+                    <div class="flex justify-between items-center text-white">
+                      <div>
+                        <p>15 October 2025</p>
+                        <p class="text-sm">Delhi</p>
+                      </div>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/images/Rectangle 178.png"
+                    alt="Event placeholder image"
+                    class="w-full h-72 object-cover rounded-b-lg"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Pagination Dots -->
+          <div class="events-pagination mt-8 text-center"></div>
+        </div>
+      </section>
+
+      <!-- =================================== -->
+      <!-- 6. PAST EVENTS SECTION              -->
+      <!-- =================================== -->
+      <section class="bg-dark-brown py-20">
+        <div class="container mx-auto px-4 md:px-6">
+          <!-- Section Header -->
+          <div class="flex justify-between items-center mb-10">
+            <h2
+              class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
+            >
+              Past Events
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+              <button
+                id="past-events-prev"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-left w-8 h-8"></i>
+              </button>
+              <button
+                id="past-events-next"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-right w-8 h-8"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Past Events Slider -->
+          <div class="swiper past-events-slider">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 181.png"
+                    alt="Event: Cricket and Beyond"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Cricket and Beyond</h3>
+                    <div
+                      class="flex justify-between items-center mt-2 opacity-80"
+                    >
+                      <p>20 April 2025</p>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 199.png"
+                    alt="Event: The name is Bond"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">The name is Bond</h3>
+                    <div
+                      class="flex justify-between items-center mt-2 opacity-80"
+                    >
+                      <p>20 April 2025</p>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 198.png"
+                    alt="Event: Plying with the..."
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Plying with the...</h3>
+                    <div
+                      class="flex justify-between items-center mt-2 opacity-80"
+                    >
+                      <p>20 April 2025</p>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 4 (Example) -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 198.png"
+                    alt="Past Event placeholder"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Historic Moment</h3>
+                    <div
+                      class="flex justify-between items-center mt-2 opacity-80"
+                    >
+                      <p>15 March 2025</p>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Pagination Dots -->
+          <div class="past-events-pagination mt-8 text-center"></div>
+        </div>
+      </section>
+
+      <!-- =================================== -->
+      <!-- 7. OUR EXPERTISE SECTION (CORRECTED LAYOUT) -->
+      <!-- =================================== -->
+      <section class="bg-primary-blue py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6 relative">
+          <!-- Decorative Background Text -->
+          <h2
+            class="absolute -top-6 right-0 text-[10rem] lg:text-[10rem] font-bold text-accent-red opacity-90 select-none -translate-y-1/4 hidden sm:block z-0"
+          >
+            PLAY ON
+          </h2>
+
+          <!-- Section Header -->
+          <div class="relative z-10">
+            <h2
+              class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white mb-10"
+            >
+              Our Expertise
+            </h2>
+
+            <!-- Main container for the two-column layout on large screens -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- LEFT COLUMN (Two large items stacked) -->
+              <div class="flex flex-col gap-6">
+                <!-- Item 1: Consulting -->
+                <a
+                  href="#"
+                  class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 197.png"
+                    alt="Consulting with Shah Rukh Khan"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <h3
+                    class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white"
+                  >
+                    Consulting
+                  </h3>
+                </a>
+
+                <!-- Item 4: Event Management -->
+                <a
+                  href="#"
+                  class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 178.png"
+                    alt="Event Management"
+                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <h3
+                    class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white"
+                  >
+                    Event Management
+                  </h3>
+                </a>
+              </div>
+
+              <!-- RIGHT COLUMN (Corrected with two vertical stacks) -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- First vertical stack (even heights) -->
+                <div class="flex flex-col gap-6">
+                  <!-- Item 2: Instadia Branding -->
+                  <a
+                    href="#"
+                    class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg"
+                  >
+                    <img
+                      src="assets/images/Rectangle 178.png"
+                      alt="Instadia Branding"
+                      class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                    ></div>
+                    <h3
+                      class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight"
+                    >
+                      Instadia<br />Branding
+                    </h3>
+                  </a>
+
+                  <!-- Item 5: Media Syndication -->
+                  <a
+                    href="#"
+                    class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg"
+                  >
+                    <img
+                      src="assets/images/Rectangle 200.png"
+                      alt="Media Syndication"
+                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                    ></div>
+                    <h3
+                      class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight"
+                    >
+                      Media<br />Syndication
+                    </h3>
+                  </a>
+                </div>
+
+                <!-- Second vertical stack (uneven heights to match design) -->
+                <div class="flex flex-col gap-6">
+                  <!-- Item 3: Sponsorship Sales (Taller) -->
+                  <a
+                    href="#"
+                    class="group relative h-60 md:h-150 block overflow-hidden rounded-lg shadow-lg"
+                  >
+                    <img
+                      src="assets/images/Rectangle 198.png"
+                      alt="Sponsorship Sales"
+                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                    ></div>
+                    <h3
+                      class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight"
+                    >
+                      Sponsorship<br />Sales
+                    </h3>
+                  </a>
+
+                  <!-- Item 6: Players Endorsement (Shorter) -->
+                  <a
+                    href="#"
+                    class="group relative h-60 md:h-90 block overflow-hidden rounded-lg shadow-lg"
+                  >
+                    <img
+                      src="assets/images/Rectangle 199.png"
+                      alt="Players Endorsement"
+                      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                    ></div>
+                    <h3
+                      class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight"
+                    >
+                      Players<br />Endorsement
+                    </h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================== -->
+      <!-- 8. SIGNATURE EVENTS (SPORTS) SECTION -->
+      <!-- =================================== -->
+      <section class="bg-accent-blue py-20">
+        <div class="container mx-auto px-4 md:px-6">
+          <!-- Section Header -->
+          <div class="flex justify-between items-center mb-10">
+            <h2
+              class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
+            >
+              Signature Events (Sports)
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+              <button
+                id="sports-prev"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-left w-8 h-8"></i>
+              </button>
+              <button
+                id="sports-next"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-right w-8 h-8"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Events Slider -->
+          <div class="swiper sports-slider">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <a href="#" class="block group">
+                  <div class="bg-accent-red p-6 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                      The Shakti of Music 2025
+                    </h3>
+                    <div class="flex justify-between items-center text-white">
+                      <div>
+                        <p>4 September 2025</p>
+                        <p class="text-sm">Kolkata</p>
+                      </div>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/images/Rectangle 178.png"
+                    alt="Zakir Hussain playing tabla"
+                    class="w-full h-72 object-cover rounded-b-lg"
+                  />
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <a href="#" class="block group">
+                  <div class="bg-accent-red p-6 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                      Good Economics for Hard Times
+                    </h3>
+                    <div class="flex justify-between items-center text-white">
+                      <div>
+                        <p>28 September 2025</p>
+                        <p class="text-sm">Kolkata</p>
+                      </div>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/images/Rectangle 178.png"
+                    alt="Abhijit Banerjee speaking"
+                    class="w-full h-72 object-cover rounded-b-lg"
+                  />
+                </a>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <a href="#" class="block group">
+                  <div class="bg-accent-red p-6 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                      The Shakti of Music 2025
+                    </h3>
+                    <div class="flex justify-between items-center text-white">
+                      <div>
+                        <p>27 September 2025</p>
+                        <p class="text-sm">Kolkata</p>
+                      </div>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/images/Rectangle 181.png"
+                    alt="Shakti band performing"
+                    class="w-full h-72 object-cover rounded-b-lg"
+                  />
+                </a>
+              </div>
+
+              <!-- Slide 4 (Example) -->
+              <div class="swiper-slide">
+                <a href="#" class="block group">
+                  <div class="bg-accent-red p-6 rounded-t-lg">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                      Another Great Event
+                    </h3>
+                    <div class="flex justify-between items-center text-white">
+                      <div>
+                        <p>15 October 2025</p>
+                        <p class="text-sm">Delhi</p>
+                      </div>
+                      <span
+                        class="text-2xl transform transition-transform group-hover:translate-x-1"
+                        ><i class="ti ti-arrow-right text-2xl"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/images/Rectangle 178.png"
+                    alt="Event placeholder image"
+                    class="w-full h-72 object-cover rounded-b-lg"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Pagination Dots -->
+          <div class="sports-pagination mt-8 text-center"></div>
+        </div>
+      </section>
+
+      <!-- =================================== -->
+      <!-- 8. SIGNATURE EVENTS (Literature) SECTION -->
+      <!-- =================================== -->
+      <section class="bg-accent-green py-20">
+        <div class="container mx-auto px-4 md:px-6">
+          <!-- Section Header -->
+          <div class="flex justify-between items-center mb-10">
+            <h2
+              class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
+            >
+              Signature Events (Literature)
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+              <button
+                id="literature-prev"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-left w-8 h-8"></i>
+              </button>
+              <button
+                id="literature-next"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-right w-8 h-8"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="swiper literature-slider">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 196.png"
+                    alt="Event: Reading and Writing India"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Reading and Wri...</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 199.png"
+                    alt="Event: The name is Bond"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">The name is Bond</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 200.png"
+                    alt="Event: Open to All"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Open to All</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 4 (Example) -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 181.png"
+                    alt="Another Art Event"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Artistic Visions</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>15 May 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Pagination Dots -->
+          <div class="literature-pagination mt-8 text-center"></div>
+        </div>
+      </section>
+
+      <!-- ============================================= -->
+      <!-- 8. SIGNATURE EVENTS (ART & CULTURE) SECTION   -->
+      <!-- ============================================= -->
+      <section class="bg-dark-brown py-20">
+        <div class="container mx-auto px-4 md:px-6">
+          <!-- Section Header -->
+          <div class="flex justify-between items-center mb-10">
+            <h2
+              class="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white"
+            >
+              Signature Events (Art)
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+              <button
+                id="art-culture-prev"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-left w-8 h-8"></i>
+              </button>
+              <button
+                id="art-culture-next"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-right w-8 h-8"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Art & Culture Slider -->
+          <div class="swiper art-culture-slider">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 196.png"
+                    alt="Event: Reading and Writing India"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Reading and Wri...</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 199.png"
+                    alt="Event: The name is Bond"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">The name is Bond</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 200.png"
+                    alt="Event: Open to All"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Open to All</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 4 (Example) -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 181.png"
+                    alt="Another Art Event"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Artistic Visions</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>15 May 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Pagination Dots -->
+          <div class="art-culture-pagination mt-8 text-center"></div>
+        </div>
+      </section>
+
+      <!-- ============================================= -->
+      <!-- 9. SIGNATURE EVENTS (others) SECTION       -->
+      <!-- ============================================= -->
+      <section class="bg-primary-blue py-20">
+        <div class="container mx-auto px-4 md:px-6">
+          <!-- Section Header -->
+          <div class="flex justify-between items-center mb-10">
+            <h2
+              class="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white"
+            >
+              Signature Events (Others)
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+              <button
+                id="corporate-prev"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-left w-8 h-8"></i>
+              </button>
+              <button
+                id="corporate-next"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-right w-8 h-8"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Corporate Slider -->
+          <div class="swiper corporate-slider">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 178.png"
+                    alt="Event: The game of decisions"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">The game of de...</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 197.png"
+                    alt="Event: Perfect Strokes"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">Perfect Strokes</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 199.png"
+                    alt="Event: The large short films"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">The large...</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a
+                  href="#"
+                  class="block group relative overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="assets/images/Rectangle 199.png"
+                    alt="Event: The large short films"
+                    class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                    <h3 class="text-2xl font-bold">The large...</h3>
+                    <div class="flex justify-between items-end mt-2 opacity-80">
+                      <p>20 April 2025</p>
+                      <i
+                        class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
+                      ></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Slider Pagination Dots -->
+          <div class="corporate-pagination mt-8 text-center"></div>
+        </div>
+      </section>
+
+      <!-- =================================== -->
+      <!-- 9. TRUSTED BRANDS SECTION (EXPANDED) -->
+      <!-- =================================== -->
+      <section class="bg-white py-20">
+        <div class="container mx-auto px-4 md:px-6">
+          <!-- Section Header -->
+          <div class="text-center">
+            <h2
+              class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-accent-red"
+            >
+              Brands Who Trust Our Plans
+            </h2>
+          </div>
+
+          <!-- Responsive Logo Wall -->
+          <div
+            class="mt-16 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-8 gap-y-12"
+          >
+            <!-- Row 1 -->
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+                alt="ESPN Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+                alt="Google Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+                alt="Pepsi Logo"
+                class="h-12 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+                alt="IPL Logo"
+                class="h-16 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+                alt="Tata Steel Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+                alt="Amazon Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+                alt="Coca-Cola Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+                alt="Mastercard Logo"
+                class="h-10 filter transition-all duration-300"
+              />
+            </div>
+
+            <!-- Row 2 -->
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+                alt="ESPN Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+                alt="Google Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+                alt="Pepsi Logo"
+                class="h-12 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+                alt="IPL Logo"
+                class="h-16 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+                alt="Tata Steel Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+                alt="Amazon Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+                alt="Coca-Cola Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+                alt="Mastercard Logo"
+                class="h-10 filter transition-all duration-300"
+              />
+            </div>
+
+            <!-- Row 3 -->
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+                alt="ESPN Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+                alt="Google Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+                alt="Pepsi Logo"
+                class="h-12 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+                alt="IPL Logo"
+                class="h-16 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+                alt="Tata Steel Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+                alt="Amazon Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+                alt="Coca-Cola Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+                alt="Mastercard Logo"
+                class="h-10 filter transition-all duration-300"
+              />
+            </div>
+
+            <!-- Row 4 -->
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+                alt="ESPN Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+                alt="Google Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+                alt="Pepsi Logo"
+                class="h-12 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+                alt="IPL Logo"
+                class="h-16 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+                alt="Tata Steel Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+                alt="Amazon Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+                alt="Coca-Cola Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+                alt="Mastercard Logo"
+                class="h-10 filter transition-all duration-300"
+              />
+            </div>
+
+            <!-- Row 5 -->
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
+                alt="ESPN Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
+                alt="Google Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
+                alt="Pepsi Logo"
+                class="h-12 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
+                alt="IPL Logo"
+                class="h-16 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
+                alt="Tata Steel Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
+                alt="Amazon Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
+                alt="Coca-Cola Logo"
+                class="h-8 filter transition-all duration-300"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
+                alt="Mastercard Logo"
+                class="h-10 filter transition-all duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================== -->
+      <!-- 10. MEET OUR TEAM SECTION           -->
+      <!-- =================================== -->
+      <section class="bg-accent-blue py-20">
+        <div class="container mx-auto px-4 md:px-6">
+          <!-- Section Header -->
+          <div class="flex justify-between items-center mb-10">
+            <h2
+              class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
+            >
+              Meet Our Team
+            </h2>
+            <!-- Slider Navigation Arrows -->
+            <div class="hidden md:flex items-center space-x-2">
+              <button
+                id="team-prev"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-left w-8 h-8"></i>
+              </button>
+              <button
+                id="team-next"
+                class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
+              >
+                <i class="ti ti-chevron-right w-8 h-8"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Team Slider -->
+          <div class="swiper team-slider">
+            <div class="swiper-wrapper">
+              <!-- Slide 1: Jeet Banerjee -->
+              <div class="swiper-slide">
+                <div class="text-center">
+                  <img
+                    src="assets/images/Rectangle 169.png"
+                    alt="Jeet Banerjee"
+                    class="w-full object-cover"
+                  />
+                  <h3
+                    class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+                  >
+                    Jeet Banerjee
+                  </h3>
+                  <p class="text-white/80 uppercase text-sm tracking-widest">
+                    Director
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 2: Malavika Banerjee -->
+              <div class="swiper-slide">
+                <div class="text-center">
+                  <img
+                    src="assets/images/Rectangle 169.png"
+                    alt="Malavika Banerjee"
+                    class="w-full object-cover"
+                  />
+                  <h3
+                    class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+                  >
+                    Malavika Banerjee
+                  </h3>
+                  <p class="text-white/80 uppercase text-sm tracking-widest">
+                    Director
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 3: Prem Khatwani -->
+              <div class="swiper-slide">
+                <div class="text-center">
+                  <img
+                    src="assets/images/Rectangle 169.png"
+                    alt="Prem Khatwani"
+                    class="w-full object-cover"
+                  />
+                  <h3
+                    class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+                  >
+                    Prem Khatwani
+                  </h3>
+                  <p class="text-white/80 uppercase text-sm tracking-widest">
+                    Director
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 4 (Example) -->
+              <div class="swiper-slide">
+                <div class="text-center">
+                  <img
+                    src="assets/images/Rectangle 169.png"
+                    alt="Team Member"
+                    class="w-full object-cover"
+                  />
+                  <h3
+                    class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+                  >
+                    Sujata Sen
+                  </h3>
+                  <p class="text-white/80 uppercase text-sm tracking-widest">
+                    Consultant
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 5 (Example) -->
+              <div class="swiper-slide">
+                <div class="text-center">
+                  <img
+                    src="assets/images/Rectangle 169.png"
+                    alt="Team Member"
+                    class="w-full object-cover"
+                  />
+                  <h3
+                    class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
+                  >
+                    Another Member
+                  </h3>
+                  <p class="text-white/80 uppercase text-sm tracking-widest">
+                    Manager
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Pagination Dots -->
+          <div class="team-pagination mt-8 text-center"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =================================== -->
+    <!-- 11. FOOTER SECTION (UPDATED)        -->
+    <!-- =================================== -->
+    <footer class="bg-black text-white">
+      <!-- Top Red Banner -->
+      <div class="bg-accent-red py-10 md:py-14">
+        <div
+          class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-6"
+        >
+          <!-- 'font-teko' must be defined in your CSS/Tailwind config for this font family -->
+          <h2
+            class="text-6xl md:text-7xl font-bold font-teko uppercase leading-none tracking-wide"
+          >
+            PLAY ON
+          </h2>
+          <!-- Vertical divider on desktop -->
+          <h3
+            class="text-xl md:text-2xl font-medium leading-tight text-center md:text-left"
+          >
+            Every Event<br />Every Experience
+          </h3>
+        </div>
+      </div>
+
+      <!-- Main Footer Content -->
+      <div class="container mx-auto px-6 md:px-10 py-16 lg:py-20 text-lg">
+        <!-- Grid: Stacks on mobile (text-center), 3 columns on desktop (text-left) -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 text-center md:text-left"
+        >
+          <!-- Column 1: Logo & Offices (Spans 4/12 on desktop) -->
+          <div
+            class="md:col-span-5 lg:col-span-4 flex flex-col items-center md:items-start space-y-10"
+          >
+            <!-- Logo -->
+            <img
+              src="assets/images/logo/logo.png"
+              alt="Gameplan Logo"
+              class="h-8"
+            />
+
+            <!-- Offices Container -->
+            <div class="space-y-6">
+              <div>
+                <h4
+                  class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
+                >
+                  Head Office
+                </h4>
+                <p class="uppercase leading-relaxed text-white">
+                  L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
+                  700017
+                </p>
+              </div>
+              <div>
+                <h4
+                  class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
+                >
+                  Bhubaneshwar Office
+                </h4>
+                <p class="uppercase leading-relaxed text-white">
+                  L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
+                  700017
+                </p>
+              </div>
+              <div>
+                <h4
+                  class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
+                >
+                  Jharkhand Office
+                </h4>
+                <p class="uppercase leading-relaxed text-white">
+                  L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
+                  700017
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Contact & Privacy (Spans 4/12 on desktop) -->
+          <!-- Uses flex-col justify-between to push Privacy Policy to bottom on desktop -->
+          <div
+            class="md:col-span-3 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10"
+          >
+            <div>
+              <h4
+                class="text-lg text-white font-bold uppercase tracking-[0.2em] mb-6"
+              >
+                Contact
+              </h4>
+              <div class="uppercase space-y-2 leading-relaxed text-white">
+                <a
+                  href="mailto:mail@gameplan.co.in"
+                  class="hover:text-zinc-300 transition-colors lowercase text-lg"
+                  >mail@gameplan.co.in</a
+                >
+                <div class="mt-5 space-y-1 text-lg">
+                  <p>+ 91 (0) 33 2282 1960/61</p>
+                  <p>+ 91 (0) 33 3290 4947</p>
+                  <p>+ 91 (0) 33 2282 1959</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Follow Us & Terms (Spans 4/12 on desktop) -->
+          <div
+            class="md:col-span-4 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10"
+          >
+            <div>
+              <h4 class="text-white font-bold uppercase tracking-[0.2em] mb-6">
+                Follow Us On
+              </h4>
+
+              <!-- Social Media List (Vertical Stack) -->
+              <div class="flex flex-col gap-4 w-full">
+                <!-- Facebook -->
+                <div
+                  class="flex flex-col sm:flex-row items-center sm:items-center justify-center md:justify-start gap-3 text-center sm:text-left"
+                >
+                  <div class="flex items-center gap-2 shrink-0">
+                    <a
+                      href="https://www.facebook.com/GameplanSports/"
+                      target="_blank"
+                      class="w-8 h-8 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group shrink-0"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <a
+                    href="https://www.facebook.com/GameplanSports/"
+                    target="_blank"
+                    class="text-zinc-400 hover:text-white transition-colors text-xl break-all"
+                  >
+                    https://www.facebook.com/GameplanSports/
+                  </a>
+                </div>
+
+                <!-- Instagram -->
+                <div
+                  class="flex flex-col sm:flex-row items-center sm:items-center justify-center md:justify-start gap-3 text-center sm:text-left"
+                >
+                  <div class="flex items-center gap-2 shrink-0">
+                    <a
+                      href="https://www.instagram.com/gameplan1998/"
+                      target="_blank"
+                      class="w-8 h-8 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group shrink-0"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        ></rect>
+                        <path
+                          d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                        ></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                      </svg>
+                    </a>
+                  </div>
+                  <a
+                    href="https://www.instagram.com/gameplan1998/"
+                    target="_blank"
+                    class="text-zinc-400 hover:text-white transition-colors text-xl break-all"
+                  >
+                    https://www.instagram.com/gameplan1998/
+                  </a>
+                </div>
+
+                <!-- X (Twitter) -->
+                <div
+                  class="flex flex-col sm:flex-row items-center sm:items-center justify-center md:justify-start gap-3 text-center sm:text-left"
+                >
+                  <div class="flex items-center gap-2 shrink-0">
+                    <a
+                      href="https://x.com/gameplansport?lang=en"
+                      target="_blank"
+                      class="w-8 h-8 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group shrink-0"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <a
+                    href="https://x.com/gameplansport?lang=en"
+                    target="_blank"
+                    class="text-zinc-400 hover:text-white transition-colors text-xl break-all"
+                  >
+                    https://x.com/gameplansport?lang=en
+                  </a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div
+                  class="flex flex-col sm:flex-row items-center sm:items-center justify-center md:justify-start gap-3 text-center sm:text-left"
+                >
+                  <div class="flex items-center gap-2 shrink-0">
+                    <a
+                      href="https://in.linkedin.com/company/gameplan-sports-private-ltd"
+                      target="_blank"
+                      class="w-8 h-8 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group shrink-0"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <a
+                    href="https://in.linkedin.com/company/gameplan-sports-private-ltd"
+                    target="_blank"
+                    class="text-zinc-400 hover:text-white transition-colors text-xl break-all"
+                  >
+                    https://in.linkedin.com/company/gameplan-sports-private-ltd
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Link -->
+            <div class="md:mt-auto pt-8 w-full text-center md:text-left">
+              <a
+                href="#"
+                class="text-zinc-400 hover:text-white transition-colors tracking-wider"
+                >Privacy Policy</a
+              >
+              <br />
+              <a
+                href="#"
+                class="text-zinc-400 hover:text-white transition-colors tracking-wider"
+                >Terms & Conditions</a
+              >
+            </div>
+          </div>
         </div>
 
-        <!-- BOTTOM EXPLORE TEXT & ARROW (Hidden on Mobile to save space) -->
-        <!-- <div class="relative z-10 h-full w-full hidden md:flex flex-col justify-end pt-10 md:pb-8 pb-4">
-            <p class="text-lg md:text-4xl text-center drop-shadow-sm text-white/80 tracking-widest font-light">Explore Our Landmarks</p>
-            <i class="ti ti-chevrons-down text-3xl md:text-6xl mx-auto mt-2 animate-bounce drop-shadow-sm text-white/80"></i>
-        </div> -->
-    </div>
-</div>
-			<!-- =================================== -->
-			<!-- 5. UPCOMING EVENTS SECTION (NOW VISIBLE) -->
-			<!-- =================================== -->
-			<section class="bg-primary-blue py-20">
-				<div class="container mx-auto px-4 md:px-6">
-					<!-- Section Header -->
-					<div class="flex justify-between items-center mb-10">
-						<h2
-							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
-						>
-							Upcoming Events
-						</h2>
-						<!-- Slider Navigation Arrows -->
-						<div class="hidden md:flex items-center space-x-2">
-							<button
-								id="events-prev"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-left w-8 h-8"></i>
-							</button>
-							<button
-								id="events-next"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-right w-8 h-8"></i>
-							</button>
-						</div>
-					</div>
-
-					<!-- Events Slider -->
-					<div class="swiper events-slider">
-						<div class="swiper-wrapper">
-							<!-- Slide 1 -->
-							<div class="swiper-slide">
-								<a href="#" class="block group">
-									<div class="bg-accent-red p-6 rounded-t-lg">
-										<h3 class="text-2xl font-bold text-white mb-4">
-											The Shakti of Music 2025
-										</h3>
-										<div class="flex justify-between items-center text-white">
-											<div>
-												<p>4 September 2025</p>
-												<p class="text-sm">Kolkata</p>
-											</div>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-									<img
-										src="assets/images/Rectangle 178.png"
-										alt="Zakir Hussain playing tabla"
-										class="w-full h-72 object-cover rounded-b-lg"
-									/>
-								</a>
-							</div>
-
-							<!-- Slide 2 -->
-							<div class="swiper-slide">
-								<a href="#" class="block group">
-									<div class="bg-accent-red p-6 rounded-t-lg">
-										<h3 class="text-2xl font-bold text-white mb-4">
-											Good Economics for Hard Times
-										</h3>
-										<div class="flex justify-between items-center text-white">
-											<div>
-												<p>28 September 2025</p>
-												<p class="text-sm">Kolkata</p>
-											</div>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-									<img
-										src="assets/images/Rectangle 178.png"
-										alt="Abhijit Banerjee speaking"
-										class="w-full h-72 object-cover rounded-b-lg"
-									/>
-								</a>
-							</div>
-
-							<!-- Slide 3 -->
-							<div class="swiper-slide">
-								<a href="#" class="block group">
-									<div class="bg-accent-red p-6 rounded-t-lg">
-										<h3 class="text-2xl font-bold text-white mb-4">
-											The Shakti of Music 2025
-										</h3>
-										<div class="flex justify-between items-center text-white">
-											<div>
-												<p>27 September 2025</p>
-												<p class="text-sm">Kolkata</p>
-											</div>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-									<img
-										src="assets/images/Rectangle 181.png"
-										alt="Shakti band performing"
-										class="w-full h-72 object-cover rounded-b-lg"
-									/>
-								</a>
-							</div>
-
-							<!-- Slide 4 (Example) -->
-							<div class="swiper-slide">
-								<a href="#" class="block group">
-									<div class="bg-accent-red p-6 rounded-t-lg">
-										<h3 class="text-2xl font-bold text-white mb-4">
-											Another Great Event
-										</h3>
-										<div class="flex justify-between items-center text-white">
-											<div>
-												<p>15 October 2025</p>
-												<p class="text-sm">Delhi</p>
-											</div>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-									<img
-										src="assets/images/Rectangle 178.png"
-										alt="Event placeholder image"
-										class="w-full h-72 object-cover rounded-b-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Slider Pagination Dots -->
-					<div class="events-pagination mt-8 text-center"></div>
-				</div>
-			</section>
-
-			<!-- =================================== -->
-			<!-- 6. PAST EVENTS SECTION              -->
-			<!-- =================================== -->
-			<section class="bg-dark-brown py-20">
-				<div class="container mx-auto px-4 md:px-6">
-					<!-- Section Header -->
-					<div class="flex justify-between items-center mb-10">
-						<h2
-							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
-						>
-							Past Events
-						</h2>
-						<!-- Slider Navigation Arrows -->
-						<div class="hidden md:flex items-center space-x-2">
-							<button
-								id="past-events-prev"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-left w-8 h-8"></i>
-							</button>
-							<button
-								id="past-events-next"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-right w-8 h-8"></i>
-							</button>
-						</div>
-					</div>
-
-					<!-- Past Events Slider -->
-					<div class="swiper past-events-slider">
-						<div class="swiper-wrapper">
-							<!-- Slide 1 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 181.png"
-										alt="Event: Cricket and Beyond"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Cricket and Beyond</h3>
-										<div
-											class="flex justify-between items-center mt-2 opacity-80"
-										>
-											<p>20 April 2025</p>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 2 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 199.png"
-										alt="Event: The name is Bond"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">The name is Bond</h3>
-										<div
-											class="flex justify-between items-center mt-2 opacity-80"
-										>
-											<p>20 April 2025</p>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 3 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 198.png"
-										alt="Event: Plying with the..."
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Plying with the...</h3>
-										<div
-											class="flex justify-between items-center mt-2 opacity-80"
-										>
-											<p>20 April 2025</p>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 4 (Example) -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 198.png"
-										alt="Past Event placeholder"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Historic Moment</h3>
-										<div
-											class="flex justify-between items-center mt-2 opacity-80"
-										>
-											<p>15 March 2025</p>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Slider Pagination Dots -->
-					<div class="past-events-pagination mt-8 text-center"></div>
-				</div>
-			</section>
-
-			<!-- =================================== -->
-			<!-- 7. OUR EXPERTISE SECTION (CORRECTED LAYOUT) -->
-			<!-- =================================== -->
-			<section class="bg-primary-blue py-20 relative overflow-hidden">
-				<div class="container mx-auto px-4 md:px-6 relative">
-					<!-- Decorative Background Text -->
-					<h2
-						class="absolute -top-6 right-0 text-[10rem] lg:text-[10rem] font-bold text-accent-red opacity-90 select-none -translate-y-1/4 hidden sm:block z-0"
-					>
-						PLAY ON
-					</h2>
-
-					<!-- Section Header -->
-					<div class="relative z-10">
-						<h2
-							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white mb-10"
-						>
-							Our Expertise
-						</h2>
-
-						<!-- Main container for the two-column layout on large screens -->
-						<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-							<!-- LEFT COLUMN (Two large items stacked) -->
-							<div class="flex flex-col gap-6">
-								<!-- Item 1: Consulting -->
-								<a
-									href="#"
-									class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg"
-								>
-									<img
-										src="assets/images/Rectangle 197.png"
-										alt="Consulting with Shah Rukh Khan"
-										class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<h3
-										class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white"
-									>
-										Consulting
-									</h3>
-								</a>
-
-								<!-- Item 4: Event Management -->
-								<a
-									href="#"
-									class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg"
-								>
-									<img
-										src="assets/images/Rectangle 178.png"
-										alt="Event Management"
-										class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<h3
-										class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white"
-									>
-										Event Management
-									</h3>
-								</a>
-							</div>
-
-							<!-- RIGHT COLUMN (Corrected with two vertical stacks) -->
-							<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-								<!-- First vertical stack (even heights) -->
-								<div class="flex flex-col gap-6">
-									<!-- Item 2: Instadia Branding -->
-									<a
-										href="#"
-										class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg"
-									>
-										<img
-											src="assets/images/Rectangle 178.png"
-											alt="Instadia Branding"
-											class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-										/>
-										<div
-											class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-										></div>
-										<h3
-											class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight"
-										>
-											Instadia<br />Branding
-										</h3>
-									</a>
-
-									<!-- Item 5: Media Syndication -->
-									<a
-										href="#"
-										class="group relative h-60 md:h-120 block overflow-hidden rounded-lg shadow-lg"
-									>
-										<img
-											src="assets/images/Rectangle 200.png"
-											alt="Media Syndication"
-											class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-										/>
-										<div
-											class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-										></div>
-										<h3
-											class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight"
-										>
-											Media<br />Syndication
-										</h3>
-									</a>
-								</div>
-
-								<!-- Second vertical stack (uneven heights to match design) -->
-								<div class="flex flex-col gap-6">
-									<!-- Item 3: Sponsorship Sales (Taller) -->
-									<a
-										href="#"
-										class="group relative h-60 md:h-150 block overflow-hidden rounded-lg shadow-lg"
-									>
-										<img
-											src="assets/images/Rectangle 198.png"
-											alt="Sponsorship Sales"
-											class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-										/>
-										<div
-											class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-										></div>
-										<h3
-											class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight"
-										>
-											Sponsorship<br />Sales
-										</h3>
-									</a>
-
-									<!-- Item 6: Players Endorsement (Shorter) -->
-									<a
-										href="#"
-										class="group relative h-60 md:h-90 block overflow-hidden rounded-lg shadow-lg"
-									>
-										<img
-											src="assets/images/Rectangle 199.png"
-											alt="Players Endorsement"
-											class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-										/>
-										<div
-											class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-										></div>
-										<h3
-											class="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white leading-tight"
-										>
-											Players<br />Endorsement
-										</h3>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- =================================== -->
-			<!-- 8. SIGNATURE EVENTS (SPORTS) SECTION -->
-			<!-- =================================== -->
-			<section class="bg-accent-blue py-20">
-				<div class="container mx-auto px-4 md:px-6">
-					<!-- Section Header -->
-					<div class="flex justify-between items-center mb-10">
-						<h2
-							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
-						>
-							Signature Events (Sports)
-						</h2>
-						<!-- Slider Navigation Arrows -->
-						<div class="hidden md:flex items-center space-x-2">
-							<button
-								id="sports-prev"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-left w-8 h-8"></i>
-							</button>
-							<button
-								id="sports-next"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-right w-8 h-8"></i>
-							</button>
-						</div>
-					</div>
-
-					<!-- Events Slider -->
-					<div class="swiper sports-slider">
-						<div class="swiper-wrapper">
-							<!-- Slide 1 -->
-							<div class="swiper-slide">
-								<a href="#" class="block group">
-									<div class="bg-accent-red p-6 rounded-t-lg">
-										<h3 class="text-2xl font-bold text-white mb-4">
-											The Shakti of Music 2025
-										</h3>
-										<div class="flex justify-between items-center text-white">
-											<div>
-												<p>4 September 2025</p>
-												<p class="text-sm">Kolkata</p>
-											</div>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-									<img
-										src="assets/images/Rectangle 178.png"
-										alt="Zakir Hussain playing tabla"
-										class="w-full h-72 object-cover rounded-b-lg"
-									/>
-								</a>
-							</div>
-
-							<!-- Slide 2 -->
-							<div class="swiper-slide">
-								<a href="#" class="block group">
-									<div class="bg-accent-red p-6 rounded-t-lg">
-										<h3 class="text-2xl font-bold text-white mb-4">
-											Good Economics for Hard Times
-										</h3>
-										<div class="flex justify-between items-center text-white">
-											<div>
-												<p>28 September 2025</p>
-												<p class="text-sm">Kolkata</p>
-											</div>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-									<img
-										src="assets/images/Rectangle 178.png"
-										alt="Abhijit Banerjee speaking"
-										class="w-full h-72 object-cover rounded-b-lg"
-									/>
-								</a>
-							</div>
-
-							<!-- Slide 3 -->
-							<div class="swiper-slide">
-								<a href="#" class="block group">
-									<div class="bg-accent-red p-6 rounded-t-lg">
-										<h3 class="text-2xl font-bold text-white mb-4">
-											The Shakti of Music 2025
-										</h3>
-										<div class="flex justify-between items-center text-white">
-											<div>
-												<p>27 September 2025</p>
-												<p class="text-sm">Kolkata</p>
-											</div>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-									<img
-										src="assets/images/Rectangle 181.png"
-										alt="Shakti band performing"
-										class="w-full h-72 object-cover rounded-b-lg"
-									/>
-								</a>
-							</div>
-
-							<!-- Slide 4 (Example) -->
-							<div class="swiper-slide">
-								<a href="#" class="block group">
-									<div class="bg-accent-red p-6 rounded-t-lg">
-										<h3 class="text-2xl font-bold text-white mb-4">
-											Another Great Event
-										</h3>
-										<div class="flex justify-between items-center text-white">
-											<div>
-												<p>15 October 2025</p>
-												<p class="text-sm">Delhi</p>
-											</div>
-											<span
-												class="text-2xl transform transition-transform group-hover:translate-x-1"
-												><i class="ti ti-arrow-right text-2xl"></i>
-											</span>
-										</div>
-									</div>
-									<img
-										src="assets/images/Rectangle 178.png"
-										alt="Event placeholder image"
-										class="w-full h-72 object-cover rounded-b-lg"
-									/>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Slider Pagination Dots -->
-					<div class="sports-pagination mt-8 text-center"></div>
-				</div>
-			</section>
-
-			<!-- =================================== -->
-			<!-- 8. SIGNATURE EVENTS (Literature) SECTION -->
-			<!-- =================================== -->
-			<section class="bg-accent-green py-20">
-				<div class="container mx-auto px-4 md:px-6">
-					<!-- Section Header -->
-					<div class="flex justify-between items-center mb-10">
-						<h2
-							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
-						>
-							Signature Events (Literature)
-						</h2>
-						<!-- Slider Navigation Arrows -->
-						<div class="hidden md:flex items-center space-x-2">
-							<button
-								id="literature-prev"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-left w-8 h-8"></i>
-							</button>
-							<button
-								id="literature-next"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-right w-8 h-8"></i>
-							</button>
-						</div>
-					</div>
-
-					<div class="swiper literature-slider">
-						<div class="swiper-wrapper">
-							<!-- Slide 1 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 196.png"
-										alt="Event: Reading and Writing India"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Reading and Wri...</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 2 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 199.png"
-										alt="Event: The name is Bond"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">The name is Bond</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 3 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 200.png"
-										alt="Event: Open to All"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Open to All</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 4 (Example) -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 181.png"
-										alt="Another Art Event"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Artistic Visions</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>15 May 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Slider Pagination Dots -->
-					<div class="literature-pagination mt-8 text-center"></div>
-				</div>
-			</section>
-
-			<!-- ============================================= -->
-			<!-- 8. SIGNATURE EVENTS (ART & CULTURE) SECTION   -->
-			<!-- ============================================= -->
-			<section class="bg-dark-brown py-20">
-				<div class="container mx-auto px-4 md:px-6">
-					<!-- Section Header -->
-					<div class="flex justify-between items-center mb-10">
-						<h2
-							class="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white"
-						>
-							Signature Events (Art)
-						</h2>
-						<!-- Slider Navigation Arrows -->
-						<div class="hidden md:flex items-center space-x-2">
-							<button
-								id="art-culture-prev"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-left w-8 h-8"></i>
-							</button>
-							<button
-								id="art-culture-next"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-right w-8 h-8"></i>
-							</button>
-						</div>
-					</div>
-
-					<!-- Art & Culture Slider -->
-					<div class="swiper art-culture-slider">
-						<div class="swiper-wrapper">
-							<!-- Slide 1 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 196.png"
-										alt="Event: Reading and Writing India"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Reading and Wri...</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 2 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 199.png"
-										alt="Event: The name is Bond"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">The name is Bond</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 3 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 200.png"
-										alt="Event: Open to All"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Open to All</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 4 (Example) -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 181.png"
-										alt="Another Art Event"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Artistic Visions</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>15 May 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Slider Pagination Dots -->
-					<div class="art-culture-pagination mt-8 text-center"></div>
-				</div>
-			</section>
-
-			<!-- ============================================= -->
-			<!-- 9. SIGNATURE EVENTS (others) SECTION       -->
-			<!-- ============================================= -->
-			<section class="bg-primary-blue py-20">
-				<div class="container mx-auto px-4 md:px-6">
-					<!-- Section Header -->
-					<div class="flex justify-between items-center mb-10">
-						<h2
-							class="text-3xl md:text-4xl font-bold uppercase tracking-wider text-white"
-						>
-							Signature Events (Others)
-						</h2>
-						<!-- Slider Navigation Arrows -->
-						<div class="hidden md:flex items-center space-x-2">
-							<button
-								id="corporate-prev"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-left w-8 h-8"></i>
-							</button>
-							<button
-								id="corporate-next"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-right w-8 h-8"></i>
-							</button>
-						</div>
-					</div>
-
-					<!-- Corporate Slider -->
-					<div class="swiper corporate-slider">
-						<div class="swiper-wrapper">
-							<!-- Slide 1 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 178.png"
-										alt="Event: The game of decisions"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">The game of de...</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 2 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 197.png"
-										alt="Event: Perfect Strokes"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">Perfect Strokes</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<!-- Slide 3 -->
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 199.png"
-										alt="Event: The large short films"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">The large...</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<div class="swiper-slide">
-								<a
-									href="#"
-									class="block group relative overflow-hidden rounded-lg"
-								>
-									<img
-										src="assets/images/Rectangle 199.png"
-										alt="Event: The large short films"
-										class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-									<div
-										class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-									></div>
-									<div class="absolute bottom-0 left-0 p-6 text-white w-full">
-										<h3 class="text-2xl font-bold">The large...</h3>
-										<div class="flex justify-between items-end mt-2 opacity-80">
-											<p>20 April 2025</p>
-											<i
-												class="ti ti-arrow-right h-6 w-6 transform transition-transform group-hover:translate-x-1"
-											></i>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					<!-- Slider Pagination Dots -->
-					<div class="corporate-pagination mt-8 text-center"></div>
-				</div>
-			</section>
-
-			<!-- =================================== -->
-			<!-- 9. TRUSTED BRANDS SECTION (EXPANDED) -->
-			<!-- =================================== -->
-			<section class="bg-white py-20">
-				<div class="container mx-auto px-4 md:px-6">
-					<!-- Section Header -->
-					<div class="text-center">
-						<h2
-							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-accent-red"
-						>
-							Brands Who Trust Our Plans
-						</h2>
-					</div>
-
-					<!-- Responsive Logo Wall -->
-					<div
-						class="mt-16 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-8 gap-y-12"
-					>
-						<!-- Row 1 -->
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
-								alt="ESPN Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
-								alt="Google Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
-								alt="Pepsi Logo"
-								class="h-12 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
-								alt="IPL Logo"
-								class="h-16 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
-								alt="Tata Steel Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
-								alt="Amazon Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
-								alt="Coca-Cola Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
-								alt="Mastercard Logo"
-								class="h-10 filter transition-all duration-300"
-							/>
-						</div>
-
-						<!-- Row 2 -->
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
-								alt="ESPN Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
-								alt="Google Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
-								alt="Pepsi Logo"
-								class="h-12 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
-								alt="IPL Logo"
-								class="h-16 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
-								alt="Tata Steel Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
-								alt="Amazon Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
-								alt="Coca-Cola Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
-								alt="Mastercard Logo"
-								class="h-10 filter transition-all duration-300"
-							/>
-						</div>
-
-						<!-- Row 3 -->
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
-								alt="ESPN Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
-								alt="Google Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
-								alt="Pepsi Logo"
-								class="h-12 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
-								alt="IPL Logo"
-								class="h-16 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
-								alt="Tata Steel Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
-								alt="Amazon Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
-								alt="Coca-Cola Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
-								alt="Mastercard Logo"
-								class="h-10 filter transition-all duration-300"
-							/>
-						</div>
-
-						<!-- Row 4 -->
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
-								alt="ESPN Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
-								alt="Google Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
-								alt="Pepsi Logo"
-								class="h-12 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
-								alt="IPL Logo"
-								class="h-16 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
-								alt="Tata Steel Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
-								alt="Amazon Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
-								alt="Coca-Cola Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
-								alt="Mastercard Logo"
-								class="h-10 filter transition-all duration-300"
-							/>
-						</div>
-
-						<!-- Row 5 -->
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png"
-								alt="ESPN Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/440px-Google_2015_logo.svg.png"
-								alt="Google Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/450px-Pepsi_logo_2014.svg.png"
-								alt="Pepsi Logo"
-								class="h-12 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/440px-Indian_Premier_League_Official_Logo.svg.png"
-								alt="IPL Logo"
-								class="h-16 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tata_Steel_Logo.svg/440px-Tata_Steel_Logo.svg.png"
-								alt="Tata Steel Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/512px-Amazon_logo.svg.png"
-								alt="Amazon Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Coca-Cola_logo.svg/512px-Coca-Cola_logo.svg.png"
-								alt="Coca-Cola Logo"
-								class="h-8 filter transition-all duration-300"
-							/>
-						</div>
-						<div class="flex justify-center items-center">
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/440px-Mastercard_2019_logo.svg.png"
-								alt="Mastercard Logo"
-								class="h-10 filter transition-all duration-300"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- =================================== -->
-			<!-- 10. MEET OUR TEAM SECTION           -->
-			<!-- =================================== -->
-			<section class="bg-accent-blue py-20">
-				<div class="container mx-auto px-4 md:px-6">
-					<!-- Section Header -->
-					<div class="flex justify-between items-center mb-10">
-						<h2
-							class="text-4xl md:text-5xl font-bold uppercase tracking-wider text-white"
-						>
-							Meet Our Team
-						</h2>
-						<!-- Slider Navigation Arrows -->
-						<div class="hidden md:flex items-center space-x-2">
-							<button
-								id="team-prev"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-left w-8 h-8"></i>
-							</button>
-							<button
-								id="team-next"
-								class="text-white/70 hover:text-white transition-colors p-2 text-3xl"
-							>
-								<i class="ti ti-chevron-right w-8 h-8"></i>
-							</button>
-						</div>
-					</div>
-
-					<!-- Team Slider -->
-					<div class="swiper team-slider">
-						<div class="swiper-wrapper">
-							<!-- Slide 1: Jeet Banerjee -->
-							<div class="swiper-slide">
-								<div class="text-center">
-									<img
-										src="assets/images/Rectangle 169.png"
-										alt="Jeet Banerjee"
-										class="w-full object-cover"
-									/>
-									<h3
-										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
-									>
-										Jeet Banerjee
-									</h3>
-									<p class="text-white/80 uppercase text-sm tracking-widest">
-										Director
-									</p>
-								</div>
-							</div>
-
-							<!-- Slide 2: Malavika Banerjee -->
-							<div class="swiper-slide">
-								<div class="text-center">
-									<img
-										src="assets/images/Rectangle 169.png"
-										alt="Malavika Banerjee"
-										class="w-full object-cover"
-									/>
-									<h3
-										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
-									>
-										Malavika Banerjee
-									</h3>
-									<p class="text-white/80 uppercase text-sm tracking-widest">
-										Director
-									</p>
-								</div>
-							</div>
-
-							<!-- Slide 3: Prem Khatwani -->
-							<div class="swiper-slide">
-								<div class="text-center">
-									<img
-										src="assets/images/Rectangle 169.png"
-										alt="Prem Khatwani"
-										class="w-full object-cover"
-									/>
-									<h3
-										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
-									>
-										Prem Khatwani
-									</h3>
-									<p class="text-white/80 uppercase text-sm tracking-widest">
-										Director
-									</p>
-								</div>
-							</div>
-
-							<!-- Slide 4 (Example) -->
-							<div class="swiper-slide">
-								<div class="text-center">
-									<img
-										src="assets/images/Rectangle 169.png"
-										alt="Team Member"
-										class="w-full object-cover"
-									/>
-									<h3
-										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
-									>
-										Sujata Sen
-									</h3>
-									<p class="text-white/80 uppercase text-sm tracking-widest">
-										Consultant
-									</p>
-								</div>
-							</div>
-
-							<!-- Slide 5 (Example) -->
-							<div class="swiper-slide">
-								<div class="text-center">
-									<img
-										src="assets/images/Rectangle 169.png"
-										alt="Team Member"
-										class="w-full object-cover"
-									/>
-									<h3
-										class="text-xl font-bold text-white uppercase mt-6 tracking-wider"
-									>
-										Another Member
-									</h3>
-									<p class="text-white/80 uppercase text-sm tracking-widest">
-										Manager
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Slider Pagination Dots -->
-					<div class="team-pagination mt-8 text-center"></div>
-				</div>
-			</section>
-		</main>
-
-		<!-- =================================== -->
-		<!-- 11. FOOTER SECTION (UPDATED)        -->
-		<!-- =================================== -->
-		<footer class="bg-black text-white">
-			<!-- Top Red Banner -->
-			<div class="bg-accent-red py-10 md:py-14">
-				<div
-					class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-6"
-				>
-					<!-- 'font-teko' must be defined in your CSS/Tailwind config for this font family -->
-					<h2
-						class="text-6xl md:text-7xl font-bold font-teko uppercase leading-none tracking-wide"
-					>
-						PLAY ON
-					</h2>
-					<!-- Vertical divider on desktop -->
-					<h3
-						class="text-xl md:text-2xl font-medium leading-tight text-center md:text-left"
-					>
-						Every Event<br />Every Experience
-					</h3>
-				</div>
-			</div>
-
-			<!-- Main Footer Content -->
-			<div class="container mx-auto px-6 md:px-10 py-16 lg:py-20 text-lg">
-				<!-- Grid: Stacks on mobile (text-center), 3 columns on desktop (text-left) -->
-				<div
-					class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-8 text-center md:text-left"
-				>
-					<!-- Column 1: Logo & Offices (Spans 4/12 on desktop) -->
-					<div
-						class="md:col-span-5 lg:col-span-4 flex flex-col items-center md:items-start space-y-10"
-					>
-						<!-- Logo -->
-						<img
-							src="assets/images/logo/logo.png"
-							alt="Gameplan Logo"
-							class="h-8"
-						/>
-
-						<!-- Offices Container -->
-						<div class="space-y-6">
-							<div>
-								<h4
-									class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
-								>
-									Head Office
-								</h4>
-								<p class="uppercase leading-relaxed text-white">
-									L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
-									700017.
-								</p>
-							</div>
-							<div>
-								<h4
-									class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
-								>
-									Bhubaneshwar Office
-								</h4>
-								<p class="uppercase leading-relaxed text-white">
-									L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
-									700017.
-								</p>
-							</div>
-							<div>
-								<h4
-									class="text-zinc-400 font-bold uppercase tracking-[0.2em] mb-2"
-								>
-									Jharkhand Office
-								</h4>
-								<p class="uppercase leading-relaxed text-white">
-									L&T Chambers – 4th floor,<br />16 Camac Street, Kolkata –
-									700017.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Column 2: Contact & Privacy (Spans 4/12 on desktop) -->
-					<!-- Uses flex-col justify-between to push Privacy Policy to bottom on desktop -->
-					<div
-						class="md:col-span-3 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10"
-					>
-						<div>
-							<h4
-								class="text-lg text-white font-bold uppercase tracking-[0.2em] mb-6"
-							>
-								Contact
-							</h4>
-							<div class="uppercase space-y-2 leading-relaxed text-white">
-								<a
-									href="mailto:mail@gameplan.co.in"
-									class="hover:text-zinc-300 transition-colors lowercase text-lg"
-									>mail@gameplan.co.in</a
-								>
-								<div class="mt-5 space-y-1 text-lg">
-									<p>+ 91 (0) 33 2282 1960/61</p>
-									<p>+ 91 (0) 33 3290 4947</p>
-									<p>+ 91 (0) 33 2282 1959</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Column 3: Follow Us & Terms (Spans 4/12 on desktop) -->
-					<!-- Uses flex-col justify-between to push Terms to bottom on desktop -->
-					<div
-						class="md:col-span-4 lg:col-span-4 flex flex-col items-center md:items-start md:justify-between gap-y-10"
-					>
-						<div>
-							<h4 class="text-white font-bold uppercase tracking-[0.2em] mb-6">
-								Follow Us On
-							</h4>
-							<div
-								class="flex items-center justify-center md:justify-start gap-3"
-							>
-								<!-- Facebook -->
-								<a
-									href="https://www.facebook.com/GameplanSports/"
-									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
-								>
-									<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-										<path
-											d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-										/>
-									</svg>
-								</a>
-								<!-- X (Twitter) -->
-								<a
-									href="https://x.com/gameplansport"
-									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
-								>
-									<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-										<path
-											d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-										/>
-									</svg>
-								</a>
-								<!-- Instagram -->
-								<a
-									href="https://www.instagram.com/gameplan1998/"
-									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
-								>
-									<svg
-										class="w-4 h-4"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<rect
-											x="2"
-											y="2"
-											width="20"
-											height="20"
-											rx="5"
-											ry="5"
-										></rect>
-										<path
-											d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-										></path>
-										<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-									</svg>
-								</a>
-								<!-- Threads (@ symbol style) -->
-								<!-- <a href="#" class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group">
-                           <svg width="16" height="20" viewBox="0 0 16 20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.8667 9.35828C11.7303 6.62531 10.3556 5.06073 8.04761 5.04518C6.6561 5.03603 5.49285 5.6765 4.78024 6.85038L6.05047 7.79553C6.5845 6.91626 7.42766 6.73419 8.03835 6.74059C8.79897 6.74608 9.37175 6.9858 9.74321 7.45426C10.0128 7.79462 10.1939 8.26582 10.284 8.85963C9.609 8.73519 8.88179 8.69707 8.10237 8.74526C5.90727 8.8825 4.49722 10.2732 4.59156 12.2047C4.63958 13.1846 5.08853 14.0282 5.85673 14.579C6.50532 15.0447 7.34259 15.2716 8.21103 15.2204C9.35911 15.1518 10.2596 14.6769 10.8879 13.8068C11.3647 13.1462 11.6662 12.2898 11.7993 11.212C12.3468 11.5706 12.7511 12.0418 12.976 12.6091C13.3568 13.5735 13.3787 15.1582 12.1885 16.4501C11.1457 17.581 9.8923 18.0714 7.99792 18.086C5.89632 18.0696 4.30686 17.3367 3.27417 15.9103C2.3055 14.5744 1.806 12.6439 1.78747 10.1744C1.806 7.70404 2.30634 5.7744 3.27417 4.43765C4.30686 3.01123 5.89632 2.27927 7.99792 2.2628C10.1147 2.28018 11.7311 3.01489 12.8042 4.44954C13.3307 5.15223 13.7266 6.03607 13.9885 7.06631L15.4761 6.63629C15.1585 5.36724 14.6598 4.27387 13.9818 3.36715C12.6063 1.52809 10.5847 0.586597 7.99286 0.567383C5.40609 0.586597 3.41737 1.53266 2.0806 3.37721C0.892081 5.01956 0.278028 7.31701 0.257812 10.1808C0.278028 13.0446 0.892081 15.3293 2.0806 16.9716C3.41737 18.8162 5.4162 19.7622 8.00213 19.7815C10.3025 19.7641 11.9231 19.1099 13.2582 17.6615C15.006 15.7648 14.953 13.3887 14.3777 11.9302C13.9355 10.8094 13.0552 9.91183 11.8675 9.35919M8.12932 13.5286C7.16739 13.5872 6.16839 13.1187 6.11869 12.1141C6.08248 11.3694 6.60724 10.5386 8.18828 10.4398C8.90284 10.3878 9.62059 10.4413 10.3219 10.599C10.1399 13.0712 9.07104 13.4719 8.12932 13.5286Z" fill="white"/>
-</svg>
-
-                        </a> -->
-								<!-- LinkedIn -->
-								<a
-									href="https://www.linkedin.com/company/gameplan-sports-private-ltd/"
-									class="w-9 h-9 border border-white/70 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 group"
-								>
-									<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-										<path
-											d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
-										/>
-									</svg>
-								</a>
-							</div>
-						</div>
-						<!-- Bottom Link -->
-						<div class="md:mt-auto pt-4">
-							<a
-								href="#"
-								class="text-zinc-400 hover:text-white transition-colors tracking-wider"
-								>Privacy Policy</a
-							>
-							<br />
-							<a
-								href="#"
-								class="text-zinc-400 hover:text-white transition-colors tracking-wider"
-								>Terms & Conditions</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Bottom Copyright with Divider -->
-				<div
-					class="border-t border-white mt-16 pt-8 text-center text-zinc-500 text-md"
-				>
-					© Gameplan Copyright 2025, All Rights Reserved
-				</div>
-			</div>
-		</footer>
-
-<!-- PASTE THIS IN YOUR HTML FILE AND RUN TAILWIND BUILD -->
-
-<!-- 1. The Container (Holds the stack of alerts) -->
-<div class="fixed bottom-5 right-5 z-50 flex w-[90vw] max-w-sm flex-col gap-3 md:bottom-10 md:right-10">
-
-    <!-- EXAMPLE ALERT 1 -->
-    <div class="relative w-full">
+        <!-- Bottom Copyright with Divider -->
+        <div
+          class="border-t border-white mt-16 pt-8 text-center text-zinc-500 text-md"
+        >
+          © Gameplan Copyright 2025, All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <!-- PASTE THIS IN YOUR HTML FILE AND RUN TAILWIND BUILD -->
+
+    <!-- 1. The Container (Holds the stack of alerts) -->
+    <div
+      class="fixed bottom-5 right-5 z-50 flex w-[90vw] max-w-sm flex-col gap-3 md:bottom-10 md:right-10"
+    >
+      <!-- EXAMPLE ALERT 1 -->
+      <div class="relative w-full">
         <!-- Unique ID for this specific checkbox -->
         <input type="checkbox" id="close-1" class="peer hidden" />
 
         <!-- Card Wrapper -->
         <!-- peer-checked logic: shrink max-height to 0, fade opacity, remove margin -->
-        <div class="relative w-full transform overflow-hidden rounded-2xl border border-white/10 bg-black/20 backdrop-blur-md shadow-lg transition-all duration-500 ease-in-out peer-checked:max-h-0 peer-checked:opacity-0 peer-checked:mb-0 peer-checked:pointer-events-none">
-            
-            <!-- Close Button -->
-            <label for="close-1" class="absolute right-3 top-3 z-30 cursor-pointer p-1 text-white/70 hover:text-white transition-colors">
-                <i class="ti ti-x text-xl"></i>
-            </label>
+        <div
+          class="relative w-full transform overflow-hidden rounded-2xl border border-white/10 bg-black/20 backdrop-blur-md shadow-lg transition-all duration-500 ease-in-out peer-checked:max-h-0 peer-checked:opacity-0 peer-checked:mb-0 peer-checked:pointer-events-none"
+        >
+          <!-- Close Button -->
+          <label
+            for="close-1"
+            class="absolute right-3 top-3 z-30 cursor-pointer p-1 text-white/70 hover:text-white transition-colors"
+          >
+            <i class="ti ti-x text-xl"></i>
+          </label>
 
-            <!-- Content -->
-            <div class="relative z-10 p-4">
-                <div class="mb-3">
-                    <span class="inline-block rounded-lg bg-accent-red-alt px-3 py-1 text-xs font-bold text-white shadow-sm">
-                        New Event Alert
-                    </span>
-                </div>
-                <div class="flex items-center gap-4">
-                    <div class="relative h-14 w-14 flex-shrink-0">
-                        <img src="assets/images/logo-placeholder.png" class="h-full w-full rounded-full border border-white/20 object-cover" />
-                    </div>
-                    <div class="flex-grow min-w-0 text-white">
-                        <h3 class="truncate text-base font-bold leading-tight">Event One</h3>
-                        <div class="my-1.5 h-px w-full bg-white/30"></div>
-                        <div class="flex items-center text-xs text-white/90">
-                            <span class="font-semibold">24 Nov, 2025</span>
-                        </div>
-                    </div>
-                </div>
+          <!-- Content -->
+          <div class="relative z-10 p-4">
+            <div class="mb-3">
+              <span
+                class="inline-block rounded-lg bg-accent-red-alt px-3 py-1 text-sm font-bold text-white shadow-sm"
+              >
+                New Event Alert
+              </span>
             </div>
-            
-            <!-- Link Overlay -->
-            <a href="#" class="absolute inset-0 z-0"></a>
+            <div class="flex items-center gap-4">
+              <div class="relative h-14 w-14 flex-shrink-0">
+                <img
+                  src="assets/images/logo-placeholder.png"
+                  class="h-full w-full rounded-full border border-white/20 object-cover"
+                />
+              </div>
+              <div class="flex-grow min-w-0 text-white">
+                <h3 class="truncate text-xl font-bold leading-tight">
+                  Event One
+                </h3>
+                <div class="my-1.5 h-px w-full bg-white/30"></div>
+                <div class="flex items-center text-md text-white/90">
+                  <span class="font-semibold">24 Nov, 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link Overlay -->
+          <a href="#" class="absolute inset-0 z-0"></a>
         </div>
+      </div>
     </div>
 
-</div>
+    <!-- ============================================= -->
+    <!-- UNIVERSAL POPUP/LIGHTBOX FOR VIDEOS & IMAGES  -->
+    <!-- ============================================= -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 z-[999] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300"
+    >
+      <!-- Close button -->
+      <button
+        id="lightbox-close"
+        class="absolute top-4 right-4 text-white p-2 z-10"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
 
-		<!-- ============================================= -->
-		<!-- UNIVERSAL POPUP/LIGHTBOX FOR VIDEOS & IMAGES  -->
-		<!-- ============================================= -->
-		<div
-			id="lightbox"
-			class="fixed inset-0 z-[999] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300"
-		>
-			<!-- Close button -->
-			<button
-				id="lightbox-close"
-				class="absolute top-4 right-4 text-white p-2 z-10"
-			>
-				<svg
-					class="w-8 h-8"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2.5"
-					viewBox="0 0 24 24"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M6 18L18 6M6 6l12 12"
-					></path>
-				</svg>
-			</button>
+      <!-- Container for content -->
+      <div
+        id="lightbox-content"
+        class="relative w-full max-w-4xl max-h-[90vh] transform scale-95 transition-transform duration-300"
+      >
+        <!-- Content (Image or Video) will be injected here by JavaScript -->
+      </div>
+    </div>
 
-			<!-- Container for content -->
-			<div
-				id="lightbox-content"
-				class="relative w-full max-w-4xl max-h-[90vh] transform scale-95 transition-transform duration-300"
-			>
-				<!-- Content (Image or Video) will be injected here by JavaScript -->
-			</div>
-		</div>
-
-		<!-- SCRIPTS -->
-		<script src="assets/js/swiper-bundle.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+    <!-- SCRIPTS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

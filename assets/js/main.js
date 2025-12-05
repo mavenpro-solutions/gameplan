@@ -1,6 +1,31 @@
 // assets/js/main.js
 jQuery(document).ready(function($) {
 
+     // =========================================================
+    // --- 0. DYNAMIC HERO TITLE FONT SIZING ---
+    // =========================================================
+    $('.hero-slide h1').each(function() {
+        // 1. Get the text and count words (splitting by spaces)
+        var text = $(this).text().trim();
+        var wordCount = text.split(/\s+/).length;
+        var $h1 = $(this);
+
+        // 2. Remove existing hardcoded desktop size classes to prevent conflicts
+        $h1.removeClass('md:text-3xl md:text-4xl md:text-5xl');
+
+        // 3. Apply class based on word count
+        if (wordCount < 8) {
+            // Short titles (Less than 10 words) -> Big Text
+            $h1.addClass('md:text-5xl'); 
+        } else if (wordCount >= 8 && wordCount < 20) {
+            // Medium titles (10 to 19 words) -> Medium Text
+            $h1.addClass('md:text-4xl');
+        } else {
+            // Long titles (20+ words) -> Smaller Text
+            $h1.addClass('md:text-3xl');
+        }
+    });
+
      // --- 1. HERO SLIDER (WITH CLICK-TO-CHANGE FUNCTIONALITY) ---
     new Swiper('.hero-swiper', {
         // Core settings
